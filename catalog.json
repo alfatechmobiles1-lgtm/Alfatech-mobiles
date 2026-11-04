@@ -1,0 +1,1538 @@
+{
+ "version": 1,
+ "updated": "2026-11-02",
+ "shop": {
+  "name": "ALFATECH MOBILES",
+  "phone": "+91 95544 84848",
+  "wa": "919554484848",
+  "email": "alfatech.mobiles1@gmail.com",
+  "addr1": "Nishat Rd, Sadar Bazar",
+  "city": "Shahjahanpur",
+  "state": "Uttar Pradesh",
+  "pin": "242001",
+  "deliveryState": "Uttar Pradesh"
+ },
+ "emi": {
+  "tenures": [
+   {
+    "months": 3,
+    "rate": 0
+   },
+   {
+    "months": 6,
+    "rate": 0
+   },
+   {
+    "months": 9,
+    "rate": 0
+   },
+   {
+    "months": 12,
+    "rate": 0
+   }
+  ],
+  "downPayment": 0,
+  "note": "EMI amounts are approximate. Final EMI, interest, processing fee and down payment depend on your bank card or finance partner and are confirmed by the shop."
+ },
+ "models": [
+  {
+   "id": "apple-iphone-18-pro-max",
+   "brand": "Apple",
+   "name": "iPhone 18 Pro Max",
+   "display": "6.9-inch Super Retina XDR OLED; ProMotion / Always-On",
+   "chip": "Apple A20 Pro",
+   "cam": "Triple 48MP Pro Fusion rear camera system",
+   "front": "18MP Center Stage front camera",
+   "batt": "Up to 43 hours video playback (Apple rating)",
+   "os": "iOS",
+   "highlights": "Pro Max size. Photos show the iPhone 18 Pro body (same design, smaller size).",
+   "src": "https://www.apple.com/in/iphone/",
+   "colours": [
+    {
+     "name": "Glacier",
+     "hex": "#B8CEE0",
+     "shots": [
+      "img/iphone-18-pro-glacier-backfront.webp",
+      "img/iphone-18-pro-glacier-backside.webp",
+      "img/iphone-18-pro-glacier-cam.webp"
+     ]
+    },
+    {
+     "name": "Burgundy",
+     "hex": "#5E2A33",
+     "shots": [
+      "img/iphone-18-pro-burgundy-backfront.webp",
+      "img/iphone-18-pro-burgundy-backside.webp",
+      "img/iphone-18-pro-burgundy-cam.webp"
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "256",
+     "label": "256GB",
+     "price": 175000,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "512",
+     "label": "512GB",
+     "price": 198000,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false
+  },
+  {
+   "id": "apple-iphone-18-pro",
+   "brand": "Apple",
+   "name": "iPhone 18 Pro",
+   "display": "6.3-inch Super Retina XDR OLED; ProMotion up to 120Hz",
+   "chip": "Apple A20 Pro",
+   "cam": "Triple 48MP Pro Fusion rear camera system",
+   "front": "18MP Center Stage front camera",
+   "batt": "Fast wired charging",
+   "os": "iOS",
+   "highlights": "",
+   "src": "https://www.apple.com/in/shop/buy-iphone/iphone-18-pro",
+   "colours": [
+    {
+     "name": "Glacier",
+     "hex": "#B8CEE0",
+     "shots": [
+      "img/iphone-18-pro-glacier-backfront.webp",
+      "img/iphone-18-pro-glacier-backside.webp",
+      "img/iphone-18-pro-glacier-cam.webp"
+     ]
+    },
+    {
+     "name": "Burgundy",
+     "hex": "#5E2A33",
+     "shots": [
+      "img/iphone-18-pro-burgundy-backfront.webp",
+      "img/iphone-18-pro-burgundy-backside.webp",
+      "img/iphone-18-pro-burgundy-cam.webp"
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "256",
+     "label": "256GB",
+     "price": 159900,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false
+  },
+  {
+   "id": "apple-iphone-17",
+   "brand": "Apple",
+   "name": "iPhone 17",
+   "display": "6.3-inch Super Retina XDR OLED, ProMotion",
+   "chip": "Apple A19",
+   "cam": "48MP Fusion dual-camera system",
+   "front": "Center Stage front camera",
+   "batt": "",
+   "os": "iOS",
+   "highlights": "",
+   "src": "https://www.apple.com/in/shop/buy-iphone/iphone-17",
+   "colours": [
+    {
+     "name": "Lavender",
+     "hex": "#D9C7E8",
+     "shots": [
+      "img/apple-iphone-17--lavender-backfront.webp",
+      "img/apple-iphone-17--lavender-backside.webp",
+      "img/apple-iphone-17--lavender-cam.webp"
+     ]
+    },
+    {
+     "name": "Sage",
+     "hex": "#C1D09D",
+     "shots": [
+      "img/apple-iphone-17--sage-backfront.webp",
+      "img/apple-iphone-17--sage-backside.webp",
+      "img/apple-iphone-17--sage-cam.webp"
+     ]
+    },
+    {
+     "name": "Mist Blue",
+     "hex": "#B0C5E0",
+     "shots": [
+      "img/apple-iphone-17--mist-blue-backfront.webp",
+      "img/apple-iphone-17--mist-blue-backside.webp",
+      "img/apple-iphone-17--mist-blue-cam.webp"
+     ]
+    },
+    {
+     "name": "White",
+     "hex": "#F2F2F0",
+     "shots": [
+      "img/apple-iphone-17--white-backfront.webp",
+      "img/apple-iphone-17--white-backside.webp",
+      "img/apple-iphone-17--white-cam.webp"
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "256",
+     "label": "256GB",
+     "price": 96500,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false
+  },
+  {
+   "id": "apple-iphone-16",
+   "brand": "Apple",
+   "name": "iPhone 16",
+   "display": "6.1-inch Super Retina XDR OLED",
+   "chip": "Apple A18",
+   "cam": "48MP Fusion main + 12MP ultra-wide rear cameras",
+   "front": "12MP TrueDepth front camera",
+   "batt": "",
+   "os": "iOS",
+   "highlights": "Storage not specified on the rate list - shop confirms the exact variant.",
+   "src": "https://www.apple.com/in/shop/buy-iphone/iphone-16",
+   "colours": [
+    {
+     "name": "Black",
+     "hex": "#464646",
+     "shots": [
+      "img/apple-iphone-16--black-backfront.webp",
+      "img/apple-iphone-16--black-backside.webp",
+      "img/apple-iphone-16--black-cam.webp",
+      "img/apple-iphone-16--black-edge.webp"
+     ]
+    },
+    {
+     "name": "White",
+     "hex": "#F2F2F0",
+     "shots": [
+      "img/apple-iphone-16--white-backfront.webp",
+      "img/apple-iphone-16--white-backside.webp",
+      "img/apple-iphone-16--white-cam.webp",
+      "img/apple-iphone-16--white-edge.webp"
+     ]
+    },
+    {
+     "name": "Pink",
+     "hex": "#F2A0D4",
+     "shots": [
+      "img/apple-iphone-16--pink-backfront.webp",
+      "img/apple-iphone-16--pink-backside.webp",
+      "img/apple-iphone-16--pink-cam.webp",
+      "img/apple-iphone-16--pink-edge.webp"
+     ]
+    },
+    {
+     "name": "Teal",
+     "hex": "#A9D9D7",
+     "shots": [
+      "img/apple-iphone-16--teal-backfront.webp",
+      "img/apple-iphone-16--teal-backside.webp",
+      "img/apple-iphone-16--teal-cam.webp",
+      "img/apple-iphone-16--teal-edge.webp"
+     ]
+    },
+    {
+     "name": "Ultramarine",
+     "hex": "#869EF6",
+     "shots": [
+      "img/apple-iphone-16--ultramarine-backfront.webp",
+      "img/apple-iphone-16--ultramarine-backside.webp",
+      "img/apple-iphone-16--ultramarine-cam.webp",
+      "img/apple-iphone-16--ultramarine-edge.webp"
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "storagetobeconfirmed",
+     "label": "Storage to be confirmed",
+     "price": 87000,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false
+  },
+  {
+   "id": "apple-iphone-15",
+   "brand": "Apple",
+   "name": "iPhone 15",
+   "display": "6.1-inch Super Retina XDR OLED",
+   "chip": "Apple A16 Bionic",
+   "cam": "48MP main + 12MP ultra-wide",
+   "front": "12MP TrueDepth front camera",
+   "batt": "",
+   "os": "iOS",
+   "highlights": "",
+   "src": "https://www.apple.com/in/iphone/",
+   "colours": [],
+   "variants": [
+    {
+     "id": "128",
+     "label": "128GB",
+     "price": 72500,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false
+  },
+  {
+   "id": "redmi-note-17-pro-max",
+   "brand": "Redmi",
+   "name": "Redmi Note 17 Pro Max 5G",
+   "display": "6.83-inch AMOLED, 120Hz",
+   "chip": "Snapdragon 6 Gen 5",
+   "cam": "50MP + 8MP rear",
+   "front": "32MP",
+   "batt": "10,000mAh, 100W fast charging",
+   "os": "HyperOS 3",
+   "highlights": "Biggest battery in the Redmi line-up. Titan toughness build.",
+   "src": "https://www.mi.com/in/",
+   "variants": [
+    {
+     "id": "8-256",
+     "label": "8GB + 256GB",
+     "price": 45500,
+     "mrp": 69999,
+     "stock": true
+    },
+    {
+     "id": "12-256",
+     "label": "12GB + 256GB",
+     "price": 50500,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Black",
+     "hex": "#222222",
+     "shots": [
+      "img/p/redmi-note-17-pro-max/redmi-04.webp",
+      "img/p/redmi-note-17-pro-max/redmi-03.webp",
+      "img/p/redmi-note-17-pro-max/redmi-01.webp",
+      "img/p/redmi-note-17-pro-max/redmi-02.webp"
+     ]
+    },
+    {
+     "name": "Green",
+     "hex": "#A8CFA0",
+     "shots": [
+      "img/p/redmi-note-17-pro-max/redmi-08.webp",
+      "img/p/redmi-note-17-pro-max/redmi-07.webp",
+      "img/p/redmi-note-17-pro-max/redmi-05.webp",
+      "img/p/redmi-note-17-pro-max/redmi-06.webp"
+     ]
+    },
+    {
+     "name": "Pink",
+     "hex": "#EBC7C0",
+     "shots": [
+      "img/p/redmi-note-17-pro-max/redmi-12.webp",
+      "img/p/redmi-note-17-pro-max/redmi-11.webp",
+      "img/p/redmi-note-17-pro-max/redmi-09.webp",
+      "img/p/redmi-note-17-pro-max/redmi-10.webp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "redmi-note-17-pro",
+   "brand": "Redmi",
+   "name": "Redmi Note 17 Pro 5G",
+   "display": "6.83-inch 1.5K AMOLED, 120Hz",
+   "chip": "Snapdragon 6s Gen 4",
+   "cam": "50MP OIS + 8MP ultra-wide",
+   "front": "",
+   "batt": "9,000mAh, 67W fast charging",
+   "os": "HyperOS 3 / Android 16",
+   "highlights": "",
+   "src": "https://www.mi.com/in/",
+   "variants": [
+    {
+     "id": "8-128",
+     "label": "8GB + 128GB",
+     "price": 33500,
+     "mrp": 49999,
+     "stock": true
+    },
+    {
+     "id": "8-256",
+     "label": "8GB + 256GB",
+     "price": 36500,
+     "mrp": 54999,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Black",
+     "hex": "#222222",
+     "shots": [
+      "img/p/redmi-note-17-pro/redmi-16.webp",
+      "img/p/redmi-note-17-pro/redmi-15.webp",
+      "img/p/redmi-note-17-pro/redmi-13.webp",
+      "img/p/redmi-note-17-pro/redmi-14.webp"
+     ]
+    },
+    {
+     "name": "Purple",
+     "hex": "#C9B6E4",
+     "shots": [
+      "img/p/redmi-note-17-pro/redmi-20.webp",
+      "img/p/redmi-note-17-pro/redmi-19.webp",
+      "img/p/redmi-note-17-pro/redmi-17.webp",
+      "img/p/redmi-note-17-pro/redmi-18.webp"
+     ]
+    },
+    {
+     "name": "Blue",
+     "hex": "#A9C8E8",
+     "shots": [
+      "img/p/redmi-note-17-pro/redmi-24.webp",
+      "img/p/redmi-note-17-pro/redmi-23.webp",
+      "img/p/redmi-note-17-pro/redmi-21.webp",
+      "img/p/redmi-note-17-pro/redmi-22.webp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "redmi-note-17",
+   "brand": "Redmi",
+   "name": "Redmi Note 17 5G",
+   "display": "6.99-inch (17.75cm) AMOLED, 120Hz",
+   "chip": "Snapdragon 4 Gen 4",
+   "cam": "50MP AI dual camera",
+   "front": "8MP",
+   "batt": "8,000mAh, 45W fast charging",
+   "os": "HyperOS 3",
+   "highlights": "",
+   "src": "https://www.mi.com/in/",
+   "variants": [
+    {
+     "id": "6-128",
+     "label": "6GB + 128GB",
+     "price": 20000,
+     "mrp": 39999,
+     "stock": true
+    },
+    {
+     "id": "8-256",
+     "label": "8GB + 256GB",
+     "price": 29000,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Black",
+     "hex": "#222222",
+     "shots": [
+      "img/p/redmi-note-17/redmi-27.webp",
+      "img/p/redmi-note-17/redmi-26.webp",
+      "img/p/redmi-note-17/redmi-25.webp"
+     ]
+    },
+    {
+     "name": "Purple",
+     "hex": "#B9AEE8",
+     "shots": [
+      "img/p/redmi-note-17/redmi-30.webp",
+      "img/p/redmi-note-17/redmi-29.webp",
+      "img/p/redmi-note-17/redmi-28.webp"
+     ]
+    },
+    {
+     "name": "Light Blue",
+     "hex": "#A8D4DC",
+     "shots": [
+      "img/p/redmi-note-17/redmi-33.webp",
+      "img/p/redmi-note-17/redmi-32.webp",
+      "img/p/redmi-note-17/redmi-31.webp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "redmi-17",
+   "brand": "Redmi",
+   "name": "Redmi 17 5G",
+   "display": "6.9-inch, 120Hz",
+   "chip": "Snapdragon 4 Gen 5",
+   "cam": "50MP AI dual camera",
+   "front": "8MP",
+   "batt": "7,900mAh, 45W fast charging",
+   "os": "HyperOS 3",
+   "highlights": "IP64 splash resistance.",
+   "src": "https://www.mi.com/in/",
+   "variants": [
+    {
+     "id": "6-128",
+     "label": "6GB + 128GB",
+     "price": 22500,
+     "mrp": 39999,
+     "stock": true
+    },
+    {
+     "id": "8-128",
+     "label": "8GB + 128GB",
+     "price": 25500,
+     "mrp": 39999,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Black",
+     "hex": "#222222",
+     "shots": [
+      "img/p/redmi-17/redmi-36.webp",
+      "img/p/redmi-17/redmi-35.webp",
+      "img/p/redmi-17/redmi-34.webp"
+     ]
+    },
+    {
+     "name": "Blue",
+     "hex": "#22346E",
+     "shots": [
+      "img/p/redmi-17/redmi-38.webp",
+      "img/p/redmi-17/redmi-37.webp",
+      "img/p/redmi-17/redmi-39.webp"
+     ]
+    },
+    {
+     "name": "Orange",
+     "hex": "#E06A45",
+     "shots": [
+      "img/p/redmi-17/redmi-42.webp",
+      "img/p/redmi-17/redmi-41.webp",
+      "img/p/redmi-17/redmi-40.webp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "redmi-17c",
+   "brand": "Redmi",
+   "name": "Redmi 17C 5G",
+   "display": "6.9-inch HD+, 120Hz",
+   "chip": "MediaTek Dimensity 6300",
+   "cam": "50MP rear",
+   "front": "8MP",
+   "batt": "6,000mAh, 33W fast charging",
+   "os": "HyperOS 3",
+   "highlights": "IP64. Colours: Coffee Brew, Purple Dawn, Dark Night.",
+   "src": "https://www.mi.com/in/",
+   "variants": [
+    {
+     "id": "4-128",
+     "label": "4GB + 128GB",
+     "price": 19500,
+     "mrp": 39999,
+     "stock": true
+    },
+    {
+     "id": "6-128",
+     "label": "6GB + 128GB",
+     "price": 21500,
+     "mrp": 39999,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Coffee Brew",
+     "hex": "#B8946A",
+     "shots": [
+      "img/p/redmi-17c/redmi-47.webp",
+      "img/p/redmi-17c/redmi-45.webp",
+      "img/p/redmi-17c/redmi-46.webp"
+     ]
+    },
+    {
+     "name": "Dark Night",
+     "hex": "#2A2A2A",
+     "shots": [
+      "img/p/redmi-17c/redmi-49.webp",
+      "img/p/redmi-17c/redmi-48.webp",
+      "img/p/redmi-17c/redmi-44.webp"
+     ]
+    },
+    {
+     "name": "Purple Dawn",
+     "hex": "#A08AB8",
+     "shots": [
+      "img/p/redmi-17c/redmi-50.webp",
+      "img/p/redmi-17c/redmi-53.webp",
+      "img/p/redmi-17c/redmi-51.webp",
+      "img/p/redmi-17c/redmi-52.webp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "redmi-15a",
+   "brand": "Redmi",
+   "name": "Redmi 15A 5G",
+   "display": "6.9-inch HD+, 120Hz",
+   "chip": "Unisoc T8300 5G",
+   "cam": "32MP rear",
+   "front": "8MP",
+   "batt": "6,300mAh, 15W charging",
+   "os": "HyperOS 3 / Android 16",
+   "highlights": "Colours: Awesome Blue, Amaze Purple, Ace Black.",
+   "src": "https://www.mi.com/in/",
+   "variants": [
+    {
+     "id": "4-64",
+     "label": "4GB + 64GB",
+     "price": 15500,
+     "mrp": 16999,
+     "stock": true
+    },
+    {
+     "id": "4-128",
+     "label": "4GB + 128GB",
+     "price": 17500,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "6-128",
+     "label": "6GB + 128GB",
+     "price": 19000,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Ace Black",
+     "hex": "#222222",
+     "shots": [
+      "img/p/redmi-15a/redmi-57.webp",
+      "img/p/redmi-15a/redmi-56.webp",
+      "img/p/redmi-15a/redmi-54.webp",
+      "img/p/redmi-15a/redmi-55.webp"
+     ]
+    },
+    {
+     "name": "Amaze Purple",
+     "hex": "#D8C8E6",
+     "shots": [
+      "img/p/redmi-15a/redmi-61.webp",
+      "img/p/redmi-15a/redmi-60.webp",
+      "img/p/redmi-15a/redmi-58.webp",
+      "img/p/redmi-15a/redmi-59.webp"
+     ]
+    },
+    {
+     "name": "Awesome Blue",
+     "hex": "#7E9CC0",
+     "shots": [
+      "img/p/redmi-15a/redmi-63.webp",
+      "img/p/redmi-15a/redmi-64.webp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "moto-g06-power",
+   "brand": "Motorola",
+   "name": "Moto G06 Power",
+   "display": "6.88-inch HD+, 120Hz",
+   "chip": "MediaTek Helio G81 Extreme",
+   "cam": "50MP rear",
+   "front": "8MP",
+   "batt": "7,000mAh",
+   "os": "Android 15",
+   "highlights": "",
+   "src": "https://www.motorola.com/in/",
+   "variants": [
+    {
+     "id": "4-64",
+     "label": "4GB + 64GB",
+     "price": 12000,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Green",
+     "hex": "#6E9A3A",
+     "shots": [
+      "img/p/moto-g06-power/moto-01.webp",
+      "img/p/moto-g06-power/moto-02.webp",
+      "img/p/moto-g06-power/moto-03.webp",
+      "img/p/moto-g06-power/moto-04.webp"
+     ]
+    },
+    {
+     "name": "Beige",
+     "hex": "#B8AE98",
+     "shots": [
+      "img/p/moto-g06-power/moto-05.webp",
+      "img/p/moto-g06-power/moto-06.webp",
+      "img/p/moto-g06-power/moto-07.webp",
+      "img/p/moto-g06-power/moto-08.webp"
+     ]
+    },
+    {
+     "name": "Teal",
+     "hex": "#3F5F6A",
+     "shots": [
+      "img/p/moto-g06-power/moto-09.webp",
+      "img/p/moto-g06-power/moto-10.webp",
+      "img/p/moto-g06-power/moto-11.webp",
+      "img/p/moto-g06-power/moto-12.webp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "moto-g37-power",
+   "brand": "Motorola",
+   "name": "Moto G37 Power",
+   "display": "6.7-inch HD+, 120Hz, 1050 nits",
+   "chip": "MediaTek Dimensity 6400",
+   "cam": "50MP AI camera",
+   "front": "",
+   "batt": "7,000mAh, 30W TurboPower",
+   "os": "Android 16",
+   "highlights": "MIL-STD-810H durability. Colours: Nautical Blue, Impenetrable, Capri.",
+   "src": "https://www.motorola.com/in/",
+   "variants": [
+    {
+     "id": "4-64",
+     "label": "4GB + 64GB",
+     "price": 15000,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "4-128",
+     "label": "4GB + 128GB",
+     "price": 17000,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "8-128",
+     "label": "8GB + 128GB",
+     "price": 23000,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Impenetrable (Black)",
+     "hex": "#3B3B3E",
+     "shots": [
+      "img/p/moto-g37-power/moto-13.webp",
+      "img/p/moto-g37-power/moto-14.webp",
+      "img/p/moto-g37-power/moto-15.webp",
+      "img/p/moto-g37-power/moto-16.webp"
+     ]
+    },
+    {
+     "name": "Nautical Blue",
+     "hex": "#2547A0",
+     "shots": [
+      "img/p/moto-g37-power/moto-17.webp",
+      "img/p/moto-g37-power/moto-18.webp",
+      "img/p/moto-g37-power/moto-19.webp",
+      "img/p/moto-g37-power/moto-20.webp"
+     ]
+    },
+    {
+     "name": "Capri",
+     "hex": "#2BB3C0",
+     "shots": [
+      "img/p/moto-g37-power/moto-21.webp",
+      "img/p/moto-g37-power/moto-22.webp",
+      "img/p/moto-g37-power/moto-23.webp",
+      "img/p/moto-g37-power/moto-24.webp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "moto-g77-power",
+   "brand": "Motorola",
+   "name": "Moto G77 Power",
+   "display": "6.72-inch FHD+, 120Hz",
+   "chip": "MediaTek Dimensity 6400",
+   "cam": "50MP Sony LYTIA 600",
+   "front": "32MP",
+   "batt": "7,000mAh, 30W TurboPower",
+   "os": "Android 16",
+   "highlights": "Vegan leather finish. Colours: Fuchsia Red, Nautical Blue, Impenetrable.",
+   "src": "https://www.motorola.in/smartphones-moto-g77-power/p?skuId=692",
+   "colours": [],
+   "variants": [
+    {
+     "id": "4-128",
+     "label": "4GB + 128GB",
+     "price": 19000,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "8-128",
+     "label": "8GB + 128GB",
+     "price": 25000,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false
+  },
+  {
+   "id": "moto-g-max",
+   "brand": "Motorola",
+   "name": "Moto G Max",
+   "display": "6.72-inch FHD+, 120Hz",
+   "chip": "Snapdragon 6s Gen 4",
+   "cam": "50MP Sony LYTIA 600 + 8MP",
+   "front": "32MP",
+   "batt": "7,000mAh silicon-carbon, 30W",
+   "os": "Android 16",
+   "highlights": "Stereo speakers with Dolby Atmos, IP64, MIL-STD-810H, Gorilla Glass 7i.",
+   "src": "https://www.motorola.com/in/",
+   "variants": [
+    {
+     "id": "4-128",
+     "label": "4GB + 128GB",
+     "price": 19500,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "6-128",
+     "label": "6GB + 128GB",
+     "price": 21500,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Stargazer",
+     "hex": "#3E5560",
+     "shots": [
+      "img/p/moto-g-max/moto-25.webp",
+      "img/p/moto-g-max/moto-26.webp",
+      "img/p/moto-g-max/moto-27.webp",
+      "img/p/moto-g-max/moto-28.webp",
+      "img/p/moto-g-max/moto-29.webp"
+     ]
+    },
+    {
+     "name": "Alaskan Blue",
+     "hex": "#7DB3E0",
+     "shots": [
+      "img/p/moto-g-max/moto-30.webp",
+      "img/p/moto-g-max/moto-31.webp",
+      "img/p/moto-g-max/moto-32.webp",
+      "img/p/moto-g-max/moto-33.webp",
+      "img/p/moto-g-max/moto-34.webp"
+     ]
+    },
+    {
+     "name": "Malaga",
+     "hex": "#C55A80",
+     "shots": [
+      "img/p/moto-g-max/moto-35.webp",
+      "img/p/moto-g-max/moto-36.webp",
+      "img/p/moto-g-max/moto-37.webp",
+      "img/p/moto-g-max/moto-38.webp",
+      "img/p/moto-g-max/moto-39.webp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "motorola-edge-70-fusion",
+   "brand": "Motorola",
+   "name": "Motorola Edge 70 Fusion",
+   "display": "6.8-inch 1.5K quad-curved AMOLED, 144Hz",
+   "chip": "Snapdragon 7s Gen 4",
+   "cam": "50MP Sony LYTIA 710 + ultra-wide",
+   "front": "32MP",
+   "batt": "7,000mAh, 68W",
+   "os": "Android 16",
+   "highlights": "Pantone colours: Silhouette, Country Air, Blue Surf.",
+   "src": "https://www.motorola.com/in/",
+   "variants": [
+    {
+     "id": "8-128",
+     "label": "8GB + 128GB",
+     "price": 31000,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "12-256",
+     "label": "12GB + 256GB",
+     "price": 35000,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "12-512",
+     "label": "12GB + 512GB",
+     "price": 39000,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Silhouette",
+     "hex": "#2E3446",
+     "shots": [
+      "img/p/motorola-edge-70-fusion/moto-40.webp",
+      "img/p/motorola-edge-70-fusion/moto-41.webp",
+      "img/p/motorola-edge-70-fusion/moto-42.webp",
+      "img/p/motorola-edge-70-fusion/moto-45.webp"
+     ]
+    },
+    {
+     "name": "Country Air",
+     "hex": "#C9D6E0",
+     "shots": [
+      "img/p/motorola-edge-70-fusion/moto-43.webp",
+      "img/p/motorola-edge-70-fusion/moto-44.webp",
+      "img/p/motorola-edge-70-fusion/moto-46.webp",
+      "img/p/motorola-edge-70-fusion/moto-47.webp"
+     ]
+    },
+    {
+     "name": "Blue Surf",
+     "hex": "#8FB9AA",
+     "shots": [
+      "img/p/motorola-edge-70-fusion/moto-48.webp",
+      "img/p/motorola-edge-70-fusion/moto-49.webp",
+      "img/p/motorola-edge-70-fusion/moto-50.webp",
+      "img/p/motorola-edge-70-fusion/moto-51.webp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "motorola-edge-70-pro",
+   "brand": "Motorola",
+   "name": "Motorola Edge 70 Pro",
+   "display": "144Hz AMOLED",
+   "chip": "MediaTek Dimensity 8500 Extreme",
+   "cam": "50MP triple camera",
+   "front": "",
+   "batt": "6,500mAh, 90W",
+   "os": "Android 16",
+   "highlights": "IP68 / IP69. Pantone Lily White (marble), Tea (satin), Titan (fabric).",
+   "src": "https://www.motorola.com/in/",
+   "variants": [
+    {
+     "id": "8-256",
+     "label": "8GB + 256GB",
+     "price": 40000,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "12-256",
+     "label": "12GB + 256GB",
+     "price": 43000,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Lily White",
+     "hex": "#E8E6E0",
+     "shots": [
+      "img/p/motorola-edge-70-pro/moto-56.webp",
+      "img/p/motorola-edge-70-pro/moto-57.webp",
+      "img/p/motorola-edge-70-pro/moto-58.webp",
+      "img/p/motorola-edge-70-pro/moto-59.webp"
+     ]
+    },
+    {
+     "name": "Titan",
+     "hex": "#22324F",
+     "shots": [
+      "img/p/motorola-edge-70-pro/moto-60.webp",
+      "img/p/motorola-edge-70-pro/moto-61.webp",
+      "img/p/motorola-edge-70-pro/moto-62.webp",
+      "img/p/motorola-edge-70-pro/moto-63.webp"
+     ]
+    },
+    {
+     "name": "Tea",
+     "hex": "#8C9A6E",
+     "shots": [
+      "img/p/motorola-edge-70-pro/moto-64.webp",
+      "img/p/motorola-edge-70-pro/moto-65.webp",
+      "img/p/motorola-edge-70-pro/moto-66.webp",
+      "img/p/motorola-edge-70-pro/moto-67.webp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "motorola-edge-70-pro-plus",
+   "brand": "Motorola",
+   "name": "Motorola Edge 70 Pro+",
+   "display": "6.8-inch 1.5K quad-curved AMOLED, 144Hz",
+   "chip": "",
+   "cam": "50MP Sony LYT-710 OIS + 50MP 3.5x periscope + 50MP ultra-wide",
+   "front": "",
+   "batt": "6,500mAh, 90W wired + 15W wireless",
+   "os": "Android 16",
+   "highlights": "Pantone Zinfandel, Chicory Coffee (wood), Stormy Sea.",
+   "src": "https://www.motorola.in/smartphones-motorola-edge-70-pro-plus/p?skuId=675",
+   "variants": [
+    {
+     "id": "12-256",
+     "label": "12GB + 256GB",
+     "price": 48000,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Zinfandel",
+     "hex": "#6E1F2A",
+     "shots": [
+      "img/p/motorola-edge-70-pro-plus/moto-68.webp",
+      "img/p/motorola-edge-70-pro-plus/moto-69.webp",
+      "img/p/motorola-edge-70-pro-plus/moto-70.webp",
+      "img/p/motorola-edge-70-pro-plus/moto-71.webp"
+     ]
+    },
+    {
+     "name": "Chicory Coffee",
+     "hex": "#5A4030",
+     "shots": [
+      "img/p/motorola-edge-70-pro-plus/moto-72.webp",
+      "img/p/motorola-edge-70-pro-plus/moto-73.webp",
+      "img/p/motorola-edge-70-pro-plus/moto-74.webp",
+      "img/p/motorola-edge-70-pro-plus/moto-75.webp"
+     ]
+    },
+    {
+     "name": "Stormy Sea",
+     "hex": "#5F8285",
+     "shots": [
+      "img/p/motorola-edge-70-pro-plus/moto-76.webp",
+      "img/p/motorola-edge-70-pro-plus/moto-77.webp",
+      "img/p/motorola-edge-70-pro-plus/moto-78.webp",
+      "img/p/motorola-edge-70-pro-plus/moto-79.webp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "motorola-edge-70-max",
+   "brand": "Motorola",
+   "name": "Motorola Edge 70 Max",
+   "display": "6.8-inch Quad HD+ LTPO AMOLED, 144Hz, 7000 nits",
+   "chip": "Snapdragon 8 Gen 5",
+   "cam": "50MP Sony LYTIA 710 OIS main",
+   "front": "",
+   "batt": "7,100mAh, 90W wired + 25W magnetic wireless",
+   "os": "Android 16",
+   "highlights": "IP68 / IP69, MIL-STD-810H, Gorilla Glass 7i.",
+   "src": "https://www.motorola.com/in/",
+   "variants": [
+    {
+     "id": "8-256",
+     "label": "8GB + 256GB",
+     "price": 55000,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "12-256",
+     "label": "12GB + 256GB",
+     "price": 60000,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Dark Shadow",
+     "hex": "#2F3335",
+     "shots": [
+      "img/p/motorola-edge-70-max/moto-80.webp",
+      "img/p/motorola-edge-70-max/moto-81.webp",
+      "img/p/motorola-edge-70-max/moto-82.webp",
+      "img/p/motorola-edge-70-max/moto-83.webp",
+      "img/p/motorola-edge-70-max/moto-84.webp",
+      "img/p/motorola-edge-70-max/moto-85.webp"
+     ]
+    },
+    {
+     "name": "Ice Melt",
+     "hex": "#A9C6DC",
+     "shots": [
+      "img/p/motorola-edge-70-max/moto-86.webp",
+      "img/p/motorola-edge-70-max/moto-87.webp",
+      "img/p/motorola-edge-70-max/moto-88.webp",
+      "img/p/motorola-edge-70-max/moto-89.webp",
+      "img/p/motorola-edge-70-max/moto-90.webp",
+      "img/p/motorola-edge-70-max/moto-91.webp"
+     ]
+    },
+    {
+     "name": "Aqua Gray",
+     "hex": "#7E978C",
+     "shots": [
+      "img/p/motorola-edge-70-max/moto-92.webp",
+      "img/p/motorola-edge-70-max/moto-93.webp",
+      "img/p/motorola-edge-70-max/moto-94.webp",
+      "img/p/motorola-edge-70-max/moto-95.webp",
+      "img/p/motorola-edge-70-max/moto-96.webp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vivo-y11",
+   "brand": "vivo",
+   "name": "vivo Y11 5G",
+   "display": "6.74-inch HD+ LCD, 120Hz",
+   "chip": "MediaTek Dimensity 6300",
+   "cam": "13MP rear",
+   "front": "5MP",
+   "batt": "6,500mAh, 15W",
+   "os": "OriginOS 6 / Android 16",
+   "highlights": "IP65. Photos shared with Y21 (same body design).",
+   "src": "https://www.vivo.com/in/products/y11-5g",
+   "variants": [
+    {
+     "id": "4-64",
+     "label": "4GB + 64GB",
+     "price": 16500,
+     "mrp": 18999,
+     "stock": true
+    },
+    {
+     "id": "4-128",
+     "label": "4GB + 128GB",
+     "price": 19500,
+     "mrp": 22499,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Sunrise Gold / Midnight Blue",
+     "hex": "#D9C8A8",
+     "shots": [
+      "img/p/vivo-y11/vivo-05.webp",
+      "img/p/vivo-y11/vivo-06.webp",
+      "img/p/vivo-y11/vivo-03.webp",
+      "img/p/vivo-y11/vivo-04.webp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vivo-y21",
+   "brand": "vivo",
+   "name": "vivo Y21 5G",
+   "display": "6.74-inch HD+ LCD, 120Hz",
+   "chip": "MediaTek Dimensity 6300",
+   "cam": "50MP + 0.08MP",
+   "front": "5MP",
+   "batt": "6,500mAh, 44W FlashCharge",
+   "os": "OriginOS 6 / Android 16",
+   "highlights": "IP65.",
+   "src": "https://www.vivo.com/in/products/y21-5g",
+   "variants": [
+    {
+     "id": "4-64",
+     "label": "4GB + 64GB",
+     "price": 18000,
+     "mrp": 20999,
+     "stock": true
+    },
+    {
+     "id": "4-128",
+     "label": "4GB + 128GB",
+     "price": 20500,
+     "mrp": 23999,
+     "stock": true
+    },
+    {
+     "id": "6-128",
+     "label": "6GB + 128GB",
+     "price": 24000,
+     "mrp": 27999,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Champagne Gold / Midnight Blue",
+     "hex": "#D9C8A8",
+     "shots": [
+      "img/p/vivo-y21/vivo-05.webp",
+      "img/p/vivo-y21/vivo-06.webp",
+      "img/p/vivo-y21/vivo-03.webp",
+      "img/p/vivo-y21/vivo-04.webp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vivo-y31t",
+   "brand": "vivo",
+   "name": "vivo Y31t 5G",
+   "display": "6.75-inch HD+ LCD, 120Hz",
+   "chip": "Snapdragon 4 Gen 2",
+   "cam": "50MP + 2MP bokeh",
+   "front": "8MP",
+   "batt": "7,200mAh, 44W",
+   "os": "OriginOS 6 / Android 16",
+   "highlights": "IP68 & IP69.",
+   "src": "https://www.vivo.com/in/products/param/y31t-5g",
+   "variants": [
+    {
+     "id": "4-128",
+     "label": "4GB + 128GB",
+     "price": 23000,
+     "mrp": 26999,
+     "stock": true
+    },
+    {
+     "id": "6-128",
+     "label": "6GB + 128GB",
+     "price": 27000,
+     "mrp": 31499,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Crimson Red / Seashore Green / Golden Mist",
+     "hex": "#8E2A2E",
+     "shots": [
+      "img/p/vivo-y31t/vivo-10.webp",
+      "img/p/vivo-y31t/vivo-09.webp",
+      "img/p/vivo-y31t/vivo-07.webp",
+      "img/p/vivo-y31t/vivo-08.webp",
+      "img/p/vivo-y31t/vivo-11.webp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vivo-y51-pro",
+   "brand": "vivo",
+   "name": "vivo Y51 Pro 5G",
+   "display": "6.75-inch HD+ LCD, 120Hz",
+   "chip": "MediaTek Dimensity 7360-Turbo",
+   "cam": "50MP + 2MP",
+   "front": "8MP",
+   "batt": "7,200mAh, 44W",
+   "os": "OriginOS 6 / Android 16",
+   "highlights": "IP68 & IP69.",
+   "src": "https://www.vivo.com/in/products/param/y51-pro-5g",
+   "variants": [
+    {
+     "id": "8-128",
+     "label": "8GB + 128GB",
+     "price": 30000,
+     "mrp": 34999,
+     "stock": true
+    },
+    {
+     "id": "8-256",
+     "label": "8GB + 256GB",
+     "price": 33000,
+     "mrp": 37999,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Festive Red / Noble Gold",
+     "hex": "#E3D2B6",
+     "shots": [
+      "img/p/vivo-y51-pro/vivo-14.webp",
+      "img/p/vivo-y51-pro/vivo-13.webp",
+      "img/p/vivo-y51-pro/vivo-15.webp",
+      "img/p/vivo-y51-pro/vivo-16.webp",
+      "img/p/vivo-y51-pro/vivo-12.webp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vivo-s2-fe",
+   "brand": "vivo",
+   "name": "vivo S2 FE",
+   "display": "6.83-inch 1.5K AMOLED, 120Hz",
+   "chip": "MediaTek Dimensity 7300e (reported)",
+   "cam": "50MP Sony IMX852",
+   "front": "32MP",
+   "batt": "10,000mAh, 44W",
+   "os": "OriginOS 6 / Android 16",
+   "highlights": "IP68 / IP69. Colours: Stellar Green, Zen White, Titan Black.",
+   "src": "https://www.vivo.com/in/",
+   "variants": [
+    {
+     "id": "6-128",
+     "label": "6GB + 128GB",
+     "price": 34000,
+     "mrp": 38999,
+     "stock": true
+    },
+    {
+     "id": "8-128",
+     "label": "8GB + 128GB",
+     "price": 37000,
+     "mrp": 42999,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Titan Black / Zen White / Stellar Green",
+     "hex": "#4E6B4A",
+     "shots": [
+      "img/p/vivo-s2-fe/vivo-17.webp",
+      "img/p/vivo-s2-fe/vivo-18.webp",
+      "img/p/vivo-s2-fe/vivo-22.webp",
+      "img/p/vivo-s2-fe/vivo-23.webp",
+      "img/p/vivo-s2-fe/vivo-24.webp",
+      "img/p/vivo-s2-fe/vivo-19.webp",
+      "img/p/vivo-s2-fe/vivo-20.webp",
+      "img/p/vivo-s2-fe/vivo-21.webp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vivo-s2",
+   "brand": "vivo",
+   "name": "vivo S2",
+   "display": "6.83-inch 1.5K curved AMOLED, 120Hz",
+   "chip": "MediaTek Dimensity 7360-Turbo",
+   "cam": "50MP + 2MP",
+   "front": "32MP",
+   "batt": "7,050mAh, 44W",
+   "os": "OriginOS 6",
+   "highlights": "IP68 & IP69. Colours: Silk White, Sapphire Blue, Regal Bronze.",
+   "src": "https://www.vivo.com/in/products/s2",
+   "variants": [
+    {
+     "id": "8-128",
+     "label": "8GB + 128GB",
+     "price": 36000,
+     "mrp": 42999,
+     "stock": true
+    },
+    {
+     "id": "8-256",
+     "label": "8GB + 256GB",
+     "price": 41000,
+     "mrp": 48999,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Silk White / Sapphire Blue / Regal Bronze",
+     "hex": "#E8E4DC",
+     "shots": [
+      "img/p/vivo-s2/vivo-25.webp",
+      "img/p/vivo-s2/vivo-35.webp",
+      "img/p/vivo-s2/vivo-29.webp",
+      "img/p/vivo-s2/vivo-30.webp",
+      "img/p/vivo-s2/vivo-31.webp",
+      "img/p/vivo-s2/vivo-32.webp",
+      "img/p/vivo-s2/vivo-33.webp",
+      "img/p/vivo-s2/vivo-34.webp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vivo-v70-fe",
+   "brand": "vivo",
+   "name": "vivo V70 FE",
+   "display": "6.83-inch 1.5K AMOLED, 120Hz",
+   "chip": "MediaTek Dimensity 7360-Turbo",
+   "cam": "200MP OIS + 8MP ultra-wide",
+   "front": "50MP autofocus",
+   "batt": "7,000mAh, 90W",
+   "os": "OriginOS 6 / Android 16",
+   "highlights": "Glow-in-the-dark back (Darkness Glow). IP68 & IP69.",
+   "src": "https://www.vivo.com/in/products/param/v70-fe",
+   "variants": [
+    {
+     "id": "8-128",
+     "label": "8GB + 128GB",
+     "price": 37500,
+     "mrp": 44999,
+     "stock": true
+    },
+    {
+     "id": "8-256",
+     "label": "8GB + 256GB",
+     "price": 42000,
+     "mrp": 49999,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Monsoon Blue / Northern Lights Purple",
+     "hex": "#2C3A6A",
+     "shots": [
+      "img/p/vivo-v70-fe/vivo-28.webp",
+      "img/p/vivo-v70-fe/vivo-27.webp",
+      "img/p/vivo-v70-fe/vivo-43.webp",
+      "img/p/vivo-v70-fe/vivo-44.webp",
+      "img/p/vivo-v70-fe/vivo-26.webp",
+      "img/p/vivo-v70-fe/vivo-45.webp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vivo-v80",
+   "brand": "vivo",
+   "name": "vivo V80",
+   "display": "6.59-inch 1.5K AMOLED, 144Hz",
+   "chip": "Snapdragon 7 Gen 4",
+   "cam": "50MP OIS + 50MP OIS telephoto + 8MP ultra-wide (ZEISS)",
+   "front": "50MP autofocus",
+   "batt": "7,200mAh, 90W FlashCharge",
+   "os": "OriginOS 7 / Android 17",
+   "highlights": "ZEISS cameras. IP68 & IP69.",
+   "src": "https://www.vivo.com/in/products/param/v80",
+   "variants": [
+    {
+     "id": "8-128",
+     "label": "8GB + 128GB",
+     "price": 51000,
+     "mrp": 62999,
+     "stock": true
+    },
+    {
+     "id": "8-256",
+     "label": "8GB + 256GB",
+     "price": 56000,
+     "mrp": 69999,
+     "stock": true
+    },
+    {
+     "id": "8-512",
+     "label": "8GB + 512GB",
+     "price": 65000,
+     "mrp": 79999,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Horizon Blue / Stellar Black / Sunrise Anthem",
+     "hex": "#5E9A92",
+     "shots": [
+      "img/p/vivo-v80/vivo-42.webp",
+      "img/p/vivo-v80/vivo-41.webp",
+      "img/p/vivo-v80/vivo-36.webp",
+      "img/p/vivo-v80/vivo-37.webp",
+      "img/p/vivo-v80/vivo-49.webp",
+      "img/p/vivo-v80/vivo-38.webp",
+      "img/p/vivo-v80/vivo-39.webp",
+      "img/p/vivo-v80/vivo-40.webp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vivo-x300-fe",
+   "brand": "vivo",
+   "name": "vivo X300 FE",
+   "display": "6.31-inch 1.5K AMOLED, 120Hz",
+   "chip": "Snapdragon 8 Gen 5",
+   "cam": "50MP OIS + 50MP 3x telephoto + 8MP ultra-wide (ZEISS)",
+   "front": "50MP autofocus",
+   "batt": "6,500mAh, 90W wired + 40W wireless",
+   "os": "OriginOS 6 / Android 16",
+   "highlights": "Compact flagship. IP68 & IP69.",
+   "src": "https://www.vivo.com/in/products/param/x300-fe",
+   "variants": [
+    {
+     "id": "12-256",
+     "label": "12GB + 256GB",
+     "price": 78000,
+     "mrp": 94999,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "colours": [
+    {
+     "name": "Urban Olive / Lilac Purple / Noir Black",
+     "hex": "#5E7A48",
+     "shots": [
+      "img/p/vivo-x300-fe/vivo-50.webp",
+      "img/p/vivo-x300-fe/vivo-51.webp",
+      "img/p/vivo-x300-fe/vivo-46.webp",
+      "img/p/vivo-x300-fe/vivo-47.webp",
+      "img/p/vivo-x300-fe/vivo-48.webp",
+      "img/p/vivo-x300-fe/vivo-52.webp",
+      "img/p/vivo-x300-fe/vivo-53.webp"
+     ]
+    }
+   ]
+  }
+ ]
+}

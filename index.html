@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ALFATECH Mobiles</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ALFATECH MOBILES — luxurious black & gold storefront preview.
+   Deep black surfaces, warm gold accents and cream typography. Product
+   photographs sit on clean white tiles framed in gold, so the phones stay true
+   while the chrome around them reads premium. */
+:root{
+  --ink:#F2ECDC; --bg:#0A0A0A; --bg2:#141210; --surface:#16130E;
+  --obsidian:#000000; --charcoal:#1C1913;
+  --gold:#D4AF52; --gold-light:#F1DA98; --gold-dark:#8A6A1F; --gold-soft:#1E1A12;
+  --gold-grad:linear-gradient(135deg,#F1DA98 0%,#D4AF52 46%,#9C7A2A 100%);
+  --red:#E0313D; --red-dark:#B51F29; --red-soft:#241315;
+  --muted:#9C927C; --line:#2C271D; --line2:#3C3526; --ok:#62C692; --ok-soft:#10251A;
+  --shadow:0 18px 50px -26px rgba(0,0,0,.85);
+  --glow:0 0 0 1px rgba(212,175,82,.28), 0 20px 48px -26px rgba(0,0,0,.9);
+  --f:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:radial-gradient(1200px 520px at 50% -240px, rgba(212,175,82,.07), transparent 70%), var(--bg); color:var(--ink); font-family:var(--f); font-size:15.5px; line-height:1.55; -webkit-font-smoothing:antialiased}
+body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px); z-index:90; background:var(--obsidian)}
+h1,h2,h3,h4{margin:0; line-height:1.15; letter-spacing:-.015em; font-weight:800; text-wrap:balance; color:var(--ink)}
+p{margin:0}
+a{color:inherit}
+img{max-width:100%; display:block}
+button,input,select,textarea{font:inherit; color:inherit}
+:focus-visible{outline:2px solid var(--gold); outline-offset:2px; border-radius:6px}
+.wrap{max-width:1240px; margin-inline:auto; padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px))}
+.sr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+.muted{color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+.kicker{font-size:12px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+.kicker.gold{color:var(--gold)}
+
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:46px; padding:0 20px; border-radius:10px; border:1.5px solid transparent; font-weight:800; font-size:15px; text-decoration:none; cursor:pointer; white-space:nowrap; transition:background .15s,border-color .15s,color .15s,filter .15s; letter-spacing:.01em}
+.btn-red{background:var(--gold-grad); color:var(--obsidian); box-shadow:0 10px 26px -14px rgba(212,175,82,.5)}
+.btn-red:hover{filter:brightness(1.07)}
+.btn-dark{background:transparent; color:var(--gold); border-color:var(--gold-dark)}
+.btn-dark:hover{border-color:var(--gold); color:var(--gold-light)}
+.btn-gold{background:var(--gold-grad); color:var(--obsidian)}
+.btn-gold:hover{filter:brightness(1.07)}
+.btn-line{background:transparent; border-color:var(--line2); color:var(--ink)}
+.btn-line:hover{border-color:var(--gold); color:var(--gold-light)}
+.btn-wa{background:#1F8F4E; color:#fff}
+.btn.sm{min-height:38px; padding:0 14px; font-size:14px}
+.btn[disabled]{opacity:.45; cursor:not-allowed}
+.link{font-weight:700; text-decoration:underline; text-underline-offset:3px; background:none; border:0; padding:0; cursor:pointer; color:var(--gold)}
+.link:hover{color:var(--gold-light)}
+
+/* preview strip */
+.pv{background:var(--bg2); border-bottom:1px solid var(--line); font-size:12.5px; color:var(--muted)}
+.pv b{color:var(--gold)}
+.pv .wrap{padding-block:7px}
+
+/* header */
+.hdr{position:sticky; top:env(safe-area-inset-top,0px); z-index:70; background:rgba(8,7,5,.9); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); color:var(--ink); border-bottom:1px solid var(--line)}
+.hdr-in{display:flex; align-items:center; gap:10px; min-height:62px}
+/* gold ALFATECH wordmark, extreme left */
+.wordmark{flex:none; display:inline-flex; flex-direction:column; justify-content:center; text-decoration:none; margin-right:6px}
+.wordmark b{display:block; font-weight:800; font-size:clamp(19px,2.4vw,24px); letter-spacing:.1em; line-height:1; background:var(--gold-grad); -webkit-background-clip:text; background-clip:text; color:transparent}
+.wordmark span{display:block; font-size:9px; letter-spacing:.34em; color:var(--muted); margin-top:4px; font-weight:700}
+/* icon cluster + supplied logo, extreme right */
+.tools{display:flex; gap:1px; align-items:center; margin-left:auto}
+.ib{position:relative; display:grid; place-items:center; width:42px; height:42px; border-radius:10px; border:0; background:transparent; color:var(--ink); cursor:pointer; text-decoration:none}
+.ib:hover{background:var(--charcoal); color:var(--gold)}
+.ib svg{width:21px; height:21px}
+.badge{position:absolute; top:3px; right:2px; min-width:18px; height:18px; padding:0 5px; border-radius:99px; background:var(--red); color:#fff; font-size:10.5px; font-weight:800; display:grid; place-items:center}
+.badge[data-n="0"]{display:none}
+.hdr-logo{flex:none; margin-left:8px; display:block}
+.hdr-logo img{width:46px; height:46px; border-radius:10px; box-shadow:0 0 0 1px var(--line2)}
+/* brand navigation row */
+.brandnav{border-top:1px solid var(--line); background:var(--obsidian)}
+.brandnav .wrap{display:flex; gap:2px; overflow-x:auto; scrollbar-width:none; -webkit-overflow-scrolling:touch}
+.brandnav .wrap::-webkit-scrollbar{display:none}
+.brandnav a{flex:none; padding:11px 14px; text-decoration:none; font-size:14px; font-weight:600; color:var(--muted); white-space:nowrap; border-bottom:2px solid transparent}
+.brandnav a:hover{color:var(--ink)}
+.brandnav a[aria-current="true"]{color:var(--gold); font-weight:800; border-bottom-color:var(--gold)}
+@media (max-width:560px){ .wordmark span{display:none} .ib{width:38px; height:38px} .hdr-logo img{width:40px; height:40px} }
+
+/* hero */
+.hero{background:linear-gradient(180deg,#0D0B08 0%,#0A0A0A 100%); color:var(--ink); border-bottom:1px solid var(--line)}
+.hero-in{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:30px; align-items:center; padding-block:40px}
+.hero-logo{width:clamp(150px,27vw,210px); height:auto; margin-bottom:14px; filter:drop-shadow(0 10px 34px rgba(212,175,82,.18))}
+.hero .eyebrow{font-size:12px; font-weight:800; letter-spacing:.18em; text-transform:uppercase; color:var(--gold)}
+.hero h1{font-size:clamp(30px,4.6vw,50px); line-height:1.04; letter-spacing:-.03em; margin-top:12px}
+.hero p.sub{margin-top:14px; color:#CFC6B0; max-width:46ch; font-size:16.5px}
+.hero .cta{display:flex; flex-wrap:wrap; gap:10px; margin-top:24px}
+.hero .fine{margin-top:18px; font-size:12.5px; color:var(--muted); max-width:52ch}
+.hero-shot{position:relative; display:grid; place-items:center; gap:14px; background:#FBFAF7; border:1px solid var(--line2); border-radius:20px; padding:22px 22px 18px; box-shadow:var(--glow)}
+.hero-shot img{width:100%; max-width:440px; height:auto; aspect-ratio:1/1; object-fit:contain}
+.hero-sw{display:flex; gap:7px; justify-content:center; margin-top:4px}
+.hero-sw button{width:26px; height:26px; border-radius:50%; border:1.5px solid rgba(0,0,0,.15); background:var(--c); box-shadow:0 0 0 1px rgba(0,0,0,.12) inset; cursor:pointer; padding:0}
+.hero-sw button[aria-pressed="true"]{border-color:var(--gold-dark); box-shadow:0 0 0 2px #FBFAF7 inset, 0 0 0 3px var(--gold)}
+@media (max-width:880px){ .hero-in{grid-template-columns:minmax(0,1fr); gap:20px; padding-block:28px} .hero-shot{order:-1} .hero-shot img{max-width:320px} .hero-logo{margin-inline:auto} }
+
+/* shop-by-brand tiles */
+.btiles{display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:10px}
+.btiles button{min-height:84px; border-radius:14px; border:1px solid var(--line); background:var(--surface); color:var(--ink); cursor:pointer; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; font-weight:800; font-size:15px; transition:border-color .15s, box-shadow .15s}
+.btiles button:hover{border-color:var(--gold-dark); box-shadow:var(--glow)}
+.btiles button small{font-weight:600; font-size:12px; color:var(--muted)}
+
+/* empty section state */
+.esec{border:1px dashed var(--line2); border-radius:14px; padding:26px 22px; background:var(--bg2); max-width:62ch}
+.esec b{display:block; font-size:15px; margin-bottom:6px; color:var(--gold)}
+.esec p{font-size:13.5px; color:#C7BEA8; line-height:1.6}
+.srule{font-size:12px; color:var(--muted); margin-top:-10px; margin-bottom:16px}
+
+/* sections */
+.sec{padding-block:46px}
+.sec.alt{background:var(--bg2); border-block:1px solid var(--line)}
+.sh{display:flex; align-items:flex-end; justify-content:space-between; gap:10px 24px; flex-wrap:wrap; margin-bottom:20px}
+.sh h2{font-size:clamp(22px,2.8vw,30px); margin-top:4px}
+.sh .more{font-weight:700; font-size:14px; text-decoration:none; color:var(--gold); border-bottom:2px solid var(--gold-dark); cursor:pointer}
+.sh .more:hover{border-color:var(--gold)}
+.ttl{font-size:clamp(24px,3vw,32px); margin-top:8px}
+.crumbs{display:flex; flex-wrap:wrap; gap:6px; font-size:13px; color:var(--muted)}
+.crumbs a{text-decoration:none; cursor:pointer}
+.crumbs a:hover{color:var(--gold)}
+
+/* search */
+.sbox form{display:flex; background:var(--surface); border:1.5px solid var(--line2); border-radius:12px; overflow:hidden; max-width:620px}
+.sbox form:focus-within{border-color:var(--gold)}
+.sbox input{flex:1; min-width:0; border:0; padding:0 14px; min-height:52px; background:transparent; outline:none; font-size:16px; color:var(--ink)}
+.sbox button{border:0; background:var(--gold-grad); color:var(--obsidian); padding:0 22px; font-weight:800; cursor:pointer}
+.quick{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+.quick button{min-height:36px; padding:0 14px; border-radius:99px; border:1px solid var(--line2); background:transparent; color:var(--muted); font-size:13.5px; font-weight:600; cursor:pointer}
+.quick button:hover{border-color:var(--gold); color:var(--gold-light)}
+
+/* product grid */
+.grid{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px}
+@media (max-width:1100px){ .grid{grid-template-columns:repeat(3,minmax(0,1fr))} }
+@media (max-width:760px){ .grid{grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px} }
+.card{display:flex; flex-direction:column; background:var(--surface); border:1px solid var(--line); border-radius:14px; overflow:hidden; transition:border-color .15s,box-shadow .15s}
+.card:hover{border-color:var(--gold-dark); box-shadow:var(--glow)}
+.pimg{position:relative; aspect-ratio:1/1; background:linear-gradient(160deg,#1A1610,#0F0D0A); display:flex; flex-direction:column; justify-content:center; padding:16px; text-decoration:none; cursor:pointer}
+.pimg .mk{font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+.pimg .nm{font-size:clamp(16px,1.9vw,21px); font-weight:800; line-height:1.12; color:var(--gold-light); margin-top:4px}
+.pimg .ph{position:absolute; left:16px; bottom:12px; right:16px; font-size:10.5px; color:var(--muted)}
+/* product photography sits on a clean white tile */
+.pimg.hasimg{background:#FFFFFF; padding:0; justify-content:flex-start}
+.pimg.hasimg img{position:absolute; inset:0; width:100%; height:100%; object-fit:contain; padding:6%}
+.pimg.hasimg .mk,.pimg.hasimg .nm,.pimg.hasimg .ph{display:none}
+.pimg .dots{position:absolute; left:12px; bottom:10px; display:flex; gap:5px; z-index:2}
+.pimg .dots i{width:11px; height:11px; border-radius:50%; background:var(--c); box-shadow:0 0 0 1px rgba(0,0,0,.2) inset, 0 0 0 1.5px rgba(255,255,255,.85)}
+.pimg .cct{position:absolute; right:12px; bottom:10px; z-index:2; font-size:10.5px; font-weight:700; color:#6B6355}
+
+.galw{display:flex; flex-direction:column; gap:10px}
+.gal.hasimg{padding:18px; background:#FFFFFF; position:relative}
+.gal.hasimg img{width:100%; height:100%; object-fit:contain}
+.thumbs{display:flex; gap:8px; flex-wrap:wrap}
+.thumbs .th{width:62px; height:62px; padding:4px; border:1.5px solid var(--line2); border-radius:10px; background:#FFFFFF; cursor:pointer}
+.thumbs .th img{width:100%; height:100%; object-fit:contain}
+.thumbs .th[aria-current="true"]{border-color:var(--gold)}
+.swatches{display:flex; gap:8px; flex-wrap:wrap; margin-top:2px}
+.swb{display:inline-flex; align-items:center; gap:7px; padding:6px 12px 6px 8px; border:1.5px solid var(--line2); border-radius:999px; background:var(--surface); color:var(--ink); cursor:pointer; font-size:13px; font-weight:600}
+.swb i{width:16px; height:16px; border-radius:50%; background:var(--c); box-shadow:0 0 0 1px rgba(255,255,255,.18) inset}
+.swb[aria-pressed="true"]{border-color:var(--gold); font-weight:800; color:var(--gold-light)}
+.galnote{font-size:11.5px; color:var(--muted); line-height:1.5}
+.galnote.isrep{color:#E0A95A; font-weight:600}
+.thumbs .th{position:relative}
+.thumbs .th .thd{position:absolute; top:-5px; right:-5px; width:15px; height:15px; border-radius:50%; background:var(--red); color:#fff; font-size:10px; font-weight:800; line-height:15px; text-align:center}
+.cb{padding:12px 14px 14px; display:flex; flex-direction:column; gap:5px; flex:1}
+.cb .br{font-size:11.5px; font-weight:700; color:var(--muted); letter-spacing:.06em; text-transform:uppercase}
+.cb h3{font-size:15.5px}
+.cb h3 a{text-decoration:none; cursor:pointer}
+.cb h3 a:hover{color:var(--gold)}
+.cb .spec{font-size:12.5px; color:#B6AD97; display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden}
+.cb .pr{margin-top:auto; padding-top:8px}
+.cb .pr strong{font-size:18px; font-weight:800; font-variant-numeric:tabular-nums; display:block; color:var(--gold)}
+.cb .pr small{font-size:11.5px; color:var(--muted)}
+.cb .avail{font-size:12.5px; font-weight:700; color:#B6AD97}
+.cact{display:grid; gap:8px; margin-top:8px}
+@media (max-width:760px){ .cb{padding:10px 10px 12px} .cb .spec{display:none} }
+
+/* filters */
+.cat{display:grid; grid-template-columns:240px minmax(0,1fr); gap:24px; align-items:start; padding-block:14px 50px}
+.side{position:sticky; top:calc(80px + env(safe-area-inset-top,0px)); max-height:calc(100dvh - 100px); overflow:auto; padding-right:4px}
+.fg{border-bottom:1px solid var(--line); padding:12px 0}
+.fg>summary{list-style:none; cursor:pointer; font-weight:800; font-size:14px; display:flex; justify-content:space-between}
+.fg>summary::-webkit-details-marker{display:none}
+.fg>summary::after{content:"+"; color:var(--gold)}
+.fg[open]>summary::after{content:"–"}
+.checks{display:grid; gap:6px; margin-top:10px}
+.checks label{display:flex; align-items:center; gap:9px; font-size:14px; cursor:pointer; min-height:28px}
+.checks input{width:16px; height:16px; accent-color:var(--gold); flex:none}
+.checks .ct{margin-left:auto; font-size:12px; color:var(--muted)}
+.minmax{display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:10px}
+.inp{width:100%; min-height:44px; border-radius:10px; border:1.5px solid var(--line2); background:var(--surface); color:var(--ink); padding:9px 12px}
+.inp:focus{border-color:var(--gold); outline:none}
+.toolbar{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between; padding-bottom:12px; border-bottom:1px solid var(--line); margin-bottom:12px}
+.chips{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px; align-items:center}
+.chip{display:inline-flex; align-items:center; gap:6px; min-height:32px; padding:0 10px 0 12px; border-radius:99px; background:var(--bg2); border:1px solid var(--line); font-size:13px; font-weight:600; cursor:pointer}
+.chip:hover{border-color:var(--gold)}
+.chip b{font-size:15px; color:var(--muted)}
+.fbtn{display:none}
+@media (max-width:960px){ .cat{grid-template-columns:minmax(0,1fr)} .side{display:none} .fbtn{display:inline-flex} }
+.empty{grid-column:1/-1; border:1.5px dashed var(--line2); border-radius:14px; padding:36px 20px; text-align:center; display:grid; gap:10px; justify-items:center; color:var(--muted)}
+.empty b{color:var(--gold); font-size:17px}
+.pager{display:flex; justify-content:center; align-items:center; gap:12px; flex-wrap:wrap; margin-top:24px; font-size:14px; color:var(--muted)}
+
+/* product page */
+.pdp{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:34px; align-items:start; padding-block:14px 38px}
+.gal{aspect-ratio:1/1; border:1px solid var(--line2); border-radius:18px; background:linear-gradient(160deg,#1A1610,#0F0D0A); display:grid; place-items:center; padding:30px; text-align:center}
+.gal .mk{font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted)}
+.gal .nm{font-size:clamp(26px,4vw,42px); font-weight:800; margin-top:6px; color:var(--gold-light)}
+.gal .ph{margin-top:22px; font-size:12.5px; color:var(--muted); max-width:34ch}
+.buy{display:grid; gap:16px}
+.buy h1{font-size:clamp(25px,3.2vw,36px)}
+.price strong{font-size:30px; font-weight:800; font-variant-numeric:tabular-nums; color:var(--gold)}
+.note{font-size:13px; color:var(--muted)}
+.olabel{font-size:13.5px; font-weight:800; margin-bottom:8px}
+.facts{display:grid; gap:8px; padding:14px; border-radius:12px; background:var(--bg2); font-size:14px; border:1px solid var(--line)}
+.facts>div{display:flex; justify-content:space-between; gap:12px}
+.facts>div>span:first-child{color:var(--muted)}
+.facts b{text-align:right; min-width:0}
+.bact{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+@media (max-width:900px){ .pdp{grid-template-columns:minmax(0,1fr)} }
+@media (max-width:560px){ .bact{grid-template-columns:1fr} }
+.specs{display:grid; grid-template-columns:1fr 1fr; gap:0 36px; margin-top:16px}
+.specs>div{padding:12px 0; border-bottom:1px solid var(--line)}
+.specs dt{font-size:12.5px; color:var(--muted)}
+.specs dd{margin:0; font-weight:600; margin-top:2px}
+.nv{color:var(--muted); font-style:italic; font-weight:500}
+@media (max-width:640px){ .specs{grid-template-columns:1fr} }
+
+/* generic blocks */
+.cards{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px}
+@media (max-width:860px){ .cards{grid-template-columns:1fr 1fr} }
+@media (max-width:560px){ .cards{grid-template-columns:1fr} }
+.box{border:1px solid var(--line); border-radius:14px; padding:18px; background:var(--surface); display:flex; flex-direction:column; gap:8px}
+.box h3{font-size:17px}
+.box p{font-size:14px; color:#B6AD97}
+.trust{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); border:1px solid var(--line); border-radius:16px; overflow:hidden; background:var(--surface)}
+.trust>div{padding:18px; border-right:1px solid var(--line)}
+.trust>div:last-child{border-right:0}
+.trust b{display:block; font-size:15px}
+.trust p{font-size:13.5px; color:var(--muted); margin-top:4px}
+.trust svg{width:22px; height:22px; color:var(--gold); margin-bottom:8px}
+@media (max-width:860px){ .trust{grid-template-columns:1fr 1fr} .trust>div:nth-child(2){border-right:0} .trust>div:nth-child(-n+2){border-bottom:1px solid var(--line)} }
+@media (max-width:480px){ .trust{grid-template-columns:1fr} .trust>div{border-right:0; border-bottom:1px solid var(--line)} .trust>div:last-child{border-bottom:0} }
+
+/* forms */
+.form{display:grid; gap:14px}
+.two{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.three{display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px}
+@media (max-width:560px){ .two,.three{grid-template-columns:1fr} }
+.field{display:grid; gap:6px; font-size:13.5px; font-weight:700}
+.field input,.field select,.field textarea{width:100%; min-height:46px; border-radius:10px; border:1.5px solid var(--line2); background:var(--surface); color:var(--ink); padding:10px 12px; font-weight:400}
+.field textarea{min-height:84px; resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold); outline:none}
+.agree{display:flex; gap:10px; align-items:flex-start; font-size:13.5px}
+.agree input{width:18px; height:18px; flex:none; margin-top:2px; accent-color:var(--gold)}
+.err{color:var(--red); font-size:13px; font-weight:700}
+.alert{border-radius:10px; padding:12px 14px; font-size:13.5px; background:var(--bg2); border:1px solid var(--line2)}
+.alert.red{background:var(--red-soft); border-color:#5A2A2E}
+.alert.ok{background:var(--ok-soft); border-color:#1E4A34}
+.msg{white-space:pre-wrap; font-family:ui-monospace,Menlo,Consolas,monospace; font-size:13px; background:var(--bg2); border:1px solid var(--line); border-radius:10px; padding:12px; max-height:230px; overflow:auto; color:var(--ink)}
+
+/* cart */
+.ci{display:grid; grid-template-columns:1fr auto; gap:14px; padding:14px 0; border-bottom:1px solid var(--line)}
+.qty{display:flex; align-items:center; gap:6px; margin-top:8px}
+.qty button{width:30px; height:30px; border-radius:8px; border:1px solid var(--line2); background:var(--surface); color:var(--ink); cursor:pointer}
+.qty span{min-width:24px; text-align:center; font-variant-numeric:tabular-nums}
+.rowline{display:flex; justify-content:space-between; gap:12px; font-size:14.5px}
+.rowline.total{font-weight:800; font-size:16px; padding-top:10px; border-top:1px solid var(--line); color:var(--gold)}
+.sumbox{border:1px solid var(--line); border-radius:14px; padding:20px; display:grid; gap:12px; background:var(--surface)}
+.layout2{display:grid; grid-template-columns:minmax(0,1fr) 340px; gap:28px; align-items:start}
+@media (max-width:900px){ .layout2{grid-template-columns:minmax(0,1fr)} }
+
+/* faq + doc */
+.faq{display:grid; gap:8px; max-width:860px}
+.faq details{border:1px solid var(--line); border-radius:12px; padding:0 16px; background:var(--surface)}
+.faq summary{cursor:pointer; padding:14px 0; font-weight:700; list-style:none; display:flex; justify-content:space-between; gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+"; color:var(--gold); font-size:18px}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding-bottom:14px; color:#B6AD97}
+.doc{max-width:760px; padding-block:26px 50px}
+.doc h1{font-size:clamp(26px,3.4vw,36px); margin:8px 0 12px}
+.doc h2{font-size:18px; margin:24px 0 6px; color:var(--gold-light)}
+.doc p,.doc li{color:#C2B9A3}
+.doc ul{padding-left:20px}
+
+/* footer */
+.foot{background:#060504; color:var(--muted); padding-block:42px calc(26px + env(safe-area-inset-bottom,0px)); border-top:2px solid var(--gold-dark); margin-top:20px}
+.foot-in{display:grid; grid-template-columns:1.3fr repeat(3,1fr); gap:28px}
+.foot-in img{box-shadow:0 0 0 1px var(--line2); border-radius:12px}
+.foot h4{color:var(--gold); font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; margin-bottom:12px}
+.foot ul{list-style:none; margin:0; padding:0; display:grid; gap:8px}
+.foot a{color:#C2B9A3; text-decoration:none; font-size:14.5px; cursor:pointer}
+.foot a:hover{color:var(--gold)}
+.foot-base{display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; margin-top:30px; padding-top:16px; border-top:1px solid #241F18; font-size:12.5px}
+@media (max-width:820px){ .foot-in{grid-template-columns:1fr 1fr} .foot-in>div:first-child{grid-column:1/-1} }
+
+/* dialogs */
+dialog{border:0; padding:0; background:var(--bg2); color:var(--ink); max-width:none; max-height:none}
+dialog::backdrop{background:rgba(0,0,0,.72)}
+dialog.drawer{margin:0 auto 0 0; width:min(400px,100vw); height:100dvh; display:none; flex-direction:column}
+dialog.drawer[open]{display:flex}
+dialog.modal{border-radius:16px; width:min(620px,calc(100vw - 24px)); max-height:calc(100dvh - 24px); overflow:auto; border:1px solid var(--line2)}
+.dh{display:flex; justify-content:space-between; align-items:center; gap:12px; padding:calc(14px + env(safe-area-inset-top,0px)) 18px 14px; border-bottom:1px solid var(--line); position:sticky; top:0; background:var(--bg2); z-index:2}
+dialog.modal .dh{padding-top:14px}
+.dh h2{font-size:18px}
+.db{flex:1; overflow:auto; padding:16px 18px}
+.x{width:38px; height:38px; border-radius:10px; border:1px solid var(--line2); background:var(--surface); color:var(--ink); font-size:20px; cursor:pointer; flex:none}
+.mnav{display:grid}
+.mnav a{padding:14px 4px; border-bottom:1px solid var(--line); text-decoration:none; font-weight:700; font-size:16px; cursor:pointer}
+
+.toast{position:fixed; left:50%; bottom:calc(20px + env(safe-area-inset-bottom,0px)); transform:translate(-50%,160%); visibility:hidden; z-index:100; display:flex; align-items:center; gap:12px; padding:10px 10px 10px 16px; border-radius:12px; background:var(--charcoal); color:var(--ink); border:1px solid var(--line2); box-shadow:0 18px 40px -14px rgba(0,0,0,.7); transition:transform .25s ease; max-width:calc(100vw - 32px); font-size:14px}
+.toast.show{transform:translate(-50%,0); visibility:visible}
+@media (prefers-reduced-motion: reduce){ *{transition:none !important; animation:none !important} html{scroll-behavior:auto} }
+
+/* Exact supplied ALFATECH wordmark */
+.wordmark{width:clamp(150px,22vw,218px);height:auto;margin-right:12px}
+.wordmark-img{display:block;width:100%;height:auto;object-fit:contain}
+@media(max-width:560px){.wordmark{width:clamp(138px,39vw,178px);margin-right:4px}}
+/* Branded opening animation */
+#alfatech-intro{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#000;opacity:1;visibility:visible;transition:opacity .65s ease,visibility .65s ease}
+#alfatech-intro img{width:min(88vw,900px);height:auto;display:block;animation:alfatech-reveal 1.15s cubic-bezier(.2,.8,.2,1) both;filter:drop-shadow(0 0 24px rgba(212,175,82,.12))}
+#alfatech-intro.hide{opacity:0;visibility:hidden;pointer-events:none}
+@keyframes alfatech-reveal{from{opacity:0;transform:scale(.94);filter:blur(7px)}to{opacity:1;transform:scale(1);filter:blur(0)}}
+@media(prefers-reduced-motion:reduce){#alfatech-intro img{animation:none}#alfatech-intro{transition:none}}
+
+
+
+/* ===== ALFATECH mobile-fit refinement ===== */
+html,body{width:100%;max-width:100%;overflow-x:clip}
+body{margin:0}
+#view,.wrap,main,section,header,footer{min-width:0;max-width:100%}
+img,video,svg,canvas{max-width:100%}
+.grid,.cards,.cat,.pdp,.hero-in,.trust,.specs{min-width:0}
+.grid>* ,.cards>* ,.pdp>* ,.hero-in>*{min-width:0}
+@media(max-width:600px){
+  .wrap{padding-left:14px;padding-right:14px}
+  .hdr-in{display:flex;gap:5px;min-height:58px;padding-left:12px;padding-right:12px;min-width:0}
+  .wordmark{width:clamp(112px,34vw,145px);min-width:0;flex:0 1 auto;margin-right:0}
+  .wordmark-img{width:100%;height:auto;max-height:38px;object-fit:contain}
+  .tools{flex:1 1 auto;min-width:0;justify-content:flex-end;gap:0;margin-left:auto}
+  .ib{width:clamp(31px,9vw,36px);height:38px;flex:0 1 36px;min-width:0}
+  .ib svg{width:19px;height:19px}
+  .hdr-logo{display:none!important}
+  .brandnav .wrap{max-width:100%;overflow-x:auto;padding-left:12px;padding-right:12px}
+  .brandnav a{padding:10px 12px;font-size:13px}
+  .hero-in{grid-template-columns:minmax(0,1fr);gap:18px;padding-block:24px}
+  .hero-shot{order:-1}
+  .hero-shot img{width:min(100%,300px);max-width:100%;margin-inline:auto}
+  .hero h1{font-size:clamp(27px,8vw,36px)}
+  .ttl{font-size:clamp(27px,7.5vw,34px)}
+  .cat{grid-template-columns:minmax(0,1fr)}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .card{min-width:0;border-radius:12px}
+  .pimg{padding:8px;min-width:0}
+  .pimg img{width:100%;height:auto;object-fit:contain}
+  .card .body,.card .info{min-width:0;padding:12px}
+  .card h3,.card .name{overflow-wrap:anywhere;font-size:clamp(14px,3.8vw,18px)}
+  .card .price,.price strong{font-size:clamp(17px,4.7vw,23px)}
+  .toolbar{display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+  .toolbar>div{max-width:100%;flex-wrap:wrap}
+  .toolbar select,.inp{max-width:100%;min-width:0}
+  .btn{max-width:100%;white-space:normal}
+  .pdp{grid-template-columns:minmax(0,1fr);gap:18px}
+  .gal{padding:18px;min-width:0}
+  .specs{grid-template-columns:minmax(0,1fr)}
+  .trust{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .trust>div{min-width:0;padding:12px}
+  .wrap>*{min-width:0}
+}
+@media(max-width:380px){
+  .wordmark{width:108px}
+  .ib{width:31px;flex-basis:31px}
+  .hdr-in{gap:3px}
+  .grid{gap:7px}
+  .card .body,.card .info{padding:9px}
+}
+
+.emibox{display:grid;gap:10px;padding:14px;border-radius:12px;border:1px solid var(--line);background:var(--bg2)}
+.emit{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px}
+.emit div{display:grid;gap:2px;padding:10px;border-radius:10px;background:rgba(255,255,255,.05);border:1px solid var(--line);font-size:13px;color:inherit}
+.emit span{opacity:.8}.emit b{color:var(--gold,#d4af52)}
+.emit b{font-size:17px}.emit small{font-weight:500;font-size:12px;color:var(--muted)}.emit em{font-style:normal;font-size:12px;color:var(--muted)}
+.vpick{display:flex;flex-wrap:wrap;gap:8px}
+.vpick a{display:grid;gap:2px;padding:9px 12px;border-radius:10px;border:1.5px solid var(--line);font-weight:700;font-size:14px;text-decoration:none;color:inherit;background:rgba(255,255,255,.04)}
+.vpick a small{font-weight:600;color:var(--muted);font-size:12px}
+.vpick a[aria-current="true"]{border-color:var(--gold,#b8913a);box-shadow:0 0 0 2px rgba(184,145,58,.25)}
+.vpick a.oos{opacity:.55}
+.emil{color:#1F8F4E!important;font-weight:700}
+.avail.oos{color:#b3261e}
+.cact{display:flex;gap:8px}.cact .btn{flex:1}.cact .btn-wa{flex:0 0 auto}
+.btn[disabled]{opacity:.5;pointer-events:none}
+.pimg.hasimg img{object-fit:contain;background:#fff}
+@media(max-width:640px){.hero .wrap>div{grid-template-columns:1fr!important}.hero-shot{display:none!important}}
+</style>
+</head>
+<body>
+<div id="alfatech-intro" aria-label="ALFATECH MOBILES"><img src="img/alfatech-wordmark.webp" alt="ALFATECH MOBILES"></div>
+
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="wordmark" href="#home" aria-label="ALFATECH MOBILES, home"><img src="img/alfatech-wordmark.webp" alt="ALFATECH MOBILES" class="wordmark-img"></a>
+    <div class="tools">
+      <a class="ib" href="#search" aria-label="Search smartphones"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></a>
+      <a class="ib" href="#account" aria-label="Your account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></a>
+      <button class="ib" id="cartBtn" type="button" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.2 11h10.6L20 7H7"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg><span class="badge" id="cartN" data-n="0">0</span></button>
+      <button class="ib" id="menuBtn" type="button" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+    <a class="hdr-logo" href="#home" aria-label="ALFATECH MOBILES"><img src="img/logo.webp" alt="ALFATECH MOBILES logo" width="42" height="42"></a>
+  </div>
+  <nav class="brandnav" aria-label="Brands"><div class="wrap" id="brandnav"></div></nav>
+</header>
+
+<main id="view" tabindex="-1"></main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-in">
+      <div>
+        <img src="img/logo.webp" alt="ALFATECH MOBILES" width="56" height="56" style="border-radius:10px">
+        <p style="margin-top:12px; font-size:14px; line-height:1.6" id="footAddr"></p>
+      </div>
+      <div><h4>Shop</h4><ul>
+        <li><a href="#shop">All smartphones</a></li>
+        <li><a href="#brands">All brands</a></li>
+        <li><a href="#search">Search</a></li>
+      </ul></div>
+      <div><h4>Help</h4><ul>
+        <li><a href="#contact">Contact us</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#track">Track order</a></li>
+      </ul></div>
+      <div><h4>Policies</h4><ul>
+        <li><a href="#shipping">Shipping &amp; delivery</a></li>
+        <li><a href="#returns">Cancellation &amp; returns</a></li>
+        <li><a href="#privacy">Privacy policy</a></li>
+        <li><a href="#terms">Terms &amp; conditions</a></li>
+        <li><a href="/owner" rel="nofollow">Owner login</a></li>
+      </ul></div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 ALFATECH MOBILES</span>
+      <span id="footNote"></span>
+    </div>
+  </div>
+</footer>
+
+<dialog class="drawer" id="menu" aria-label="Menu"><div class="dh"><h2>Menu</h2><button class="x" data-close type="button" aria-label="Close">×</button></div><div class="db"><nav class="mnav" id="mnav"></nav></div></dialog>
+<dialog class="drawer" id="filters" aria-label="Filters" style="margin:0 0 0 auto"><div class="dh"><h2>Filter</h2><button class="x" data-close type="button" aria-label="Close">×</button></div><div class="db" id="filtersBody"></div><div style="padding:14px 18px calc(14px + env(safe-area-inset-bottom,0px)); border-top:1px solid var(--line)"><button class="btn btn-dark" data-close type="button" style="width:100%">Show results</button></div></dialog>
+<dialog class="modal" id="wa" aria-labelledby="waTitle"><div class="dh"><h2 id="waTitle">Message the store</h2><button class="x" data-close type="button" aria-label="Close">×</button></div><div class="db" id="waBody"></div></dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"><span id="toastMsg"></span><button class="btn btn-red sm" type="button" id="toastBtn">View cart</button></div>
+
+<script>
+/* Default catalogue (built from the ALFATECH product pack + rate sheet).
+   The live catalogue saved from the owner portal (/owner) overrides it. */
+const DEFAULT_CATALOG = {"version":1,"updated":"2026-11-02","shop":{"name":"ALFATECH MOBILES","phone":"+91 95544 84848","wa":"919554484848","email":"alfatech.mobiles1@gmail.com","addr1":"Nishat Rd, Sadar Bazar","city":"Shahjahanpur","state":"Uttar Pradesh","pin":"242001","deliveryState":"Uttar Pradesh"},"emi":{"tenures":[{"months":3,"rate":0},{"months":6,"rate":0},{"months":9,"rate":0},{"months":12,"rate":0}],"downPayment":0,"note":"EMI amounts are approximate. Final EMI, interest, processing fee and down payment depend on your bank card or finance partner and are confirmed by the shop."},"models":[{"id":"apple-iphone-18-pro-max","brand":"Apple","name":"iPhone 18 Pro Max","display":"6.9-inch Super Retina XDR OLED; ProMotion / Always-On","chip":"Apple A20 Pro","cam":"Triple 48MP Pro Fusion rear camera system","front":"18MP Center Stage front camera","batt":"Up to 43 hours video playback (Apple rating)","os":"iOS","highlights":"Pro Max size. Photos show the iPhone 18 Pro body (same design, smaller size).","src":"https://www.apple.com/in/iphone/","colours":[{"name":"Glacier","hex":"#B8CEE0","shots":["img/iphone-18-pro-glacier-backfront.webp","img/iphone-18-pro-glacier-backside.webp","img/iphone-18-pro-glacier-cam.webp"]},{"name":"Burgundy","hex":"#5E2A33","shots":["img/iphone-18-pro-burgundy-backfront.webp","img/iphone-18-pro-burgundy-backside.webp","img/iphone-18-pro-burgundy-cam.webp"]}],"variants":[{"id":"256","label":"256GB","price":175000,"mrp":null,"stock":true},{"id":"512","label":"512GB","price":198000,"mrp":null,"stock":true}],"hidden":false},{"id":"apple-iphone-18-pro","brand":"Apple","name":"iPhone 18 Pro","display":"6.3-inch Super Retina XDR OLED; ProMotion up to 120Hz","chip":"Apple A20 Pro","cam":"Triple 48MP Pro Fusion rear camera system","front":"18MP Center Stage front camera","batt":"Fast wired charging","os":"iOS","highlights":"","src":"https://www.apple.com/in/shop/buy-iphone/iphone-18-pro","colours":[{"name":"Glacier","hex":"#B8CEE0","shots":["img/iphone-18-pro-glacier-backfront.webp","img/iphone-18-pro-glacier-backside.webp","img/iphone-18-pro-glacier-cam.webp"]},{"name":"Burgundy","hex":"#5E2A33","shots":["img/iphone-18-pro-burgundy-backfront.webp","img/iphone-18-pro-burgundy-backside.webp","img/iphone-18-pro-burgundy-cam.webp"]}],"variants":[{"id":"256","label":"256GB","price":159900,"mrp":null,"stock":true}],"hidden":false},{"id":"apple-iphone-17","brand":"Apple","name":"iPhone 17","display":"6.3-inch Super Retina XDR OLED, ProMotion","chip":"Apple A19","cam":"48MP Fusion dual-camera system","front":"Center Stage front camera","batt":"","os":"iOS","highlights":"","src":"https://www.apple.com/in/shop/buy-iphone/iphone-17","colours":[{"name":"Lavender","hex":"#D9C7E8","shots":["img/apple-iphone-17--lavender-backfront.webp","img/apple-iphone-17--lavender-backside.webp","img/apple-iphone-17--lavender-cam.webp"]},{"name":"Sage","hex":"#C1D09D","shots":["img/apple-iphone-17--sage-backfront.webp","img/apple-iphone-17--sage-backside.webp","img/apple-iphone-17--sage-cam.webp"]},{"name":"Mist Blue","hex":"#B0C5E0","shots":["img/apple-iphone-17--mist-blue-backfront.webp","img/apple-iphone-17--mist-blue-backside.webp","img/apple-iphone-17--mist-blue-cam.webp"]},{"name":"White","hex":"#F2F2F0","shots":["img/apple-iphone-17--white-backfront.webp","img/apple-iphone-17--white-backside.webp","img/apple-iphone-17--white-cam.webp"]}],"variants":[{"id":"256","label":"256GB","price":96500,"mrp":null,"stock":true}],"hidden":false},{"id":"apple-iphone-16","brand":"Apple","name":"iPhone 16","display":"6.1-inch Super Retina XDR OLED","chip":"Apple A18","cam":"48MP Fusion main + 12MP ultra-wide rear cameras","front":"12MP TrueDepth front camera","batt":"","os":"iOS","highlights":"Storage not specified on the rate list - shop confirms the exact variant.","src":"https://www.apple.com/in/shop/buy-iphone/iphone-16","colours":[{"name":"Black","hex":"#464646","shots":["img/apple-iphone-16--black-backfront.webp","img/apple-iphone-16--black-backside.webp","img/apple-iphone-16--black-cam.webp","img/apple-iphone-16--black-edge.webp"]},{"name":"White","hex":"#F2F2F0","shots":["img/apple-iphone-16--white-backfront.webp","img/apple-iphone-16--white-backside.webp","img/apple-iphone-16--white-cam.webp","img/apple-iphone-16--white-edge.webp"]},{"name":"Pink","hex":"#F2A0D4","shots":["img/apple-iphone-16--pink-backfront.webp","img/apple-iphone-16--pink-backside.webp","img/apple-iphone-16--pink-cam.webp","img/apple-iphone-16--pink-edge.webp"]},{"name":"Teal","hex":"#A9D9D7","shots":["img/apple-iphone-16--teal-backfront.webp","img/apple-iphone-16--teal-backside.webp","img/apple-iphone-16--teal-cam.webp","img/apple-iphone-16--teal-edge.webp"]},{"name":"Ultramarine","hex":"#869EF6","shots":["img/apple-iphone-16--ultramarine-backfront.webp","img/apple-iphone-16--ultramarine-backside.webp","img/apple-iphone-16--ultramarine-cam.webp","img/apple-iphone-16--ultramarine-edge.webp"]}],"variants":[{"id":"storagetobeconfirmed","label":"Storage to be confirmed","price":87000,"mrp":null,"stock":true}],"hidden":false},{"id":"apple-iphone-15","brand":"Apple","name":"iPhone 15","display":"6.1-inch Super Retina XDR OLED","chip":"Apple A16 Bionic","cam":"48MP main + 12MP ultra-wide","front":"12MP TrueDepth front camera","batt":"","os":"iOS","highlights":"","src":"https://www.apple.com/in/iphone/","colours":[],"variants":[{"id":"128","label":"128GB","price":72500,"mrp":null,"stock":true}],"hidden":false},{"id":"redmi-note-17-pro-max","brand":"Redmi","name":"Redmi Note 17 Pro Max 5G","display":"6.83-inch AMOLED, 120Hz","chip":"Snapdragon 6 Gen 5","cam":"50MP + 8MP rear","front":"32MP","batt":"10,000mAh, 100W fast charging","os":"HyperOS 3","highlights":"Biggest battery in the Redmi line-up. Titan toughness build.","src":"https://www.mi.com/in/","variants":[{"id":"8-256","label":"8GB + 256GB","price":45500,"mrp":69999,"stock":true},{"id":"12-256","label":"12GB + 256GB","price":50500,"mrp":null,"stock":true}],"hidden":false,"colours":[{"name":"Black","hex":"#222222","shots":["img/p/redmi-note-17-pro-max/redmi-04.webp","img/p/redmi-note-17-pro-max/redmi-03.webp","img/p/redmi-note-17-pro-max/redmi-01.webp","img/p/redmi-note-17-pro-max/redmi-02.webp"]},{"name":"Green","hex":"#A8CFA0","shots":["img/p/redmi-note-17-pro-max/redmi-08.webp","img/p/redmi-note-17-pro-max/redmi-07.webp","img/p/redmi-note-17-pro-max/redmi-05.webp","img/p/redmi-note-17-pro-max/redmi-06.webp"]},{"name":"Pink","hex":"#EBC7C0","shots":["img/p/redmi-note-17-pro-max/redmi-12.webp","img/p/redmi-note-17-pro-max/redmi-11.webp","img/p/redmi-note-17-pro-max/redmi-09.webp","img/p/redmi-note-17-pro-max/redmi-10.webp"]}]},{"id":"redmi-note-17-pro","brand":"Redmi","name":"Redmi Note 17 Pro 5G","display":"6.83-inch 1.5K AMOLED, 120Hz","chip":"Snapdragon 6s Gen 4","cam":"50MP OIS + 8MP ultra-wide","front":"","batt":"9,000mAh, 67W fast charging","os":"HyperOS 3 / Android 16","highlights":"","src":"https://www.mi.com/in/","variants":[{"id":"8-128","label":"8GB + 128GB","price":33500,"mrp":49999,"stock":true},{"id":"8-256","label":"8GB + 256GB","price":36500,"mrp":54999,"stock":true}],"hidden":false,"colours":[{"name":"Black","hex":"#222222","shots":["img/p/redmi-note-17-pro/redmi-16.webp","img/p/redmi-note-17-pro/redmi-15.webp","img/p/redmi-note-17-pro/redmi-13.webp","img/p/redmi-note-17-pro/redmi-14.webp"]},{"name":"Purple","hex":"#C9B6E4","shots":["img/p/redmi-note-17-pro/redmi-20.webp","img/p/redmi-note-17-pro/redmi-19.webp","img/p/redmi-note-17-pro/redmi-17.webp","img/p/redmi-note-17-pro/redmi-18.webp"]},{"name":"Blue","hex":"#A9C8E8","shots":["img/p/redmi-note-17-pro/redmi-24.webp","img/p/redmi-note-17-pro/redmi-23.webp","img/p/redmi-note-17-pro/redmi-21.webp","img/p/redmi-note-17-pro/redmi-22.webp"]}]},{"id":"redmi-note-17","brand":"Redmi","name":"Redmi Note 17 5G","display":"6.99-inch (17.75cm) AMOLED, 120Hz","chip":"Snapdragon 4 Gen 4","cam":"50MP AI dual camera","front":"8MP","batt":"8,000mAh, 45W fast charging","os":"HyperOS 3","highlights":"","src":"https://www.mi.com/in/","variants":[{"id":"6-128","label":"6GB + 128GB","price":20000,"mrp":39999,"stock":true},{"id":"8-256","label":"8GB + 256GB","price":29000,"mrp":null,"stock":true}],"hidden":false,"colours":[{"name":"Black","hex":"#222222","shots":["img/p/redmi-note-17/redmi-27.webp","img/p/redmi-note-17/redmi-26.webp","img/p/redmi-note-17/redmi-25.webp"]},{"name":"Purple","hex":"#B9AEE8","shots":["img/p/redmi-note-17/redmi-30.webp","img/p/redmi-note-17/redmi-29.webp","img/p/redmi-note-17/redmi-28.webp"]},{"name":"Light Blue","hex":"#A8D4DC","shots":["img/p/redmi-note-17/redmi-33.webp","img/p/redmi-note-17/redmi-32.webp","img/p/redmi-note-17/redmi-31.webp"]}]},{"id":"redmi-17","brand":"Redmi","name":"Redmi 17 5G","display":"6.9-inch, 120Hz","chip":"Snapdragon 4 Gen 5","cam":"50MP AI dual camera","front":"8MP","batt":"7,900mAh, 45W fast charging","os":"HyperOS 3","highlights":"IP64 splash resistance.","src":"https://www.mi.com/in/","variants":[{"id":"6-128","label":"6GB + 128GB","price":22500,"mrp":39999,"stock":true},{"id":"8-128","label":"8GB + 128GB","price":25500,"mrp":39999,"stock":true}],"hidden":false,"colours":[{"name":"Black","hex":"#222222","shots":["img/p/redmi-17/redmi-36.webp","img/p/redmi-17/redmi-35.webp","img/p/redmi-17/redmi-34.webp"]},{"name":"Blue","hex":"#22346E","shots":["img/p/redmi-17/redmi-38.webp","img/p/redmi-17/redmi-37.webp","img/p/redmi-17/redmi-39.webp"]},{"name":"Orange","hex":"#E06A45","shots":["img/p/redmi-17/redmi-42.webp","img/p/redmi-17/redmi-41.webp","img/p/redmi-17/redmi-40.webp"]}]},{"id":"redmi-17c","brand":"Redmi","name":"Redmi 17C 5G","display":"6.9-inch HD+, 120Hz","chip":"MediaTek Dimensity 6300","cam":"50MP rear","front":"8MP","batt":"6,000mAh, 33W fast charging","os":"HyperOS 3","highlights":"IP64. Colours: Coffee Brew, Purple Dawn, Dark Night.","src":"https://www.mi.com/in/","variants":[{"id":"4-128","label":"4GB + 128GB","price":19500,"mrp":39999,"stock":true},{"id":"6-128","label":"6GB + 128GB","price":21500,"mrp":39999,"stock":true}],"hidden":false,"colours":[{"name":"Coffee Brew","hex":"#B8946A","shots":["img/p/redmi-17c/redmi-47.webp","img/p/redmi-17c/redmi-45.webp","img/p/redmi-17c/redmi-46.webp"]},{"name":"Dark Night","hex":"#2A2A2A","shots":["img/p/redmi-17c/redmi-49.webp","img/p/redmi-17c/redmi-48.webp","img/p/redmi-17c/redmi-44.webp"]},{"name":"Purple Dawn","hex":"#A08AB8","shots":["img/p/redmi-17c/redmi-50.webp","img/p/redmi-17c/redmi-53.webp","img/p/redmi-17c/redmi-51.webp","img/p/redmi-17c/redmi-52.webp"]}]},{"id":"redmi-15a","brand":"Redmi","name":"Redmi 15A 5G","display":"6.9-inch HD+, 120Hz","chip":"Unisoc T8300 5G","cam":"32MP rear","front":"8MP","batt":"6,300mAh, 15W charging","os":"HyperOS 3 / Android 16","highlights":"Colours: Awesome Blue, Amaze Purple, Ace Black.","src":"https://www.mi.com/in/","variants":[{"id":"4-64","label":"4GB + 64GB","price":15500,"mrp":16999,"stock":true},{"id":"4-128","label":"4GB + 128GB","price":17500,"mrp":null,"stock":true},{"id":"6-128","label":"6GB + 128GB","price":19000,"mrp":null,"stock":true}],"hidden":false,"colours":[{"name":"Ace Black","hex":"#222222","shots":["img/p/redmi-15a/redmi-57.webp","img/p/redmi-15a/redmi-56.webp","img/p/redmi-15a/redmi-54.webp","img/p/redmi-15a/redmi-55.webp"]},{"name":"Amaze Purple","hex":"#D8C8E6","shots":["img/p/redmi-15a/redmi-61.webp","img/p/redmi-15a/redmi-60.webp","img/p/redmi-15a/redmi-58.webp","img/p/redmi-15a/redmi-59.webp"]},{"name":"Awesome Blue","hex":"#7E9CC0","shots":["img/p/redmi-15a/redmi-63.webp","img/p/redmi-15a/redmi-64.webp"]}]},{"id":"moto-g06-power","brand":"Motorola","name":"Moto G06 Power","display":"6.88-inch HD+, 120Hz","chip":"MediaTek Helio G81 Extreme","cam":"50MP rear","front":"8MP","batt":"7,000mAh","os":"Android 15","highlights":"","src":"https://www.motorola.com/in/","variants":[{"id":"4-64","label":"4GB + 64GB","price":12000,"mrp":null,"stock":true}],"hidden":false,"colours":[{"name":"Green","hex":"#6E9A3A","shots":["img/p/moto-g06-power/moto-01.webp","img/p/moto-g06-power/moto-02.webp","img/p/moto-g06-power/moto-03.webp","img/p/moto-g06-power/moto-04.webp"]},{"name":"Beige","hex":"#B8AE98","shots":["img/p/moto-g06-power/moto-05.webp","img/p/moto-g06-power/moto-06.webp","img/p/moto-g06-power/moto-07.webp","img/p/moto-g06-power/moto-08.webp"]},{"name":"Teal","hex":"#3F5F6A","shots":["img/p/moto-g06-power/moto-09.webp","img/p/moto-g06-power/moto-10.webp","img/p/moto-g06-power/moto-11.webp","img/p/moto-g06-power/moto-12.webp"]}]},{"id":"moto-g37-power","brand":"Motorola","name":"Moto G37 Power","display":"6.7-inch HD+, 120Hz, 1050 nits","chip":"MediaTek Dimensity 6400","cam":"50MP AI camera","front":"","batt":"7,000mAh, 30W TurboPower","os":"Android 16","highlights":"MIL-STD-810H durability. Colours: Nautical Blue, Impenetrable, Capri.","src":"https://www.motorola.com/in/","variants":[{"id":"4-64","label":"4GB + 64GB","price":15000,"mrp":null,"stock":true},{"id":"4-128","label":"4GB + 128GB","price":17000,"mrp":null,"stock":true},{"id":"8-128","label":"8GB + 128GB","price":23000,"mrp":null,"stock":true}],"hidden":false,"colours":[{"name":"Impenetrable (Black)","hex":"#3B3B3E","shots":["img/p/moto-g37-power/moto-13.webp","img/p/moto-g37-power/moto-14.webp","img/p/moto-g37-power/moto-15.webp","img/p/moto-g37-power/moto-16.webp"]},{"name":"Nautical Blue","hex":"#2547A0","shots":["img/p/moto-g37-power/moto-17.webp","img/p/moto-g37-power/moto-18.webp","img/p/moto-g37-power/moto-19.webp","img/p/moto-g37-power/moto-20.webp"]},{"name":"Capri","hex":"#2BB3C0","shots":["img/p/moto-g37-power/moto-21.webp","img/p/moto-g37-power/moto-22.webp","img/p/moto-g37-power/moto-23.webp","img/p/moto-g37-power/moto-24.webp"]}]},{"id":"moto-g77-power","brand":"Motorola","name":"Moto G77 Power","display":"6.72-inch FHD+, 120Hz","chip":"MediaTek Dimensity 6400","cam":"50MP Sony LYTIA 600","front":"32MP","batt":"7,000mAh, 30W TurboPower","os":"Android 16","highlights":"Vegan leather finish. Colours: Fuchsia Red, Nautical Blue, Impenetrable.","src":"https://www.motorola.in/smartphones-moto-g77-power/p?skuId=692","colours":[],"variants":[{"id":"4-128","label":"4GB + 128GB","price":19000,"mrp":null,"stock":true},{"id":"8-128","label":"8GB + 128GB","price":25000,"mrp":null,"stock":true}],"hidden":false},{"id":"moto-g-max","brand":"Motorola","name":"Moto G Max","display":"6.72-inch FHD+, 120Hz","chip":"Snapdragon 6s Gen 4","cam":"50MP Sony LYTIA 600 + 8MP","front":"32MP","batt":"7,000mAh silicon-carbon, 30W","os":"Android 16","highlights":"Stereo speakers with Dolby Atmos, IP64, MIL-STD-810H, Gorilla Glass 7i.","src":"https://www.motorola.com/in/","variants":[{"id":"4-128","label":"4GB + 128GB","price":19500,"mrp":null,"stock":true},{"id":"6-128","label":"6GB + 128GB","price":21500,"mrp":null,"stock":true}],"hidden":false,"colours":[{"name":"Stargazer","hex":"#3E5560","shots":["img/p/moto-g-max/moto-25.webp","img/p/moto-g-max/moto-26.webp","img/p/moto-g-max/moto-27.webp","img/p/moto-g-max/moto-28.webp","img/p/moto-g-max/moto-29.webp"]},{"name":"Alaskan Blue","hex":"#7DB3E0","shots":["img/p/moto-g-max/moto-30.webp","img/p/moto-g-max/moto-31.webp","img/p/moto-g-max/moto-32.webp","img/p/moto-g-max/moto-33.webp","img/p/moto-g-max/moto-34.webp"]},{"name":"Malaga","hex":"#C55A80","shots":["img/p/moto-g-max/moto-35.webp","img/p/moto-g-max/moto-36.webp","img/p/moto-g-max/moto-37.webp","img/p/moto-g-max/moto-38.webp","img/p/moto-g-max/moto-39.webp"]}]},{"id":"motorola-edge-70-fusion","brand":"Motorola","name":"Motorola Edge 70 Fusion","display":"6.8-inch 1.5K quad-curved AMOLED, 144Hz","chip":"Snapdragon 7s Gen 4","cam":"50MP Sony LYTIA 710 + ultra-wide","front":"32MP","batt":"7,000mAh, 68W","os":"Android 16","highlights":"Pantone colours: Silhouette, Country Air, Blue Surf.","src":"https://www.motorola.com/in/","variants":[{"id":"8-128","label":"8GB + 128GB","price":31000,"mrp":null,"stock":true},{"id":"12-256","label":"12GB + 256GB","price":35000,"mrp":null,"stock":true},{"id":"12-512","label":"12GB + 512GB","price":39000,"mrp":null,"stock":true}],"hidden":false,"colours":[{"name":"Silhouette","hex":"#2E3446","shots":["img/p/motorola-edge-70-fusion/moto-40.webp","img/p/motorola-edge-70-fusion/moto-41.webp","img/p/motorola-edge-70-fusion/moto-42.webp","img/p/motorola-edge-70-fusion/moto-45.webp"]},{"name":"Country Air","hex":"#C9D6E0","shots":["img/p/motorola-edge-70-fusion/moto-43.webp","img/p/motorola-edge-70-fusion/moto-44.webp","img/p/motorola-edge-70-fusion/moto-46.webp","img/p/motorola-edge-70-fusion/moto-47.webp"]},{"name":"Blue Surf","hex":"#8FB9AA","shots":["img/p/motorola-edge-70-fusion/moto-48.webp","img/p/motorola-edge-70-fusion/moto-49.webp","img/p/motorola-edge-70-fusion/moto-50.webp","img/p/motorola-edge-70-fusion/moto-51.webp"]}]},{"id":"motorola-edge-70-pro","brand":"Motorola","name":"Motorola Edge 70 Pro","display":"144Hz AMOLED","chip":"MediaTek Dimensity 8500 Extreme","cam":"50MP triple camera","front":"","batt":"6,500mAh, 90W","os":"Android 16","highlights":"IP68 / IP69. Pantone Lily White (marble), Tea (satin), Titan (fabric).","src":"https://www.motorola.com/in/","variants":[{"id":"8-256","label":"8GB + 256GB","price":40000,"mrp":null,"stock":true},{"id":"12-256","label":"12GB + 256GB","price":43000,"mrp":null,"stock":true}],"hidden":false,"colours":[{"name":"Lily White","hex":"#E8E6E0","shots":["img/p/motorola-edge-70-pro/moto-56.webp","img/p/motorola-edge-70-pro/moto-57.webp","img/p/motorola-edge-70-pro/moto-58.webp","img/p/motorola-edge-70-pro/moto-59.webp"]},{"name":"Titan","hex":"#22324F","shots":["img/p/motorola-edge-70-pro/moto-60.webp","img/p/motorola-edge-70-pro/moto-61.webp","img/p/motorola-edge-70-pro/moto-62.webp","img/p/motorola-edge-70-pro/moto-63.webp"]},{"name":"Tea","hex":"#8C9A6E","shots":["img/p/motorola-edge-70-pro/moto-64.webp","img/p/motorola-edge-70-pro/moto-65.webp","img/p/motorola-edge-70-pro/moto-66.webp","img/p/motorola-edge-70-pro/moto-67.webp"]}]},{"id":"motorola-edge-70-pro-plus","brand":"Motorola","name":"Motorola Edge 70 Pro+","display":"6.8-inch 1.5K quad-curved AMOLED, 144Hz","chip":"","cam":"50MP Sony LYT-710 OIS + 50MP 3.5x periscope + 50MP ultra-wide","front":"","batt":"6,500mAh, 90W wired + 15W wireless","os":"Android 16","highlights":"Pantone Zinfandel, Chicory Coffee (wood), Stormy Sea.","src":"https://www.motorola.in/smartphones-motorola-edge-70-pro-plus/p?skuId=675","variants":[{"id":"12-256","label":"12GB + 256GB","price":48000,"mrp":null,"stock":true}],"hidden":false,"colours":[{"name":"Zinfandel","hex":"#6E1F2A","shots":["img/p/motorola-edge-70-pro-plus/moto-68.webp","img/p/motorola-edge-70-pro-plus/moto-69.webp","img/p/motorola-edge-70-pro-plus/moto-70.webp","img/p/motorola-edge-70-pro-plus/moto-71.webp"]},{"name":"Chicory Coffee","hex":"#5A4030","shots":["img/p/motorola-edge-70-pro-plus/moto-72.webp","img/p/motorola-edge-70-pro-plus/moto-73.webp","img/p/motorola-edge-70-pro-plus/moto-74.webp","img/p/motorola-edge-70-pro-plus/moto-75.webp"]},{"name":"Stormy Sea","hex":"#5F8285","shots":["img/p/motorola-edge-70-pro-plus/moto-76.webp","img/p/motorola-edge-70-pro-plus/moto-77.webp","img/p/motorola-edge-70-pro-plus/moto-78.webp","img/p/motorola-edge-70-pro-plus/moto-79.webp"]}]},{"id":"motorola-edge-70-max","brand":"Motorola","name":"Motorola Edge 70 Max","display":"6.8-inch Quad HD+ LTPO AMOLED, 144Hz, 7000 nits","chip":"Snapdragon 8 Gen 5","cam":"50MP Sony LYTIA 710 OIS main","front":"","batt":"7,100mAh, 90W wired + 25W magnetic wireless","os":"Android 16","highlights":"IP68 / IP69, MIL-STD-810H, Gorilla Glass 7i.","src":"https://www.motorola.com/in/","variants":[{"id":"8-256","label":"8GB + 256GB","price":55000,"mrp":null,"stock":true},{"id":"12-256","label":"12GB + 256GB","price":60000,"mrp":null,"stock":true}],"hidden":false,"colours":[{"name":"Dark Shadow","hex":"#2F3335","shots":["img/p/motorola-edge-70-max/moto-80.webp","img/p/motorola-edge-70-max/moto-81.webp","img/p/motorola-edge-70-max/moto-82.webp","img/p/motorola-edge-70-max/moto-83.webp","img/p/motorola-edge-70-max/moto-84.webp","img/p/motorola-edge-70-max/moto-85.webp"]},{"name":"Ice Melt","hex":"#A9C6DC","shots":["img/p/motorola-edge-70-max/moto-86.webp","img/p/motorola-edge-70-max/moto-87.webp","img/p/motorola-edge-70-max/moto-88.webp","img/p/motorola-edge-70-max/moto-89.webp","img/p/motorola-edge-70-max/moto-90.webp","img/p/motorola-edge-70-max/moto-91.webp"]},{"name":"Aqua Gray","hex":"#7E978C","shots":["img/p/motorola-edge-70-max/moto-92.webp","img/p/motorola-edge-70-max/moto-93.webp","img/p/motorola-edge-70-max/moto-94.webp","img/p/motorola-edge-70-max/moto-95.webp","img/p/motorola-edge-70-max/moto-96.webp"]}]},{"id":"vivo-y11","brand":"vivo","name":"vivo Y11 5G","display":"6.74-inch HD+ LCD, 120Hz","chip":"MediaTek Dimensity 6300","cam":"13MP rear","front":"5MP","batt":"6,500mAh, 15W","os":"OriginOS 6 / Android 16","highlights":"IP65. Photos shared with Y21 (same body design).","src":"https://www.vivo.com/in/products/y11-5g","variants":[{"id":"4-64","label":"4GB + 64GB","price":16500,"mrp":18999,"stock":true},{"id":"4-128","label":"4GB + 128GB","price":19500,"mrp":22499,"stock":true}],"hidden":false,"colours":[{"name":"Sunrise Gold / Midnight Blue","hex":"#D9C8A8","shots":["img/p/vivo-y11/vivo-05.webp","img/p/vivo-y11/vivo-06.webp","img/p/vivo-y11/vivo-03.webp","img/p/vivo-y11/vivo-04.webp"]}]},{"id":"vivo-y21","brand":"vivo","name":"vivo Y21 5G","display":"6.74-inch HD+ LCD, 120Hz","chip":"MediaTek Dimensity 6300","cam":"50MP + 0.08MP","front":"5MP","batt":"6,500mAh, 44W FlashCharge","os":"OriginOS 6 / Android 16","highlights":"IP65.","src":"https://www.vivo.com/in/products/y21-5g","variants":[{"id":"4-64","label":"4GB + 64GB","price":18000,"mrp":20999,"stock":true},{"id":"4-128","label":"4GB + 128GB","price":20500,"mrp":23999,"stock":true},{"id":"6-128","label":"6GB + 128GB","price":24000,"mrp":27999,"stock":true}],"hidden":false,"colours":[{"name":"Champagne Gold / Midnight Blue","hex":"#D9C8A8","shots":["img/p/vivo-y21/vivo-05.webp","img/p/vivo-y21/vivo-06.webp","img/p/vivo-y21/vivo-03.webp","img/p/vivo-y21/vivo-04.webp"]}]},{"id":"vivo-y31t","brand":"vivo","name":"vivo Y31t 5G","display":"6.75-inch HD+ LCD, 120Hz","chip":"Snapdragon 4 Gen 2","cam":"50MP + 2MP bokeh","front":"8MP","batt":"7,200mAh, 44W","os":"OriginOS 6 / Android 16","highlights":"IP68 & IP69.","src":"https://www.vivo.com/in/products/param/y31t-5g","variants":[{"id":"4-128","label":"4GB + 128GB","price":23000,"mrp":26999,"stock":true},{"id":"6-128","label":"6GB + 128GB","price":27000,"mrp":31499,"stock":true}],"hidden":false,"colours":[{"name":"Crimson Red / Seashore Green / Golden Mist","hex":"#8E2A2E","shots":["img/p/vivo-y31t/vivo-10.webp","img/p/vivo-y31t/vivo-09.webp","img/p/vivo-y31t/vivo-07.webp","img/p/vivo-y31t/vivo-08.webp","img/p/vivo-y31t/vivo-11.webp"]}]},{"id":"vivo-y51-pro","brand":"vivo","name":"vivo Y51 Pro 5G","display":"6.75-inch HD+ LCD, 120Hz","chip":"MediaTek Dimensity 7360-Turbo","cam":"50MP + 2MP","front":"8MP","batt":"7,200mAh, 44W","os":"OriginOS 6 / Android 16","highlights":"IP68 & IP69.","src":"https://www.vivo.com/in/products/param/y51-pro-5g","variants":[{"id":"8-128","label":"8GB + 128GB","price":30000,"mrp":34999,"stock":true},{"id":"8-256","label":"8GB + 256GB","price":33000,"mrp":37999,"stock":true}],"hidden":false,"colours":[{"name":"Festive Red / Noble Gold","hex":"#E3D2B6","shots":["img/p/vivo-y51-pro/vivo-14.webp","img/p/vivo-y51-pro/vivo-13.webp","img/p/vivo-y51-pro/vivo-15.webp","img/p/vivo-y51-pro/vivo-16.webp","img/p/vivo-y51-pro/vivo-12.webp"]}]},{"id":"vivo-s2-fe","brand":"vivo","name":"vivo S2 FE","display":"6.83-inch 1.5K AMOLED, 120Hz","chip":"MediaTek Dimensity 7300e (reported)","cam":"50MP Sony IMX852","front":"32MP","batt":"10,000mAh, 44W","os":"OriginOS 6 / Android 16","highlights":"IP68 / IP69. Colours: Stellar Green, Zen White, Titan Black.","src":"https://www.vivo.com/in/","variants":[{"id":"6-128","label":"6GB + 128GB","price":34000,"mrp":38999,"stock":true},{"id":"8-128","label":"8GB + 128GB","price":37000,"mrp":42999,"stock":true}],"hidden":false,"colours":[{"name":"Titan Black / Zen White / Stellar Green","hex":"#4E6B4A","shots":["img/p/vivo-s2-fe/vivo-17.webp","img/p/vivo-s2-fe/vivo-18.webp","img/p/vivo-s2-fe/vivo-22.webp","img/p/vivo-s2-fe/vivo-23.webp","img/p/vivo-s2-fe/vivo-24.webp","img/p/vivo-s2-fe/vivo-19.webp","img/p/vivo-s2-fe/vivo-20.webp","img/p/vivo-s2-fe/vivo-21.webp"]}]},{"id":"vivo-s2","brand":"vivo","name":"vivo S2","display":"6.83-inch 1.5K curved AMOLED, 120Hz","chip":"MediaTek Dimensity 7360-Turbo","cam":"50MP + 2MP","front":"32MP","batt":"7,050mAh, 44W","os":"OriginOS 6","highlights":"IP68 & IP69. Colours: Silk White, Sapphire Blue, Regal Bronze.","src":"https://www.vivo.com/in/products/s2","variants":[{"id":"8-128","label":"8GB + 128GB","price":36000,"mrp":42999,"stock":true},{"id":"8-256","label":"8GB + 256GB","price":41000,"mrp":48999,"stock":true}],"hidden":false,"colours":[{"name":"Silk White / Sapphire Blue / Regal Bronze","hex":"#E8E4DC","shots":["img/p/vivo-s2/vivo-25.webp","img/p/vivo-s2/vivo-35.webp","img/p/vivo-s2/vivo-29.webp","img/p/vivo-s2/vivo-30.webp","img/p/vivo-s2/vivo-31.webp","img/p/vivo-s2/vivo-32.webp","img/p/vivo-s2/vivo-33.webp","img/p/vivo-s2/vivo-34.webp"]}]},{"id":"vivo-v70-fe","brand":"vivo","name":"vivo V70 FE","display":"6.83-inch 1.5K AMOLED, 120Hz","chip":"MediaTek Dimensity 7360-Turbo","cam":"200MP OIS + 8MP ultra-wide","front":"50MP autofocus","batt":"7,000mAh, 90W","os":"OriginOS 6 / Android 16","highlights":"Glow-in-the-dark back (Darkness Glow). IP68 & IP69.","src":"https://www.vivo.com/in/products/param/v70-fe","variants":[{"id":"8-128","label":"8GB + 128GB","price":37500,"mrp":44999,"stock":true},{"id":"8-256","label":"8GB + 256GB","price":42000,"mrp":49999,"stock":true}],"hidden":false,"colours":[{"name":"Monsoon Blue / Northern Lights Purple","hex":"#2C3A6A","shots":["img/p/vivo-v70-fe/vivo-28.webp","img/p/vivo-v70-fe/vivo-27.webp","img/p/vivo-v70-fe/vivo-43.webp","img/p/vivo-v70-fe/vivo-44.webp","img/p/vivo-v70-fe/vivo-26.webp","img/p/vivo-v70-fe/vivo-45.webp"]}]},{"id":"vivo-v80","brand":"vivo","name":"vivo V80","display":"6.59-inch 1.5K AMOLED, 144Hz","chip":"Snapdragon 7 Gen 4","cam":"50MP OIS + 50MP OIS telephoto + 8MP ultra-wide (ZEISS)","front":"50MP autofocus","batt":"7,200mAh, 90W FlashCharge","os":"OriginOS 7 / Android 17","highlights":"ZEISS cameras. IP68 & IP69.","src":"https://www.vivo.com/in/products/param/v80","variants":[{"id":"8-128","label":"8GB + 128GB","price":51000,"mrp":62999,"stock":true},{"id":"8-256","label":"8GB + 256GB","price":56000,"mrp":69999,"stock":true},{"id":"8-512","label":"8GB + 512GB","price":65000,"mrp":79999,"stock":true}],"hidden":false,"colours":[{"name":"Horizon Blue / Stellar Black / Sunrise Anthem","hex":"#5E9A92","shots":["img/p/vivo-v80/vivo-42.webp","img/p/vivo-v80/vivo-41.webp","img/p/vivo-v80/vivo-36.webp","img/p/vivo-v80/vivo-37.webp","img/p/vivo-v80/vivo-49.webp","img/p/vivo-v80/vivo-38.webp","img/p/vivo-v80/vivo-39.webp","img/p/vivo-v80/vivo-40.webp"]}]},{"id":"vivo-x300-fe","brand":"vivo","name":"vivo X300 FE","display":"6.31-inch 1.5K AMOLED, 120Hz","chip":"Snapdragon 8 Gen 5","cam":"50MP OIS + 50MP 3x telephoto + 8MP ultra-wide (ZEISS)","front":"50MP autofocus","batt":"6,500mAh, 90W wired + 40W wireless","os":"OriginOS 6 / Android 16","highlights":"Compact flagship. IP68 & IP69.","src":"https://www.vivo.com/in/products/param/x300-fe","variants":[{"id":"12-256","label":"12GB + 256GB","price":78000,"mrp":94999,"stock":true}],"hidden":false,"colours":[{"name":"Urban Olive / Lilac Purple / Noir Black","hex":"#5E7A48","shots":["img/p/vivo-x300-fe/vivo-50.webp","img/p/vivo-x300-fe/vivo-51.webp","img/p/vivo-x300-fe/vivo-46.webp","img/p/vivo-x300-fe/vivo-47.webp","img/p/vivo-x300-fe/vivo-48.webp","img/p/vivo-x300-fe/vivo-52.webp","img/p/vivo-x300-fe/vivo-53.webp"]}]}]};
+async function loadCatalog(){
+  try {
+    const c = new AbortController(); const t = setTimeout(() => c.abort(), 2500);
+    const r = await fetch('/api/catalog', { signal: c.signal, cache: 'no-store' });
+    clearTimeout(t);
+    if (r.ok){ const j = await r.json(); if (j && Array.isArray(j.models) && j.models.length) return j; }
+  } catch (e) {}
+  return DEFAULT_CATALOG;
+}
+</script>
+<script>
+(async () => {
+const CAT = await loadCatalog();
+/* ===== Business details supplied by ALFATECH MOBILES ===== */
+const SHOP_DEFAULT = {
+  name: 'ALFATECH MOBILES',
+  phone: '+91 95544 84848',
+  wa: '919554484848',
+  email: 'alfatech.mobiles1@gmail.com',
+  addr1: 'Nishat Rd, Sadar Bazar',
+  city: 'Shahjahanpur',
+  state: 'Uttar Pradesh',
+  pin: '242001',
+  deliveryState: 'Uttar Pradesh'
+};
+const SHOP = Object.assign({}, SHOP_DEFAULT, CAT.shop || {});
+const CHECKED = CAT.updated || '02 Nov 2026';
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const inr = n => '₹' + Math.round(n).toLocaleString('en-IN');
+const NV = '<span class="nv">Not verified</span>';
+const MODELS = (CAT.models || []).filter(m => !m.hidden && (m.variants || []).some(v => !v.hidden));
+const PRODUCTS = MODELS.flatMap(m => m.variants.filter(v => !v.hidden).map(v => ({
+  id: m.id + '--' + v.id, model: m.id, m, v, brand: m.brand,
+  name: m.name + (v.label ? ' · ' + v.label : ''), mname: m.name, vlabel: v.label || '',
+  price: +v.price || 0, mrp: v.mrp ? +v.mrp : null, stock: v.stock !== false,
+  note: v.label || '', display: m.display, chip: m.chip, cam: m.cam, front: m.front,
+  batt: m.batt, os: m.os, mem: v.label, about: m.highlights, src: m.src })));
+const GALLERY = Object.fromEntries(MODELS.map(m => [m.id, (m.colours || []).filter(c => c.shots && c.shots.length)
+  .map(c => ({ name: c.name, hex: c.hex || '#cccccc', shots: c.shots.map(u => ({ u, d: null })) }))]).filter(([, g]) => g.length));
+const byId = id => PRODUCTS.find(p => p.id === id);
+const gal = id => { const p = byId(id); return GALLERY[p ? p.model : id] || null; };
+const BRANDS = [...new Set(PRODUCTS.map(p => p.brand))];
+const siblings = p => PRODUCTS.filter(x => x.model === p.model);
+/* one card per model: the cheapest variant that passed the filters represents it */
+function groupModels(L){
+  const g = new Map();
+  for (const p of L){ const c = g.get(p.model); if (!c || p.price < c.price) g.set(p.model, p); }
+  return [...g.values()];
+}
+/* ---- EMI ---- */
+function emiRows(price){
+  const E = CAT.emi || {}, dp = +E.downPayment || 0, P = Math.max(0, price - dp);
+  return (E.tenures || []).filter(t => +t.months > 0).map(t => {
+    const n = +t.months, r = +t.rate || 0, i = r / 1200;
+    const mo = r ? P * i * Math.pow(1 + i, n) / (Math.pow(1 + i, n) - 1) : P / n;
+    return { n, r, mo: Math.ceil(mo) };
+  });
+}
+const emiFrom = price => { const R = emiRows(price); return R.length ? Math.min(...R.map(r => r.mo)) : null; };
+function emiMsg(p){
+  const R = emiRows(p.price), dp = +(CAT.emi || {}).downPayment || 0;
+  return `Hello ALFATECH MOBILES,\nMujhe ye phone EMI par lena hai:\n\n${p.mname}${p.vlabel ? ' (' + p.vlabel + ')' : ''}\nPrice: ${inr(p.price)}` +
+    (dp ? `\nDown payment: ${inr(dp)}` : '') +
+    `\n\nWebsite par dikhaye gaye EMI plans:\n` +
+    R.map(r => `- ${r.n} months: approx ${inr(r.mo)}/month${r.r ? ` (${r.r}% p.a.)` : ''}`).join('\n') +
+    `\n\nKripya batayein: kaun sa EMI plan available hai, down payment kitna lagega aur kaun se documents chahiye?`;
+}
+function emiBox(p){
+  const R = emiRows(p.price), E = CAT.emi || {};
+  if (!R.length) return '';
+  return `<div class="emibox"><p class="olabel">EMI plans <span class="muted" style="font-weight:500">(approx.)</span></p>
+    <div class="emit">${R.map(r => `<div><span>${r.n} months</span><b class="num">${inr(r.mo)}<small>/month</small></b>${r.r ? `<em>${r.r}% p.a.</em>` : ''}</div>`).join('')}</div>
+    ${+E.downPayment ? `<p class="note">Down payment: ${inr(+E.downPayment)}</p>` : ''}
+    <p class="note">${esc(E.note || '')}</p>
+    <button class="btn btn-wa" type="button" data-emi="${p.id}">EMI ke liye WhatsApp karein</button></div>`;
+}
+
+$('#footAddr').textContent = `${SHOP.addr1}, ${SHOP.city}, ${SHOP.state} ${SHOP.pin} · ${SHOP.phone}`;
+$('#footNote').textContent = `Reference prices checked ${CHECKED} · Delivery inside ${SHOP.deliveryState} only`;
+
+/* ---- Uttar Pradesh delivery check (mirrors the server rule) ---- */
+const UK_RANGES = [[244305,244999],[246000,246999],[247453,247999],[248000,249999],[262500,263999]];
+function isUpPin(pin){
+  if (!/^[1-9][0-9]{5}$/.test(pin)) return false;
+  const n = +pin;
+  if (n < 201000 || n > 285999) return false;
+  return !UK_RANGES.some(([a,b]) => n >= a && n <= b);
+}
+const normPhone = raw => { let d = (raw||'').replace(/\D/g,''); if (d.length===12 && d.startsWith('91')) d=d.slice(2); if (d.length===11 && d.startsWith('0')) d=d.slice(1); return /^[6-9][0-9]{9}$/.test(d) ? d : null; };
+
+/* ---- cart: variant selection only, no prices stored ---- */
+const store = { get(k,d){ try { return JSON.parse(localStorage.getItem('alfa-demo-'+k)) ?? d; } catch(e){ return d; } }, set(k,v){ try { localStorage.setItem('alfa-demo-'+k, JSON.stringify(v)); } catch(e){} } };
+let cart = store.get('cart', []).filter(i => byId(i.id));
+const cartTotal = () => cart.reduce((s,i) => s + byId(i.id).price * i.qty, 0);
+function counts(){ const n = cart.reduce((s,i)=>s+i.qty,0); $('#cartN').textContent = n; $('#cartN').dataset.n = n; }
+function addCart(id, quiet){
+  const ex = cart.find(i => i.id === id);
+  if (ex) ex.qty = Math.min(5, ex.qty + 1); else cart.push({ id, qty:1 });
+  store.set('cart', cart); counts();
+  if (!quiet) toast('Added ' + byId(id).name);
+}
+
+/* ---- WhatsApp hand-off ---- */
+const waLink = m => `https://wa.me/${SHOP.wa}?text=${encodeURIComponent(m)}`;
+function openWA(msg, title = 'Message the store'){
+  $('#waTitle').textContent = title;
+  $('#waBody').innerHTML = `<div class="form"><div class="msg" id="waMsg">${esc(msg)}</div>
+    <a class="btn btn-wa" href="${waLink(msg)}" target="_blank" rel="noopener">Open WhatsApp</a>
+    <button class="btn btn-line" type="button" id="waCopy">Copy message</button></div>`;
+  if (!$('#wa').open) $('#wa').showModal();
+}
+document.addEventListener('click', async e => {
+  const c = e.target.closest('#waCopy'); if (!c) return;
+  try { await navigator.clipboard.writeText($('#waMsg').textContent); c.textContent = 'Copied'; }
+  catch(err){ const r = document.createRange(); r.selectNodeContents($('#waMsg')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); c.textContent = 'Select the text and copy it'; }
+});
+
+/* ---- filters ---- */
+const BUDGETS = [['Under ₹20,000',0,20000],['₹20,000–₹40,000',20001,40000],['₹40,000–₹70,000',40001,70000],['₹70,000–₹1,00,000',70001,100000],['Above ₹1,00,000',100001,1e9]];
+const blank = () => ({ q:'', brand:[], budget:null, min:'', max:'', sort:'price_desc', page:1, title:'All smartphones' });
+let F = blank();
+const PER = 12;
+const norm = s => String(s).toLowerCase().replace(/\+/g,' plus ').replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
+function matchQ(p, q){
+  if (!q) return true;
+  const hay = norm([p.brand, p.name, p.chip, p.display, p.cam].join(' '));
+  return norm(q).split(' ').every(t => hay.includes(t) || hay.replace(/ /g,'').includes(t));
+}
+function filtered(){
+  const lo = F.budget != null ? BUDGETS[F.budget][1] : (F.min ? +F.min : null);
+  const hi = F.budget != null ? BUDGETS[F.budget][2] : (F.max ? +F.max : null);
+  const L = PRODUCTS.filter(p =>
+    (!F.brand.length || F.brand.includes(p.brand)) &&
+    (lo == null || p.price >= lo) && (hi == null || p.price <= hi) &&
+    matchQ(p, F.q));
+  const S = {
+    price_desc:(a,b)=>b.price-a.price, price_asc:(a,b)=>a.price-b.price,
+    name:(a,b)=>a.name.localeCompare(b.name),
+    brand:(a,b)=>a.brand.localeCompare(b.brand) || b.price-a.price
+  };
+  return groupModels(L).sort(S[F.sort]);
+}
+
+/* ---- shared UI ---- */
+function cardImg(p){
+  const g = gal(p.id);
+  if (!g) return `<a class="pimg" href="#p-${p.id}" aria-label="${esc(p.mname)}">
+      <span class="mk">${esc(p.brand)}</span><span class="nm">${esc(p.mname)}</span>
+      <span class="ph">Photo coming soon</span></a>`;
+  const c = g[0];
+  return `<a class="pimg hasimg" href="#p-${p.id}" aria-label="${esc(p.mname)}">
+      <img src="${esc(c.shots[0].u)}" alt="${esc(p.mname)}" loading="lazy" decoding="async" width="900" height="900">
+      ${g.length > 1 ? `<span class="dots" aria-hidden="true">${g.map(x => `<i style="--c:${x.hex}"></i>`).join('')}</span><span class="cct">${g.length} colours</span>` : ''}</a>`;
+}
+function card(p){
+  const all = siblings(p), multi = all.length > 1, ef = emiFrom(p.price);
+  const instock = all.some(x => x.stock);
+  return `<article class="card">
+    ${cardImg(p)}
+    <div class="cb">
+      <span class="br">${esc(p.brand)}</span>
+      <h3><a href="#p-${p.id}">${esc(p.mname)}</a></h3>
+      <p class="spec">${esc(multi ? all.map(x => x.vlabel).join(' | ') : (p.vlabel || p.chip || ''))}</p>
+      <div class="pr"><strong>${multi ? '<small style="font-weight:600">from </small>' : ''}${inr(p.price)}</strong>${p.mrp ? `<small style="text-decoration:line-through;color:var(--muted)">MRP ${inr(p.mrp)}</small>` : ''}${ef ? `<small class="emil">EMI from ${inr(ef)}/month</small>` : ''}</div>
+      <span class="avail${instock ? '' : ' oos'}">${instock ? 'In stock · confirm with shop' : 'Out of stock'}</span>
+      <div class="cact">${multi
+        ? `<a class="btn btn-dark sm" href="#p-${p.id}">Choose variant</a>`
+        : `<button class="btn btn-dark sm" type="button" data-add="${p.id}" ${p.stock ? '' : 'disabled'}>Add to cart</button>`}
+        <button class="btn btn-wa sm" type="button" data-emi="${p.id}">EMI</button></div>
+    </div></article>`;
+}
+
+/* ===================== VIEWS ===================== */
+const V = {};
+
+const FEATURED_ID = 'apple-iphone-18-pro';
+
+/* Section rules are stated on the page. Nothing here invents a ranking:
+   "best sellers" and "offers" have no data behind them yet, so they say so
+   instead of showing a made-up list. */
+const latestModels   = () => PRODUCTS.slice(0, 4);
+const photographed   = () => PRODUCTS.filter(p => gal(p.id));
+const newestPerBrand = () => BRANDS.map(b => PRODUCTS.find(p => p.brand === b)).filter(Boolean);
+
+function sectionHead(kicker, title, rule, moreHref, moreText){
+  return `<div class="sh"><div><p class="kicker">${esc(kicker)}</p><h2>${esc(title)}</h2></div>
+    ${moreHref ? `<a class="more" href="${moreHref}">${esc(moreText)}</a>` : ''}</div>
+    ${rule ? `<p class="srule">${esc(rule)}</p>` : ''}`;
+}
+function emptySection(title, body){
+  return `<div class="esec"><b>${esc(title)}</b><p>${esc(body)}</p></div>`;
+}
+
+V.home = () => {
+  const picks = groupModels(PRODUCTS).slice(0, 8);
+  const brands = [...new Set(PRODUCTS.map(p => p.brand))];
+  return `
+  <section class="hero"><div class="wrap" style="padding-block:34px 30px">
+    <div style="display:grid;grid-template-columns:minmax(0,1.2fr) minmax(220px,.8fr);gap:24px;align-items:center">
+      <div>
+        <p class="eyebrow">Welcome to ALFATECH MOBILES</p>
+        <h1>Premium Mobiles.<br><span style="color:var(--gold)">Real Value.</span></h1>
+        <p class="sub">Explore smartphones across leading brands, compare key specifications and check today's availability directly with our store.</p>
+        <div class="cta">
+          <a class="btn btn-gold" href="#shop">Explore all smartphones</a>
+          <a class="btn btn-line" href="#brands">Shop by brand</a>
+        </div>
+        <div class="sbox" style="margin-top:22px"><form onsubmit="return doSearch(event)">
+          <label class="sr" for="hq">Search smartphones</label>
+          <input id="hq" type="search" placeholder="Search iPhone, Redmi, Vivo, Motorola…" autocomplete="off">
+          <button type="submit">Search</button></form></div>
+      </div>
+      <div class="hero-shot" style="min-height:230px;display:flex;flex-direction:column;justify-content:center">
+        <img src="img/logo.webp" alt="ALFATECH MOBILES" width="420" height="420" style="max-width:210px;max-height:210px;object-fit:contain">
+        <p style="text-align:center;color:#5b4a24;font-weight:800;letter-spacing:.18em;font-size:12px">PREMIUM MOBILES · REAL VALUE</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="sec"><div class="wrap">
+    ${sectionHead('Browse collections','Shop by brand','Choose a brand to see available models and variants.','#brands','View all brands')}
+    <div class="btiles">${brands.map(b => `<button type="button" data-brand="${esc(b)}">${esc(b)}<small>${MODELS.filter(m=>m.brand===b).length} models</small></button>`).join('')}</div>
+  </div></section>
+
+  <section class="sec alt"><div class="wrap">
+    ${sectionHead('Explore the catalogue','Latest smartphone listings','Prices are ALFATECH selling prices; stock and final offers are confirmed by the shop.','#shop','View all products')}
+    <div class="grid">${picks.map(card).join('')}</div>
+  </div></section>
+
+  <section class="sec"><div class="wrap">
+    ${sectionHead('Find your next phone','Browse all smartphones','Use search, brand filters and price sorting to find the right model.','#shop','Open full catalogue')}
+    <div class="cta"><a class="btn btn-gold" href="#shop">Shop all ${MODELS.length} models</a><a class="btn btn-wa" href="#" data-askgeneral>Ask us on WhatsApp</a></div>
+  </div></section>`;
+};
+
+function sideHTML(){
+  const cnt = b => MODELS.filter(m => m.brand === b).length;
+  return `<details class="fg" open><summary>Brand</summary><div class="checks">
+      ${BRANDS.map(b => `<label><input type="checkbox" data-fk="brand" value="${esc(b)}" ${F.brand.includes(b)?'checked':''}>${esc(b)}<span class="ct">${cnt(b)}</span></label>`).join('')}
+    </div></details>
+    <details class="fg" open><summary>Price</summary><div class="checks">
+      ${BUDGETS.map((b,i)=>`<label><input type="radio" name="fb" data-fk="budget" value="${i}" ${F.budget===i?'checked':''}>${b[0]}</label>`).join('')}
+      <label><input type="radio" name="fb" data-fk="budget" value="" ${F.budget==null?'checked':''}>Any price</label>
+      <div class="minmax"><label><span class="sr">Minimum price</span><input class="inp" type="number" min="0" placeholder="Min ₹" data-fk="min" value="${esc(F.min)}"></label><label><span class="sr">Maximum price</span><input class="inp" type="number" min="0" placeholder="Max ₹" data-fk="max" value="${esc(F.max)}"></label></div>
+    </div></details>
+    <p class="note" style="padding-top:12px">Prices are ALFATECH MOBILES selling prices. The shop confirms stock and the final price before dispatch.</p>`;
+}
+function chipsHTML(){
+  const c = [];
+  if (F.q) c.push(['q','',`“${F.q}”`]);
+  F.brand.forEach(v => c.push(['brand',v,v]));
+  if (F.budget != null) c.push(['budget','',BUDGETS[F.budget][0]]);
+  if (F.min) c.push(['min','','Min ' + inr(F.min)]);
+  if (F.max) c.push(['max','','Max ' + inr(F.max)]);
+  return c.length ? c.map(([k,v,t])=>`<button class="chip" type="button" data-unf="${k}" data-v="${esc(v)}">${esc(t)}<b aria-hidden="true">×</b><span class="sr">Remove filter</span></button>`).join('') + '<button class="link" type="button" id="clearAll" style="font-size:13px">Clear all</button>' : '';
+}
+V.shop = () => {
+  const L = filtered(), shown = L.slice(0, F.page * PER);
+  return `<div class="wrap" style="padding-top:20px">
+    <nav class="crumbs"><a href="#home">Home</a><span>/</span><span>Shop</span></nav>
+    <h1 class="ttl">${esc(F.title)}</h1></div>
+  <div class="wrap cat">
+    <aside class="side" aria-label="Filters">${sideHTML()}</aside>
+    <div>
+      <div class="toolbar"><span><b class="num">${L.length}</b> model${L.length===1?'':'s'}</span>
+        <div style="display:flex; gap:8px; align-items:center">
+          <button class="btn btn-line sm fbtn" type="button" id="openF">Filter</button>
+          <label><span class="sr">Sort by</span><select class="inp" id="sortSel" style="min-height:40px; width:auto">
+            ${[['price_desc','Price: high to low'],['price_asc','Price: low to high'],['brand','Brand'],['name','Name']].map(([v,t])=>`<option value="${v}" ${F.sort===v?'selected':''}>${t}</option>`).join('')}
+          </select></label></div></div>
+      ${chipsHTML() ? `<div class="chips">${chipsHTML()}</div>` : ''}
+      <div class="grid">${shown.length ? shown.map(card).join('') : `<div class="empty"><b>No smartphones match these filters</b><p>Try a wider price range, or ask the shop.</p><button class="btn btn-line sm" type="button" id="clearAll2">Clear all filters</button></div>`}</div>
+      ${L.length ? `<div class="pager"><span>Showing ${shown.length} of ${L.length}</span>${shown.length < L.length ? `<button class="btn btn-line sm" type="button" id="moreBtn">Load more</button>` : ''}</div>` : ''}
+    </div></div>`;
+};
+
+V.brands = () => `<div class="wrap doc" style="max-width:1240px">
+  <nav class="crumbs"><a href="#home">Home</a><span>/</span><span>Brands</span></nav>
+  <h1>Brands we stock</h1>
+  <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:18px">
+    ${BRANDS.map(b => { const L = PRODUCTS.filter(p=>p.brand===b); const from = Math.min(...L.map(p=>p.price));
+      return `<button class="box" type="button" data-brand="${esc(b)}" style="text-align:left; cursor:pointer">
+        <h3>${esc(b)}</h3><p>${groupModels(L).length} model${groupModels(L).length===1?'':'s'} · from ${inr(from)}</p>
+        <span class="link" style="margin-top:auto">View smartphones →</span></button>`; }).join('')}
+  </div></div>`;
+
+V.search = () => `<div class="wrap" style="padding-block:24px 50px">
+  <h1 class="ttl" style="margin-top:0">Search</h1>
+  <div class="sbox" style="margin-top:16px"><form onsubmit="return doSearch(event)">
+    <label class="sr" for="sq">Search smartphones</label>
+    <input id="sq" type="search" value="${esc(F.q)}" placeholder="Search a model, chipset or brand" autocomplete="off">
+    <button type="submit">Search</button></form></div>
+  <p class="note" style="margin-top:14px">Search across ${MODELS.length} models.</p></div>`;
+
+function shotsHTML(p, ci){
+  const c = gal(p.id)[ci];
+  return c.shots.map((s,i) => `<button class="th" type="button" data-shot="${s.u}" data-from="${esc(s.d || '')}" aria-current="${i===0}" aria-label="View ${i+1} of ${esc(p.name)} in ${esc(c.name)}${s.d ? ', colour representation' : ''}"><img src="${s.u}" alt="" loading="lazy" decoding="async" width="62" height="62">${s.d ? '<span class="thd" aria-hidden="true">~</span>' : ''}</button>`).join('');
+}
+function noteFor(p, sh){
+  return (p.m.photoNote || 'Official brand product photographs.') + ' Colour availability is confirmed by the shop before dispatch.';
+}
+function pdpGallery(p){
+  const g = gal(p.id);
+  if (!g && p.image) return `<div class="gal"><img src="${esc(p.image)}" alt="${esc(p.name)}" style="width:100%;max-height:520px;object-fit:contain;background:#fff;border-radius:14px;padding:16px" loading="lazy"><p class="galnote">Representative image from the supplied model image group.</p></div>`;
+  if (!g) return `<div class="gal"><div>
+        <p class="mk">${esc(p.brand)}</p><p class="nm">${esc(p.name)}</p>
+        <p class="ph">${p.brand.toLowerCase()==='vivo' ? 'Product photos are included in the supplied image archive but exact model-to-image matching is pending confirmation.' : 'Official product photography has not been added for this model yet. Use the manufacturer gallery linked below.'}</p>
+      </div></div>`;
+  const c = g[0];
+  return `<div class="galw" data-pid="${p.id}">
+    <div class="gal hasimg"><img id="galMain" src="${c.shots[0].u}" alt="${esc(p.name)} in ${esc(c.name)}" width="1100" height="1100" decoding="async"></div>
+    <div class="thumbs" id="galThumbs">${shotsHTML(p, 0)}</div>
+    <div class="swatches" role="group" aria-label="Choose a colour">${g.map((x,i) =>
+      `<button class="swb" type="button" data-colour="${i}" aria-pressed="${i===0}"><i style="--c:${x.hex}"></i>${esc(x.name)}</button>`).join('')}</div>
+    <p class="galnote${c.shots[0].d ? ' isrep' : ''}" id="galNote">${esc(noteFor(p, c.shots[0]))}</p>
+  </div>`;
+}
+
+V.product = id => {
+  const p = byId(id) || PRODUCTS.find(x => x.model === id);
+  if (!p) return `<div class="wrap" style="padding-block:50px"><div class="empty"><b>Phone not found</b><a class="btn btn-dark" href="#shop">Browse smartphones</a></div></div>`;
+  const row = (k,v) => `<div><dt>${k}</dt><dd>${v ? esc(v) : NV}</dd></div>`;
+  const related = groupModels(PRODUCTS.filter(x => x.brand === p.brand && x.model !== p.model)).slice(0,4);
+  const sib = siblings(p);
+  return `<div class="wrap" style="padding-top:18px">
+    <nav class="crumbs"><a href="#home">Home</a><span>/</span><a href="#shop">Shop</a><span>/</span><a href="#shop" data-brand="${esc(p.brand)}">${esc(p.brand)}</a><span>/</span><span>${esc(p.name)}</span></nav>
+    <div class="pdp">
+      ${pdpGallery(p)}
+      <div class="buy">
+        <h1>${esc(p.name)}</h1>
+        <div class="price"><strong>${inr(p.price)}</strong>
+          ${p.mrp ? `<span style="margin-left:10px;color:var(--muted);text-decoration:line-through">MRP ${inr(p.mrp)}</span>` : ''}
+          <p class="note" style="margin-top:4px">${esc(p.vlabel || '')} · ALFATECH selling price${p.mrp ? ' · MRP from the box price' : ''}.</p></div>
+        ${sib.length > 1 ? `<div><p class="olabel">Choose variant</p><div class="vpick">${sib.map(x =>
+          `<a href="#p-${x.id}" aria-current="${x.id === p.id}" class="${x.stock ? '' : 'oos'}">${esc(x.vlabel)}<small>${inr(x.price)}</small></a>`).join('')}</div></div>` : ''}
+        <div class="facts">
+          <div><span>Availability</span><b>${p.stock ? 'In stock · confirmed by the shop' : 'Out of stock right now'}</b></div>
+          <div><span>Delivery</span><b>${esc(SHOP.deliveryState)} only</b></div>
+          <div><span>Warranty</span><b>Manufacturer warranty</b></div>
+        </div>
+        <div class="bact">
+          <button class="btn btn-red" type="button" data-add="${p.id}" ${p.stock ? '' : 'disabled'}>Add to cart</button>
+          <button class="btn btn-dark" type="button" data-buy="${p.id}" ${p.stock ? '' : 'disabled'}>Buy now</button>
+        </div>
+        ${emiBox(p)}
+        <button class="btn btn-wa" type="button" data-ask="${p.id}">Ask about this phone on WhatsApp</button>
+        <div>
+          <p class="olabel">At a glance</p>
+          <ul style="margin:0; padding-left:18px; display:grid; gap:6px; font-size:14px; color:#4A4A4A">
+            ${[['Display', p.display], ['Processor', p.chip], ['Rear camera', p.cam], ['Battery', p.batt]]
+              .filter(([,v]) => v).map(([k,v]) => `<li><b style="color:var(--ink)">${k}:</b> ${esc(v)}</li>`).join('')
+              || '<li class="nv">Specifications are being verified.</li>'}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <section style="padding-bottom:40px">
+      <h2 style="font-size:22px">Specifications</h2>
+      <dl class="specs">
+        ${row('Display', p.display)}${row('Processor', p.chip)}${row('Rear camera', p.cam)}${row('Front camera', p.front)}
+        ${row('Battery &amp; charging', p.batt)}${row('RAM &amp; storage', p.mem)}${row('Software', p.os)}
+        ${row('Colours', (gal(p.id) || []).map(c => c.name).join(', '))}${row('Highlights', p.about)}
+      </dl>
+      ${p.src ? `<p class="note" style="margin-top:14px">Full specifications: <a href="${esc(p.src)}" target="_blank" rel="noopener nofollow" class="link">official ${esc(p.brand)} website</a>.</p>` : ''}
+    </section>
+    ${related.length ? `<section style="padding-bottom:46px"><h2 style="font-size:22px; margin-bottom:16px">More from ${esc(p.brand)}</h2><div class="grid">${related.map(card).join('')}</div></section>` : ''}
+  </div>`;
+};
+
+V.cart = () => {
+  if (!cart.length) return `<div class="wrap" style="padding-block:24px 60px">
+    <h1 class="ttl" style="margin-top:0">Your cart</h1>
+    <div class="empty" style="margin-top:20px"><b>Your cart is empty</b><p>Browse the catalogue and add a phone.</p><a class="btn btn-dark" href="#shop">Shop smartphones</a></div></div>`;
+  return `<div class="wrap" style="padding-block:24px 60px">
+    <h1 class="ttl" style="margin-top:0">Your cart</h1>
+    <div class="layout2" style="margin-top:20px">
+      <div>${cart.map((i,k) => { const p = byId(i.id); return `<div class="ci">
+        <div><h2 style="font-size:16px">${esc(p.name)}</h2>
+          <p class="note">${esc(p.note || 'Entry configuration')}</p>
+          <div class="qty"><button type="button" data-dec="${k}" aria-label="Decrease quantity">−</button><span>${i.qty}</span><button type="button" data-inc="${k}" aria-label="Increase quantity" ${i.qty>=5?'disabled':''}>+</button>
+            <button class="link" type="button" data-rm="${k}" style="margin-left:10px; font-size:13px">Remove</button></div></div>
+        <p style="font-weight:800" class="num">${inr(p.price * i.qty)}</p></div>`; }).join('')}</div>
+      <aside class="sumbox">
+        <h2 style="font-size:17px">Order summary</h2>
+        <div class="rowline"><span>Subtotal</span><b class="num">${inr(cartTotal())}</b></div>
+        <div class="rowline"><span>Delivery</span><span class="muted">Confirmed by the shop</span></div>
+        <div class="rowline total"><span>Total</span><span class="num">${inr(cartTotal())}</span></div>
+        <p class="note">Reference prices. The shop confirms the final amount before dispatch.</p>
+        <a class="btn btn-red" href="#checkout">Checkout</a>
+      </aside></div></div>`;
+};
+
+V.checkout = () => {
+  if (!cart.length) return V.cart();
+  return `<div class="wrap" style="padding-block:24px 60px">
+    <h1 class="ttl" style="margin-top:0">Checkout</h1>
+    <p class="alert" style="margin-top:14px"><b>Preview.</b> No payment gateway is connected. Your order details are turned into a WhatsApp message that the shop confirms — exactly how the live site behaves until a payment provider is set up.</p>
+    <form class="layout2" style="margin-top:20px" id="coForm" novalidate>
+      <div class="form">
+        <div class="two">
+          <label class="field">Full name<input name="name" required autocomplete="name"></label>
+          <label class="field">Mobile number<input name="phone" required inputmode="numeric" maxlength="13" autocomplete="tel-national" placeholder="10-digit mobile"></label>
+        </div>
+        <div class="two">
+          <label class="field">WhatsApp number <span class="muted" style="font-weight:400">(if different)</span><input name="whatsapp" inputmode="numeric" maxlength="13"></label>
+          <label class="field">Email <span class="muted" style="font-weight:400">(optional)</span><input name="email" type="email" autocomplete="email"></label>
+        </div>
+        <label class="field">Address<input name="line1" required autocomplete="address-line1" placeholder="House no., street, area"></label>
+        <label class="field">Landmark <span class="muted" style="font-weight:400">(optional)</span><input name="line2"></label>
+        <div class="three">
+          <label class="field">City<input name="city" required autocomplete="address-level2"></label>
+          <label class="field">District<input name="district"></label>
+          <label class="field">PIN code<input name="pincode" required inputmode="numeric" maxlength="6" autocomplete="postal-code"></label>
+        </div>
+        <label class="field">State<select name="state" required><option>Uttar Pradesh</option></select>
+          <span class="note" style="font-weight:400">ALFATECH MOBILES delivers inside ${esc(SHOP.deliveryState)} only. Your PIN code is checked before the order is accepted.</span></label>
+        <label class="field">Delivery instructions <span class="muted" style="font-weight:400">(optional)</span><textarea name="notes" rows="2"></textarea></label>
+        <label class="agree"><input type="checkbox" name="confirm" required><span>I confirm my mobile number and delivery address above are correct.</span></label>
+        <label class="agree"><input type="checkbox" name="consent"><span>Send my order document to my WhatsApp number.</span></label>
+        <label class="agree"><input type="checkbox" name="policies" required><span>I accept the <a class="link" href="#terms">Terms</a>, <a class="link" href="#returns">return policy</a> and <a class="link" href="#privacy">privacy policy</a>.</span></label>
+        <p class="err" id="coErr" role="alert"></p>
+      </div>
+      <aside class="sumbox">
+        <h2 style="font-size:17px">Order summary</h2>
+        ${cart.map(i => { const p = byId(i.id); return `<div class="rowline"><span>${esc(p.name)}${i.qty>1?` × ${i.qty}`:''}</span><span class="num">${inr(p.price*i.qty)}</span></div>`; }).join('')}
+        <div class="rowline total"><span>Total</span><span class="num">${inr(cartTotal())}</span></div>
+        <button class="btn btn-red" type="submit">Send order to the shop</button>
+        <p class="note">Card numbers, CVV and UPI PIN are never entered on this website.</p>
+      </aside></form></div>`;
+};
+
+V.track = () => `<div class="wrap doc">
+  <nav class="crumbs"><a href="#home">Home</a><span>/</span><span>Track order</span></nav>
+  <h1>Track your order</h1>
+  <p class="alert" style="margin-top:12px">Order tracking works on the live website, where each order is stored with its own order number. In this preview there is no order database, so there is nothing to look up.</p>
+  <p style="margin-top:16px">On the live site you enter your order number and the mobile number used on the order, and both must match before any details are shown.</p>
+  <p style="margin-top:16px">For now, message the shop with your order details.</p>
+  <button class="btn btn-wa" type="button" data-askgeneral style="margin-top:18px">Message the shop</button></div>`;
+
+V.account = () => `<div class="wrap doc">
+  <nav class="crumbs"><a href="#home">Home</a><span>/</span><span>Account</span></nav>
+  <h1>Your account</h1>
+  <p class="alert" style="margin-top:12px">Accounts work on the live website, where sign-up, login, saved addresses, order history and invoice downloads all run against the shop's database. This preview has no database, so there is nothing to sign in to.</p>
+  <p style="margin-top:16px">On the live site you can create an account to keep your delivery addresses and see every order you have placed, or check out as a guest and track the order with its order number instead.</p>
+  <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:18px">
+    <a class="btn btn-dark" href="#track">Track an order</a>
+    <button class="btn btn-wa" type="button" data-askgeneral>Message the shop</button>
+  </div></div>`;
+
+V.about = () => `<div class="wrap doc">
+  <nav class="crumbs"><a href="#home">Home</a><span>/</span><span>About</span></nav>
+  <h1>About ALFATECH MOBILES</h1>
+  <p>ALFATECH MOBILES is a smartphone shop on Nishat Road, Sadar Bazar, Shahjahanpur, Uttar Pradesh. We sell new smartphones from Apple, vivo, Redmi and Motorola, and deliver across Uttar Pradesh.</p>
+  <p style="margin-top:14px">Every phone on this website is listed with the specification and price reference we hold for it, and a link to the manufacturer's own product page. Where we have not verified something, the website says so rather than guessing.</p>
+  <p class="alert" style="margin-top:20px"><b>Still to be published:</b> shop opening hours, GSTIN and legal entity details. These will appear here once ALFATECH MOBILES confirms them.</p></div>`;
+
+V.contact = () => `<div class="wrap doc">
+  <nav class="crumbs"><a href="#home">Home</a><span>/</span><span>Contact</span></nav>
+  <h1>Contact us</h1>
+  <p>Questions about a model, a variant, availability or an order — talk to the shop directly.</p>
+  <div class="facts" style="margin-top:20px">
+    <div><span>Shop address</span><b>${esc(SHOP.addr1)}, ${esc(SHOP.city)}, ${esc(SHOP.state)} ${esc(SHOP.pin)}</b></div>
+    <div><span>Phone / WhatsApp</span><b>${esc(SHOP.phone)}</b></div>
+    <div><span>Email</span><b>${esc(SHOP.email)}</b></div>
+    <div><span>Delivery area</span><b>${esc(SHOP.deliveryState)} only</b></div>
+  </div>
+  <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:22px">
+    <button class="btn btn-wa" type="button" data-askgeneral>Message us on WhatsApp</button>
+    <a class="btn btn-line" href="mailto:${esc(SHOP.email)}">Email the shop</a>
+  </div>
+  <p class="note" style="margin-top:18px">Shop opening hours are not published here yet. Please call before visiting.</p></div>`;
+
+const FAQ = [
+  ['Where do you deliver?', `We deliver inside ${SHOP.deliveryState} only. Your PIN code is checked at checkout, and orders outside the delivery area cannot be placed.`],
+  ['Is the price on the website the final price?', 'The price shown is the ALFATECH MOBILES selling price. Offers can change it, so the shop confirms the final price before dispatch.'],
+  ['How do I pay?', 'No online payment gateway is connected yet. Orders are confirmed with the shop on WhatsApp, and you pay by the method the shop offers. Card numbers, CVV and UPI PIN are never entered on this website.'],
+  ['Do I get a GST invoice?', 'ALFATECH MOBILES is GST registered. Until the GST details are added to the website, orders are issued with a pro forma order summary that is clearly labelled as not being a GST tax invoice.'],
+  ['Are the phones new?', 'Yes. ALFATECH MOBILES sells new smartphones only. There is no refurbished or second-hand stock.'],
+  ['Do you offer EMI?', 'Yes. Every phone page shows approximate monthly EMI for each plan. Tap "EMI ke liye WhatsApp karein" and the shop will confirm the exact plan, down payment and documents.'],
+  ['Are the photos real?', 'Product photos are official brand images for each model and colour. Colour availability is confirmed by the shop before dispatch.'],
+  ['What warranty do I get?', 'Phones carry the manufacturer’s warranty and are serviced at the brand’s authorised service centres. Exact terms are confirmed by the shop.']
+];
+V.faq = () => `<div class="wrap doc" style="max-width:880px">
+  <nav class="crumbs"><a href="#home">Home</a><span>/</span><span>FAQ</span></nav>
+  <h1>Frequently asked questions</h1>
+  <div class="faq" style="margin-top:18px">${FAQ.map(([q,a])=>`<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}</div></div>`;
+
+const seller = `${SHOP.name}, ${SHOP.addr1}, ${SHOP.city}, ${SHOP.state} ${SHOP.pin}`;
+const DOCS = {
+  shipping: ['Shipping and delivery policy', `
+    <h2>Where we deliver</h2><p>${seller} delivers to serviceable PIN codes inside ${SHOP.deliveryState} only. Your PIN code is validated before an order is accepted; orders outside the delivery area cannot be placed.</p>
+    <h2>Delivery charges and timelines</h2><p>Any delivery charge is shown in your order summary before you confirm. Timelines depend on stock and your location and are confirmed when the shop confirms your order. We do not publish a guaranteed delivery date.</p>
+    <h2>When your order arrives</h2><p>Please check that the box seal is intact and that the IMEI on the box matches your order document before accepting the parcel.</p>`],
+  returns: ['Cancellation, return and refund policy', `
+    <h2>Cancellation</h2><p>You may cancel an order at any time before it is dispatched. Contact the shop with your order number. If you have already paid, the amount is refunded in full.</p>
+    <h2>Returns</h2><p>Sealed-box smartphones that have been opened cannot be returned unless the device is defective. If a phone is dead on arrival or has a manufacturing defect, report it to the shop as soon as possible after delivery. Replacement follows the manufacturer's policy and may require a report from the brand's authorised service centre.</p>
+    <h2>Refunds</h2><p>Approved refunds are returned to the original payment method. The shop confirms the timeline when the refund is approved.</p>
+    <h2>Not covered</h2><p>Physical damage, liquid damage, and accessories once opened or fitted.</p>`],
+  privacy: ['Privacy policy', `
+    <h2>What we collect</h2><p>Your name, mobile number, WhatsApp number if given, email address, delivery address and order details.</p>
+    <h2>Why we collect it</h2><p>To process and deliver your order, send order updates, issue your order document and support warranty claims. We keep order records for as long as required for accounting and tax purposes.</p>
+    <h2>Payment information</h2><p>We do not collect or store card numbers, CVV codes, UPI PINs or net banking passwords on this website.</p>
+    <h2>WhatsApp messages</h2><p>We send order documents and updates to WhatsApp only if you ask us to at checkout. These are messages about your own order. You can ask us to stop at any time.</p>
+    <h2>Who we share it with</h2><p>Only the service providers needed to complete your order. We do not sell your data.</p>
+    <h2>Your choices</h2><p>Contact the shop to correct or delete your details, subject to records we are required to keep.</p>`],
+  terms: ['Terms and conditions', `
+    <h2>Who you are buying from</h2><p>${seller}.</p>
+    <h2>Products and prices</h2><p>All phones sold are new. Prices are in Indian rupees. Specifications and reference prices come from manufacturer product pages, linked on each product page; anything we have not verified is marked as such. Prices and availability can change, and the shop confirms the final price before dispatch.</p>
+    <h2>Orders</h2><p>An order is an offer to buy. It is accepted when the shop confirms it. We may decline an order if an item is out of stock, if a price was listed in error, or if the delivery address cannot be served. Any amount already paid is refunded in full.</p>
+    <h2>Payment</h2><p>Online card and UPI gateway payment is not available until a payment provider has been selected, configured and tested. Until then orders are confirmed directly with the shop.</p>
+    <h2>Invoices and tax</h2><p>ALFATECH MOBILES is GST registered. Until the GST configuration is completed on the website, orders are issued with a pro forma order summary rather than a GST tax invoice. The document is clearly labelled.</p>
+    <h2>Warranty</h2><p>Phones carry the manufacturer's warranty and are serviced at the brand's authorised service centres. The shop will help with a claim, but repair and replacement decisions are made by the manufacturer.</p>
+    <h2>Governing law</h2><p>These terms are governed by the laws of India, and disputes are subject to the jurisdiction of the courts at Shahjahanpur, Uttar Pradesh.</p>`]
+};
+['shipping','returns','privacy','terms'].forEach(k => {
+  V[k] = () => `<div class="wrap doc"><p class="kicker">Policy</p><h1>${DOCS[k][0]}</h1>
+    <p class="alert">Draft for review. ALFATECH MOBILES must confirm every point before the site goes live.</p>
+    <div style="margin-top:6px">${DOCS[k][1]}</div></div>`;
+});
+
+/* ===================== router ===================== */
+const NAVS = [['home','Home'],['shop','Shop'],['brands','Brands'],['search','Search'],['account','Account'],['cart','Cart'],['track','Track order'],['about','About'],['contact','Contact'],['faq','FAQ']];
+/* brand navigation row: All + every brand in the catalogue */
+$('#brandnav').innerHTML = ['All', ...BRANDS].map(b =>
+  `<a href="#shop" data-bnav="${b === 'All' ? '' : esc(b)}">${esc(b)}</a>`).join('');
+function markBrandNav(){
+  const on = location.hash === '#shop' && F.brand.length === 1 ? F.brand[0] : (location.hash === '#shop' && !F.brand.length ? 'All' : null);
+  document.querySelectorAll('[data-bnav]').forEach(a => {
+    const v = a.dataset.bnav || 'All';
+    a.setAttribute('aria-current', String(v === on));
+  });
+}
+document.addEventListener('click', e => {
+  const a = e.target.closest('[data-bnav]'); if (!a) return;
+  e.preventDefault();
+  const b = a.dataset.bnav;
+  F = blank();
+  if (b){ F.brand = [b]; F.title = b + ' smartphones'; } else { F.title = 'All smartphones'; }
+  go('shop');
+});
+$('#mnav').innerHTML = NAVS.map(([r,t]) => `<a href="#${r}" data-r="${r}" data-close>${t}</a>`).join('');
+$('#menuBtn').addEventListener('click', () => $('#menu').showModal());
+
+function route(){
+  const h = location.hash.slice(1) || 'home';
+  if (h.startsWith('p-')) return ['product', h.slice(2)];
+  return [V[h] ? h : 'home'];
+}
+function render(keep){
+  const [r, arg] = route(), y = scrollY;
+  $('#view').innerHTML = r === 'product' ? V.product(arg) : V[r]();
+  scrollTo(0, keep ? y : 0);
+  document.querySelectorAll('[data-r]').forEach(a => a.dataset.r === r ? a.setAttribute('aria-current','page') : a.removeAttribute('aria-current'));
+  const p = r === 'product' ? byId(arg) : null;
+  document.title = p ? `${p.name} · ALFATECH Mobiles` : 'ALFATECH Mobiles';
+  markBrandNav();
+}
+addEventListener('hashchange', () => render());
+
+function go(r){ if (location.hash === '#' + r) render(); else location.hash = r; }
+window.doSearch = function(e){
+  e.preventDefault();
+  const v = (e.target.querySelector('input')?.value ?? '').trim();
+  F = blank(); F.q = v; F.title = v ? `Results for “${v}”` : 'All smartphones';
+  go('shop'); return false;
+};
+
+/* ---- global actions ---- */
+document.addEventListener('click', e => {
+  let t;
+  if ((t = e.target.closest('[data-close]'))){ const d = t.closest('dialog'); if (d) d.close(); }
+  if ((t = e.target.closest('[data-add]'))){ addCart(t.dataset.add); return; }
+  if ((t = e.target.closest('[data-buy]'))){ addCart(t.dataset.buy, true); go('checkout'); return; }
+  if ((t = e.target.closest('[data-ask]'))){ const p = byId(t.dataset.ask);
+    openWA(`Hello ALFATECH MOBILES, mujhe ${p.mname}${p.vlabel ? ' (' + p.vlabel + ')' : ''} ke baare mein jaankari chahiye. Website price: ${inr(p.price)}. Kaun se colours stock mein hain?`, 'Ask about this phone'); return; }
+  if ((t = e.target.closest('[data-emi]'))){ const p = byId(t.dataset.emi); if (p) openWA(emiMsg(p), 'EMI plans on WhatsApp'); return; }
+  if (e.target.closest('[data-askgeneral]')){ openWA('Hello ALFATECH MOBILES, I have a question.', 'Message the shop'); return; }
+  if ((t = e.target.closest('[data-brand]'))){ e.preventDefault(); F = blank(); F.brand = [t.dataset.brand]; F.title = t.dataset.brand + ' smartphones'; go('shop'); return; }
+  if ((t = e.target.closest('[data-budget]'))){ e.preventDefault(); F = blank(); F.budget = +t.dataset.budget; F.title = 'Smartphones ' + BUDGETS[F.budget][0].toLowerCase(); go('shop'); return; }
+});
+
+/* ---- featured-phone colour swap on the homepage ---- */
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-hero]'); if (!t) return;
+  const f = byId(FEATURED_ID), c = gal(FEATURED_ID)[+t.dataset.hero], img = $('#heroImg');
+  img.src = c.shots[0].u;
+  img.alt = `${f.name} in ${c.name}`;
+  t.parentElement.querySelectorAll('[data-hero]').forEach(b => b.setAttribute('aria-pressed', String(b === t)));
+});
+
+/* ---- gallery ---- */
+document.addEventListener('click', e => {
+  const w = e.target.closest('.galw'); if (!w) return;
+  const main = w.querySelector('#galMain');
+  const p = byId(w.dataset.pid), note = w.querySelector('#galNote');
+  const setNote = s => { note.textContent = noteFor(p, s); note.classList.toggle('isrep', !!s.d); };
+  let t;
+  if ((t = e.target.closest('[data-shot]'))){
+    main.src = t.dataset.shot;
+    w.querySelectorAll('[data-shot]').forEach(b => b.setAttribute('aria-current', String(b === t)));
+    setNote({ u: t.dataset.shot, d: t.dataset.from || null });
+    return;
+  }
+  if ((t = e.target.closest('[data-colour]'))){
+    const i = +t.dataset.colour, c = gal(p.id)[i];
+    main.src = c.shots[0].u;
+    main.alt = `${p.name} in ${c.name}`;
+    w.querySelector('#galThumbs').innerHTML = shotsHTML(p, i);
+    w.querySelectorAll('[data-colour]').forEach(b => b.setAttribute('aria-pressed', String(b === t)));
+    setNote(c.shots[0]);
+  }
+});
+
+/* ---- cart actions ---- */
+document.addEventListener('click', e => {
+  if (location.hash !== '#cart') return;
+  let t;
+  if ((t = e.target.closest('[data-inc]'))) cart[+t.dataset.inc].qty = Math.min(5, cart[+t.dataset.inc].qty + 1);
+  else if ((t = e.target.closest('[data-dec]'))){ const k = +t.dataset.dec; if (--cart[k].qty < 1) cart.splice(k,1); }
+  else if ((t = e.target.closest('[data-rm]'))) cart.splice(+t.dataset.rm, 1);
+  else return;
+  store.set('cart', cart); counts(); render(true);
+});
+$('#cartBtn').addEventListener('click', () => go('cart'));
+
+/* ---- shop filters ---- */
+document.addEventListener('change', e => {
+  if (location.hash !== '#shop') return;
+  const t = e.target.closest('[data-fk]');
+  if (t){
+    const k = t.dataset.fk, v = t.value;
+    if (k === 'brand') F.brand = t.checked ? [...F.brand, v] : F.brand.filter(x => x !== v);
+    if (k === 'budget'){ F.budget = v === '' ? null : +v; F.min = ''; F.max = ''; }
+    if (k === 'min' || k === 'max'){ F[k] = v; F.budget = null; }
+    F.page = 1; refresh();
+  }
+  if (e.target.id === 'sortSel'){ F.sort = e.target.value; F.page = 1; refresh(); }
+});
+document.addEventListener('click', e => {
+  if (location.hash !== '#shop') return;
+  const u = e.target.closest('[data-unf]');
+  if (u){ const k = u.dataset.unf, v = u.dataset.v;
+    if (k === 'q'){ F.q = ''; F.title = 'All smartphones'; }
+    else if (k === 'brand') F.brand = F.brand.filter(x => x !== v);
+    else if (k === 'budget') F.budget = null; else F[k] = '';
+    F.page = 1; refresh(); }
+  if (e.target.closest('#clearAll') || e.target.closest('#clearAll2')){ F = blank(); refresh(); }
+  if (e.target.closest('#moreBtn')){ F.page++; refresh(); }
+  if (e.target.closest('#openF')){ $('#filtersBody').innerHTML = sideHTML(); $('#filters').showModal(); }
+});
+function refresh(){ const y = scrollY; $('#view').innerHTML = V.shop(); if ($('#filters').open) $('#filtersBody').innerHTML = sideHTML(); scrollTo(0, y); }
+$('#filters').addEventListener('close', () => { if (location.hash === '#shop') refresh(); });
+$('#filters').addEventListener('change', e => { if (e.target.closest('[data-fk]') && location.hash === '#shop'){ /* handled above */ } });
+
+/* ---- checkout ---- */
+document.addEventListener('submit', e => {
+  if (e.target.id !== 'coForm') return;
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  const get = k => String(fd.get(k) ?? '').trim();
+  const errs = [];
+  if (get('name').length < 2) errs.push('Enter your full name.');
+  if (!normPhone(get('phone'))) errs.push('Enter a valid 10-digit mobile number.');
+  if (get('whatsapp') && !normPhone(get('whatsapp'))) errs.push('Enter a valid WhatsApp number, or leave it blank.');
+  if (get('line1').length < 5) errs.push('Enter your full address.');
+  if (get('city').length < 2) errs.push('Enter your city.');
+  if (!/^[1-9][0-9]{5}$/.test(get('pincode'))) errs.push('Enter a valid 6-digit PIN code.');
+  else if (!isUpPin(get('pincode'))) errs.push(`We deliver inside ${SHOP.deliveryState} only, and ${get('pincode')} is outside our delivery area.`);
+  if (!fd.get('confirm')) errs.push('Please confirm your contact details.');
+  if (!fd.get('policies')) errs.push('Please accept the store policies.');
+
+  if (errs.length){ $('#coErr').textContent = errs[0]; $('#coErr').scrollIntoView({ block:'center' }); return; }
+
+  const items = cart.map((i,k) => { const p = byId(i.id); return `${k+1}. ${p.name}${i.qty>1?` × ${i.qty}`:''} — ${inr(p.price * i.qty)}`; }).join('\n');
+  const msg = `Hello ALFATECH MOBILES, I would like to place an order.\n\n${items}\nTotal (reference): ${inr(cartTotal())}\n\nName: ${get('name')}\nMobile: ${normPhone(get('phone'))}` +
+    (get('whatsapp') ? `\nWhatsApp: ${normPhone(get('whatsapp'))}` : '') +
+    (get('email') ? `\nEmail: ${get('email')}` : '') +
+    `\nAddress: ${get('line1')}${get('line2') ? ', ' + get('line2') : ''}, ${get('city')}${get('district') ? ', ' + get('district') : ''}, Uttar Pradesh – ${get('pincode')}` +
+    (get('notes') ? `\nNotes: ${get('notes')}` : '') +
+    (fd.get('consent') ? `\n\nPlease send my order document to this WhatsApp number.` : '');
+
+  openWA(msg, 'Send your order');
+});
+
+/* ---- toast ---- */
+let tt;
+function toast(m){ $('#toastMsg').textContent = m; const t = $('#toast'); t.classList.add('show'); clearTimeout(tt); tt = setTimeout(() => t.classList.remove('show'), 2600); }
+$('#toastBtn').addEventListener('click', () => { $('#toast').classList.remove('show'); go('cart'); });
+
+document.querySelectorAll('dialog').forEach(d => d.addEventListener('click', e => {
+  if (e.target === d){ const r = d.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) d.close(); }
+}));
+
+// Always open the storefront front page on a fresh page load.
+if (location.hash !== '#ALFATECH' && location.hash !== '#home') history.replaceState(null, '', location.pathname + location.search + '#home');
+counts(); render();
+})();
+</script>
+<script>
+(function(){
+  var intro = document.getElementById('alfatech-intro');
+  if (!intro) return;
+  function hideIntro(){
+    if (intro.classList.contains('hide')) return;
+    intro.classList.add('hide');
+    setTimeout(function(){ if (intro.parentNode) intro.parentNode.removeChild(intro); }, 800);
+  }
+  setTimeout(hideIntro, 1600);           // logo dikhakar ~1.6s mein hata do
+  intro.addEventListener('click', hideIntro); // tap karke bhi skip ho sake
+})();
+</script>
+
+</body>
+</html>

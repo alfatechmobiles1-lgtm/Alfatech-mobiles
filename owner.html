@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Owner portal · ALFATECH MOBILES</title>
+<style>
+:root{--bg:#0b0a08;--bg2:#15130f;--card:#1c1914;--line:#2e2a22;--ink:#f2ecdc;--muted:#a89f8c;--gold:#d4af52;--red:#c0392b;--green:#1f8f4e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:var(--gold)}
+header{position:sticky;top:0;z-index:5;background:#000;border-bottom:1px solid var(--line);padding:10px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+header img{height:30px}
+header .sp{flex:1}
+.wrap{max-width:1100px;margin:0 auto;padding:16px}
+.btn{appearance:none;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 14px;border-radius:10px;font-weight:700;cursor:pointer;font-size:14px}
+.btn:hover{border-color:var(--gold)}
+.btn.gold{background:var(--gold);color:#1a1405;border-color:var(--gold)}
+.btn.red{background:transparent;color:#ff8a7a;border-color:#5a2a24}
+.btn.sm{padding:6px 10px;font-size:13px}
+.btn[disabled]{opacity:.5;pointer-events:none}
+input,select,textarea{background:#0f0e0b;color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:inherit;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);border-color:transparent}
+input[type=checkbox]{width:18px;height:18px;accent-color:var(--gold)}
+label.f{display:grid;gap:4px;font-size:12.5px;color:var(--muted);font-weight:600}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.tabs button{border-radius:999px}
+.tabs button[aria-pressed=true]{background:var(--gold);color:#1a1405;border-color:var(--gold)}
+.box{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}
+.muted{color:var(--muted)}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+details.m{background:var(--bg2);border:1px solid var(--line);border-radius:14px;margin-bottom:10px}
+details.m>summary{list-style:none;cursor:pointer;padding:12px 14px;display:flex;gap:12px;align-items:center}
+details.m>summary::-webkit-details-marker{display:none}
+details.m[open]>summary{border-bottom:1px solid var(--line)}
+.thumb{width:48px;height:48px;border-radius:8px;background:#fff;object-fit:contain;flex:none}
+.nothumb{width:48px;height:48px;border-radius:8px;background:#2a261e;display:grid;place-items:center;font-size:11px;color:var(--muted);flex:none;text-align:center}
+.mbody{padding:14px;display:grid;gap:14px}
+table{width:100%;border-collapse:collapse}
+th{font-size:12px;color:var(--muted);text-align:left;font-weight:600;padding:4px}
+td{padding:4px;vertical-align:middle}
+td.c{text-align:center}
+.pill{font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.pill.off{color:#ff8a7a;border-color:#5a2a24}
+.shots{display:flex;gap:8px;flex-wrap:wrap}
+.shot{position:relative}
+.shot img{width:72px;height:72px;border-radius:8px;background:#fff;object-fit:contain;display:block}
+.shot button{position:absolute;top:-6px;right:-6px;width:22px;height:22px;border-radius:50%;border:0;background:var(--red);color:#fff;font-weight:900;cursor:pointer;line-height:22px;padding:0}
+.shot .mv{position:absolute;bottom:2px;left:2px;right:2px;display:flex;justify-content:space-between}
+.shot .mv b{background:rgba(0,0,0,.6);color:#fff;border-radius:4px;font-size:11px;padding:0 4px;cursor:pointer}
+.col{border:1px dashed var(--line);border-radius:12px;padding:10px;display:grid;gap:8px}
+.savebar{position:sticky;bottom:0;background:#000;border-top:1px solid var(--line);padding:10px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;z-index:5}
+.savebar .msg{flex:1;font-size:14px}
+.dirty{color:var(--gold);font-weight:700}
+.ok{color:#6fd39a}.err{color:#ff8a7a}
+.login{max-width:380px;margin:12vh auto;padding:22px}
+.setup li{margin:6px 0}
+code{background:#000;padding:1px 6px;border-radius:6px;color:var(--gold)}
+@media(max-width:640px){table.vt thead{display:none}table.vt tr{display:grid;grid-template-columns:1fr 1fr;gap:6px;border-bottom:1px solid var(--line);padding:8px 0}table.vt td{padding:0}table.vt td[data-l]::before{content:attr(data-l);display:block;font-size:11.5px;color:var(--muted);font-weight:600;margin-bottom:3px}table.vt td.c{text-align:left}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const inr = n => '₹' + Math.round(+n || 0).toLocaleString('en-IN');
+const slug = s => String(s).toLowerCase().replace(/\+/g, '-plus').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || ('item-' + Date.now());
+let TOKEN = sessionStorage.getItem('alfa-owner') || '';
+let CAT = null, STATUS = {}, TAB = 'products', Q = '', BR = '', DIRTY = false, SOURCE = '';
+
+async function api(path, opt = {}) {
+  opt.headers = Object.assign({}, opt.headers || {}, TOKEN ? { authorization: 'Bearer ' + TOKEN } : {});
+  const r = await fetch(path, opt);
+  let j = {}; try { j = await r.json(); } catch (e) {}
+  if (r.status === 401 && path !== '/api/owner/login') { TOKEN = ''; sessionStorage.removeItem('alfa-owner'); }
+  if (!r.ok) throw new Error(j.error || ('HTTP ' + r.status));
+  return j;
+}
+
+/* ---------- login / setup ---------- */
+function setupHelp() {
+  const miss = [];
+  if (!STATUS.kv) miss.push('<li>Workers &amp; Pages → your project → <b>Settings → Bindings → Add → KV namespace</b>. Variable name: <code>STORE</code>. Create a new namespace (any name, e.g. <code>alfatech-store</code>).</li>');
+  if (!STATUS.password) miss.push('<li><b>Settings → Variables and Secrets → Add</b>. Type: Secret. Name: <code>OWNER_PASSWORD</code>. Value: your own strong password.</li>');
+  if (!miss.length) return '';
+  return `<div class="box setup"><b>One-time setup needed in Cloudflare</b><ol>${miss.join('')}<li>Then upload the website zip again (<b>Create deployment</b>) so the new settings apply.</li></ol></div>`;
+}
+function viewLogin(err) {
+  $('#app').innerHTML = `<div class="login box">
+    <img src="/img/alfatech-wordmark.webp" alt="ALFATECH MOBILES" style="height:34px">
+    <h2 style="margin:14px 0 4px">Owner portal</h2>
+    <p class="muted" style="margin:0 0 14px">Prices, stock, photos and EMI plans of your website.</p>
+    ${setupHelp()}
+    <form id="lf" class="row" style="display:grid;gap:10px">
+      <label class="f">Password<input type="password" id="pw" autocomplete="current-password" required></label>
+      <button class="btn gold" type="submit">Log in</button>
+      <p class="err" style="margin:0">${esc(err || '')}</p>
+    </form></div>`;
+  $('#lf').onsubmit = async e => {
+    e.preventDefault();
+    try { const j = await api('/api/owner/login', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ password: $('#pw').value }) });
+      TOKEN = j.token; sessionStorage.setItem('alfa-owner', TOKEN); await loadCat(); render();
+    } catch (er) { viewLogin(er.message); }
+  };
+}
+async function loadCat() {
+  try { CAT = await api('/api/catalog'); SOURCE = 'saved'; }
+  catch (e) { CAT = await (await fetch('/catalog.json', { cache: 'no-store' })).json(); SOURCE = 'default'; }
+  CAT.models = CAT.models || []; CAT.emi = CAT.emi || { tenures: [] }; CAT.shop = CAT.shop || {};
+  DIRTY = false;
+}
+
+/* ---------- main ---------- */
+function render() {
+  if (!TOKEN) return viewLogin();
+  const y = scrollY;
+  $('#app').innerHTML = `
+  <header><img src="/img/alfatech-wordmark.webp" alt="ALFATECH"><b>Owner portal</b><span class="sp"></span>
+    <a class="btn sm" href="/" target="_blank">Open website</a>
+    <button class="btn sm" id="logout">Log out</button></header>
+  <div class="wrap">
+    ${setupHelp()}
+    <div class="tabs">${[['products','Phones & prices'],['emi','EMI plans'],['shop','Shop details'],['backup','Backup']].map(([k,t]) =>
+      `<button class="btn" data-tab="${k}" aria-pressed="${TAB===k}">${t}</button>`).join('')}</div>
+    <div id="tab">${({products: tabProducts, emi: tabEmi, shop: tabShop, backup: tabBackup})[TAB]()}</div>
+  </div>
+  <div class="savebar"><span class="msg" id="msg">${DIRTY ? '<span class="dirty">Unsaved changes</span>' : (SOURCE === 'default' ? '<span class="muted">Showing the built-in catalogue (nothing saved yet).</span>' : '<span class="muted">All changes saved.</span>')}</span>
+    <button class="btn gold" id="save" ${DIRTY ? '' : 'disabled'}>Save &amp; publish</button></div>`;
+  scrollTo(0, y);
+}
+const markDirty = () => { DIRTY = true; const m = $('#msg'); if (m) m.innerHTML = '<span class="dirty">Unsaved changes</span>'; const s = $('#save'); if (s) s.disabled = false; };
+
+function tabProducts() {
+  const brands = [...new Set(CAT.models.map(m => m.brand))];
+  const list = CAT.models.map((m, i) => [m, i]).filter(([m]) =>
+    (!BR || m.brand === BR) && (!Q || (m.name + ' ' + m.brand).toLowerCase().includes(Q.toLowerCase())));
+  return `<div class="box row">
+      <input id="q" placeholder="Search phone…" value="${esc(Q)}" style="flex:2;min-width:160px">
+      <select id="br" style="flex:1;min-width:120px"><option value="">All brands</option>${brands.map(b => `<option ${b===BR?'selected':''}>${esc(b)}</option>`).join('')}</select>
+      <button class="btn gold" id="addModel">+ New phone</button></div>
+    <p class="muted" style="margin:0 0 10px;font-size:13px">${CAT.models.length} phones · tap a phone to edit prices, stock, photos and details.</p>
+    ${list.map(([m, i]) => modelHTML(m, i)).join('') || '<p class="muted">No phones match.</p>'}`;
+}
+function modelHTML(m, i) {
+  const first = (m.colours || []).flatMap(c => c.shots || [])[0];
+  const prices = (m.variants || []).map(v => +v.price).filter(Boolean);
+  const oos = (m.variants || []).every(v => v.stock === false);
+  return `<details class="m" data-mi="${i}" ${OPEN.has(m.id) ? 'open' : ''}>
+    <summary>${first ? `<img class="thumb" src="${esc(first)}" alt="">` : '<span class="nothumb">no photo</span>'}
+      <div style="flex:1;min-width:0"><b>${esc(m.name)}</b><div class="muted" style="font-size:13px">${esc(m.brand)} · ${(m.variants||[]).length} variant(s) · ${prices.length ? 'from ' + inr(Math.min(...prices)) : 'no price'}</div></div>
+      ${m.hidden ? '<span class="pill off">Hidden</span>' : ''}${oos ? '<span class="pill off">Out of stock</span>' : ''}</summary>
+    <div class="mbody">
+      <div class="grid2">
+        <label class="f">Phone name<input data-f="name" value="${esc(m.name)}"></label>
+        <label class="f">Brand<input data-f="brand" value="${esc(m.brand)}" list="brandlist"></label>
+      </div>
+      <label class="row" style="gap:8px"><input type="checkbox" data-f="hidden" ${m.hidden ? 'checked' : ''}> Hide this phone from the website</label>
+      <div><b>Variants &amp; prices</b>
+        <table class="vt"><thead><tr><th>RAM + storage</th><th>Selling price ₹</th><th>MRP ₹ (optional)</th><th>In stock</th><th>Hide</th><th></th></tr></thead><tbody>
+        ${(m.variants || []).map((v, k) => `<tr data-vi="${k}">
+          <td data-l="RAM + storage"><input data-vf="label" value="${esc(v.label)}" placeholder="8GB + 128GB"></td>
+          <td data-l="Selling price ₹"><input data-vf="price" type="number" min="0" inputmode="numeric" value="${esc(v.price)}"></td>
+          <td data-l="MRP ₹ (optional)"><input data-vf="mrp" type="number" min="0" inputmode="numeric" value="${esc(v.mrp ?? '')}"></td>
+          <td class="c" data-l="In stock"><input type="checkbox" data-vf="stock" ${v.stock !== false ? 'checked' : ''}></td>
+          <td class="c" data-l="Hide"><input type="checkbox" data-vf="hidden" ${v.hidden ? 'checked' : ''}></td>
+          <td class="c"><button class="btn red sm" data-delv="${k}" type="button">Delete</button></td></tr>`).join('')}
+        </tbody></table>
+        <button class="btn sm" data-addv type="button" style="margin-top:8px">+ Add variant</button></div>
+      <div><b>Photos</b> <span class="muted" style="font-size:13px">(the first photo of the first colour is the main photo)</span>
+        <div style="display:grid;gap:10px;margin-top:8px">${(m.colours || []).map((c, ci) => `<div class="col" data-ci="${ci}">
+          <div class="row"><input data-cf="name" value="${esc(c.name)}" placeholder="Colour name" style="flex:1;min-width:140px">
+            <input data-cf="hex" type="color" value="${esc(/^#[0-9a-f]{6}$/i.test(c.hex||'') ? c.hex : '#cccccc')}" style="width:52px;padding:2px">
+            <button class="btn red sm" data-delc type="button">Delete colour</button></div>
+          <div class="shots">${(c.shots || []).map((u, si) => `<div class="shot"><img src="${esc(u)}" alt=""><button type="button" data-dels="${si}" title="Remove">×</button>
+            <div class="mv">${si ? `<b data-mvs="${si}" data-d="-1">◀</b>` : '<span></span>'}${si < c.shots.length - 1 ? `<b data-mvs="${si}" data-d="1">▶</b>` : ''}</div></div>`).join('')}
+            <label class="btn sm" style="display:grid;place-items:center;width:72px;height:72px;text-align:center">+ Photo<input type="file" accept="image/*" multiple data-up hidden></label></div>
+        </div>`).join('')}</div>
+        <button class="btn sm" data-addc type="button" style="margin-top:8px">+ Add colour</button></div>
+      <div><b>Details</b><div class="grid2" style="margin-top:8px">
+        ${[['display','Display'],['chip','Processor'],['cam','Rear camera'],['front','Front camera'],['batt','Battery & charging'],['os','Software'],['src','Official page link']].map(([k,t]) =>
+          `<label class="f">${t}<input data-f="${k}" value="${esc(m[k] || '')}"></label>`).join('')}
+        </div>
+        <label class="f" style="margin-top:10px">Highlights<textarea data-f="highlights" rows="2">${esc(m.highlights || '')}</textarea></label></div>
+      <div class="row"><button class="btn red sm" data-delm type="button">Delete this phone</button></div>
+    </div></details>`;
+}
+function tabEmi() {
+  const E = CAT.emi;
+  const ex = 20000;
+  return `<div class="box"><b>EMI plans shown on every phone</b>
+    <p class="muted" style="font-size:13px">Interest 0 = price ÷ months. Put the yearly interest % if your finance partner charges interest. Example below is for a ${inr(ex)} phone.</p>
+    <table><thead><tr><th>Months</th><th>Interest % per year</th><th>Example EMI</th><th></th></tr></thead><tbody>
+    ${(E.tenures || []).map((t, k) => { const n = +t.months || 1, r = +t.rate || 0, i = r / 1200, P = Math.max(0, ex - (+E.downPayment || 0));
+      const mo = r ? P * i * Math.pow(1+i,n) / (Math.pow(1+i,n) - 1) : P / n;
+      return `<tr data-ti="${k}"><td><input type="number" min="1" data-tf="months" value="${esc(t.months)}"></td>
+      <td><input type="number" min="0" step="0.1" data-tf="rate" value="${esc(t.rate || 0)}"></td>
+      <td>${inr(Math.ceil(mo))}/month</td><td><button class="btn red sm" data-delt="${k}" type="button">Delete</button></td></tr>`; }).join('')}
+    </tbody></table>
+    <button class="btn sm" id="addT" type="button" style="margin-top:8px">+ Add plan</button>
+    <div class="grid2" style="margin-top:14px">
+      <label class="f">Down payment ₹ (0 = none)<input type="number" min="0" id="dp" value="${esc(E.downPayment || 0)}"></label>
+    </div>
+    <label class="f" style="margin-top:10px">Note shown under EMI plans<textarea id="enote" rows="3">${esc(E.note || '')}</textarea></label></div>`;
+}
+function tabShop() {
+  const S = CAT.shop;
+  return `<div class="box"><b>Shop details</b><div class="grid2" style="margin-top:10px">
+    ${[['name','Shop name'],['phone','Phone (shown on site)'],['wa','WhatsApp number with 91, digits only'],['email','Email'],['addr1','Address'],['city','City'],['state','State'],['pin','PIN code']].map(([k,t]) =>
+      `<label class="f">${t}<input data-sf="${k}" value="${esc(S[k] || '')}"></label>`).join('')}
+    </div><p class="muted" style="font-size:13px">All WhatsApp buttons (EMI, order, enquiry) go to the WhatsApp number above.</p></div>`;
+}
+function tabBackup() {
+  return `<div class="box"><b>Backup</b>
+    <p class="muted" style="font-size:13px">Download a copy of all phones, prices and settings. Keep it safe; you can upload it again any time.</p>
+    <div class="row"><button class="btn" id="dl" type="button">Download backup</button>
+      <label class="btn">Upload backup<input type="file" id="imp" accept="application/json,.json" hidden></label></div></div>
+  <div class="box"><b>Undo / reset</b>
+    <p class="muted" style="font-size:13px">Undo brings back the version before your last save. Reset goes back to the catalogue that came with the website zip.</p>
+    <div class="row"><button class="btn" id="undo" type="button">Undo last save</button><button class="btn red" id="reset" type="button">Reset to built-in catalogue</button></div></div>`;
+}
+
+/* ---------- events ---------- */
+const OPEN = new Set();
+document.addEventListener('toggle', e => {
+  const d = e.target.closest && e.target.closest('details.m'); if (!d) return;
+  const m = CAT.models[+d.dataset.mi]; if (!m) return;
+  d.open ? OPEN.add(m.id) : OPEN.delete(m.id);
+}, true);
+const ctx = el => {
+  const d = el.closest('[data-mi]'); const m = d ? CAT.models[+d.dataset.mi] : null;
+  const vr = el.closest('[data-vi]'); const cr = el.closest('[data-ci]');
+  return { m, v: vr && m ? m.variants[+vr.dataset.vi] : null, vi: vr ? +vr.dataset.vi : null, c: cr && m ? m.colours[+cr.dataset.ci] : null, ci: cr ? +cr.dataset.ci : null };
+};
+document.addEventListener('input', e => {
+  const t = e.target, { m, v, c } = ctx(t);
+  if (t.id === 'q') { Q = t.value; const pos = t.selectionStart; render(); const q = $('#q'); q.focus(); q.setSelectionRange(pos, pos); return; }
+  if (t.dataset.f && m) { m[t.dataset.f] = t.type === 'checkbox' ? t.checked : t.value; if (t.dataset.f === 'name') { const s = t.closest('details').querySelector('summary b'); if (s) s.textContent = t.value; } }
+  else if (t.dataset.vf && v) { const k = t.dataset.vf;
+    if (k === 'stock') v.stock = t.checked; else if (k === 'hidden') v.hidden = t.checked;
+    else if (k === 'price') v.price = t.value === '' ? 0 : +t.value;
+    else if (k === 'mrp') v.mrp = t.value === '' ? null : +t.value;
+    else { v.label = t.value; } }
+  else if (t.dataset.cf && c) c[t.dataset.cf] = t.value;
+  else if (t.dataset.tf) { const T = CAT.emi.tenures[+t.closest('[data-ti]').dataset.ti]; T[t.dataset.tf] = +t.value; }
+  else if (t.id === 'dp') CAT.emi.downPayment = +t.value || 0;
+  else if (t.id === 'enote') CAT.emi.note = t.value;
+  else if (t.dataset.sf) CAT.shop[t.dataset.sf] = t.value.trim();
+  else return;
+  markDirty();
+});
+document.addEventListener('change', async e => {
+  const t = e.target;
+  if (t.id === 'br') { BR = t.value; render(); return; }
+  if (t.dataset.tf || t.id === 'dp') { render(); return; }
+  if (t.dataset.up !== undefined) {
+    const { m, c } = ctx(t);
+    const files = [...t.files]; if (!files.length) return;
+    say('Uploading ' + files.length + ' photo(s)…');
+    try { for (const f of files) { const blob = await shrink(f); const r = await fetch('/api/owner/upload', { method: 'POST', headers: { authorization: 'Bearer ' + TOKEN, 'content-type': blob.type }, body: blob });
+        const j = await r.json(); if (!r.ok) throw new Error(j.error || 'Upload failed'); c.shots.push(j.url); }
+      OPEN.add(m.id); markDirty(); render(); say('<span class="dirty">Photos added - press Save &amp; publish.</span>');
+    } catch (er) { say('<span class="err">' + esc(er.message) + '</span>'); }
+    return;
+  }
+  if (t.id === 'imp') {
+    try { const j = JSON.parse(await t.files[0].text()); if (!Array.isArray(j.models)) throw new Error('Not an ALFATECH backup file');
+      CAT = j; markDirty(); render(); say('<span class="dirty">Backup loaded - press Save &amp; publish.</span>'); }
+    catch (er) { say('<span class="err">' + esc(er.message) + '</span>'); }
+  }
+});
+document.addEventListener('click', async e => {
+  const t = e.target.closest('button,b[data-mvs]'); if (!t) return;
+  const { m, vi, c, ci } = ctx(t);
+  if (t.dataset.tab) { TAB = t.dataset.tab; render(); return; }
+  if (t.id === 'logout') { TOKEN = ''; sessionStorage.removeItem('alfa-owner'); render(); return; }
+  if (t.id === 'save') return save();
+  if (t.id === 'addModel') {
+    const name = prompt('Phone name (for example: vivo Y200 5G)'); if (!name) return;
+    const brand = prompt('Brand (Apple, Redmi, Motorola, vivo …)', BR || '') || 'Other';
+    let id = slug(name); while (CAT.models.some(x => x.id === id)) id += '-2';
+    CAT.models.unshift({ id, brand, name, display: '', chip: '', cam: '', front: '', batt: '', os: '', highlights: '', src: '', hidden: false,
+      colours: [{ name: 'Default', hex: '#cccccc', shots: [] }], variants: [{ id: 'v1', label: '', price: 0, mrp: null, stock: true }] });
+    OPEN.add(id); Q = ''; BR = ''; markDirty(); render(); return;
+  }
+  if (!m && !t.dataset.delt && t.id !== 'addT' && !['dl','undo','reset'].includes(t.id)) return;
+  if (t.dataset.addv !== undefined) { let k = m.variants.length + 1, id; do { id = 'v' + k++; } while (m.variants.some(v => v.id === id));
+    m.variants.push({ id, label: '', price: 0, mrp: null, stock: true }); }
+  else if (t.dataset.delv !== undefined) { if (m.variants.length === 1) return alert('A phone needs at least one variant. Hide or delete the phone instead.'); if (!confirm('Delete this variant?')) return; m.variants.splice(vi, 1); }
+  else if (t.dataset.addc !== undefined) { (m.colours = m.colours || []).push({ name: 'New colour', hex: '#cccccc', shots: [] }); }
+  else if (t.dataset.delc !== undefined) { if (!confirm('Delete this colour and its photos?')) return; m.colours.splice(ci, 1); }
+  else if (t.dataset.dels !== undefined) { c.shots.splice(+t.dataset.dels, 1); }
+  else if (t.dataset.mvs !== undefined) { const a = +t.dataset.mvs, b = a + +t.dataset.d; [c.shots[a], c.shots[b]] = [c.shots[b], c.shots[a]]; }
+  else if (t.dataset.delm !== undefined) { if (!confirm('Delete ' + m.name + ' from the website?')) return; CAT.models.splice(CAT.models.indexOf(m), 1); }
+  else if (t.id === 'addT') { CAT.emi.tenures.push({ months: 18, rate: 0 }); }
+  else if (t.dataset.delt !== undefined) { CAT.emi.tenures.splice(+t.dataset.delt, 1); }
+  else if (t.id === 'dl') { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([JSON.stringify(CAT, null, 1)], { type: 'application/json' }));
+    a.download = 'alfatech-catalogue-' + new Date().toISOString().slice(0, 10) + '.json'; a.click(); return; }
+  else if (t.id === 'undo') { if (!confirm('Bring back the version before your last save?')) return;
+    try { await api('/api/owner/undo', { method: 'POST' }); await loadCat(); render(); say('<span class="ok">Previous version restored and live.</span>'); } catch (er) { say('<span class="err">' + esc(er.message) + '</span>'); } return; }
+  else if (t.id === 'reset') { if (!confirm('Go back to the built-in catalogue? Your saved changes will be removed from the website (you can Undo once).')) return;
+    try { await api('/api/owner/catalog', { method: 'DELETE' }); await loadCat(); render(); say('<span class="ok">Website is back on the built-in catalogue.</span>'); } catch (er) { say('<span class="err">' + esc(er.message) + '</span>'); } return; }
+  else return;
+  if (m) OPEN.add(m.id);
+  markDirty(); render();
+});
+function say(h) { const m = $('#msg'); if (m) m.innerHTML = h; }
+async function save() {
+  for (const m of CAT.models) for (const v of m.variants) if (!v.label && m.variants.length > 1) return say('<span class="err">' + esc(m.name) + ': every variant needs a RAM + storage label.</span>');
+  for (const m of CAT.models) m.variants.forEach((v, k) => { if (!v.id) v.id = 'v' + (k + 1); });
+  say('Saving…'); $('#save').disabled = true;
+  try { await api('/api/owner/catalog', { method: 'PUT', headers: { 'content-type': 'application/json' }, body: JSON.stringify(CAT) });
+    DIRTY = false; SOURCE = 'saved'; render(); say('<span class="ok">Saved. The website shows the new prices now (refresh it to see).</span>');
+  } catch (er) { $('#save').disabled = false; say('<span class="err">Not saved: ' + esc(er.message) + '</span>'); if (!TOKEN) viewLogin('Session expired - log in again, then press Save.'); }
+}
+/* resize photos in the browser before upload: max 1000px, WebP */
+function shrink(file) {
+  return new Promise((res, rej) => {
+    const img = new Image(); img.onerror = () => rej(new Error('Could not read ' + file.name));
+    img.onload = () => { const s = Math.min(1, 1000 / Math.max(img.width, img.height));
+      const cv = document.createElement('canvas'); cv.width = Math.round(img.width * s); cv.height = Math.round(img.height * s);
+      const g = cv.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, cv.width, cv.height); g.drawImage(img, 0, 0, cv.width, cv.height);
+      cv.toBlob(b => b ? res(b) : rej(new Error('Could not convert ' + file.name)), 'image/webp', 0.82); URL.revokeObjectURL(img.src); };
+    img.src = URL.createObjectURL(file);
+  });
+}
+addEventListener('beforeunload', e => { if (DIRTY) { e.preventDefault(); e.returnValue = ''; } });
+
+(async () => {
+  try { STATUS = await (await fetch('/api/status', { cache: 'no-store' })).json(); } catch (e) { STATUS = {}; }
+  if (TOKEN) { try { await loadCat(); } catch (e) { TOKEN = ''; } }
+  render();
+})();
+</script>
+<datalist id="brandlist"><option>Apple</option><option>Redmi</option><option>Motorola</option><option>vivo</option><option>Samsung</option><option>OPPO</option><option>OnePlus</option><option>realme</option></datalist>
+</body>
+</html>
