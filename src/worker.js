@@ -1,9 +1,7 @@
-// ALFATECH MOBILES - Cloudflare Pages advanced-mode worker.
-// Serves the static site, plus a small API for the owner portal (/owner).
-// Needs (Cloudflare Pages > Settings):
-//   - KV namespace binding named  STORE
-//   - Secret / variable named      OWNER_PASSWORD
-// Without them the shop still works with the built-in catalogue; only saving is disabled.
+// ALFATECH MOBILES - Cloudflare Worker (static assets + owner-portal API).
+// Static files are served from ./public by the ASSETS binding (see wrangler.jsonc).
+// Needs: KV binding STORE (in wrangler.jsonc) and secret OWNER_PASSWORD
+// (Worker > Settings > Variables and Secrets). Without them the shop still works.
 
 const JSONH = { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' };
 const json = (obj, status = 200) => new Response(JSON.stringify(obj), { status, headers: JSONH });

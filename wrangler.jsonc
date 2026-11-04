@@ -1,0 +1,16 @@
+{
+  // ALFATECH MOBILES - Cloudflare Worker with static assets.
+  // Website files live in ./public, the owner-portal API in ./src/worker.js.
+  "name": "alfatech-mobiles",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "observability": { "enabled": true }
+  // KV for the owner portal gets added here once the namespace ID is known:
+  // "kv_namespaces": [{ "binding": "STORE", "id": "<namespace id>" }]
+}
