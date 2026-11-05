@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-02",
+ "updated": "2026-11-05",
  "shop": {
   "name": "ALFATECH MOBILES",
   "phone": "+91 95544 84848",
@@ -45,25 +45,31 @@
    "front": "18MP Center Stage front camera",
    "batt": "Up to 43 hours video playback (Apple rating)",
    "os": "iOS",
-   "highlights": "Pro Max size. Photos show the iPhone 18 Pro body (same design, smaller size).",
+   "highlights": "Photos show the iPhone 18 Pro design (same look, bigger size).",
    "src": "https://www.apple.com/in/iphone/",
    "colours": [
     {
-     "name": "Glacier",
-     "hex": "#B8CEE0",
+     "name": "Silver",
+     "hex": "#E3E3E1",
      "shots": [
-      "img/iphone-18-pro-glacier-backfront.webp",
-      "img/iphone-18-pro-glacier-backside.webp",
-      "img/iphone-18-pro-glacier-cam.webp"
+      "img/p/apple-iphone-18-pro/apple-25.webp",
+      "img/p/apple-iphone-18-pro/apple-26.webp"
      ]
     },
     {
      "name": "Burgundy",
      "hex": "#5E2A33",
      "shots": [
-      "img/iphone-18-pro-burgundy-backfront.webp",
-      "img/iphone-18-pro-burgundy-backside.webp",
-      "img/iphone-18-pro-burgundy-cam.webp"
+      "img/p/apple-iphone-18-pro/apple-27.webp",
+      "img/p/apple-iphone-18-pro/apple-28.webp"
+     ]
+    },
+    {
+     "name": "Glacier Blue",
+     "hex": "#B8CEE0",
+     "shots": [
+      "img/p/apple-iphone-18-pro/apple-29.webp",
+      "img/p/apple-iphone-18-pro/apple-30.webp"
      ]
     }
    ],
@@ -72,18 +78,25 @@
      "id": "256",
      "label": "256GB",
      "price": 175000,
-     "mrp": null,
-     "stock": true
+     "mrp": 179900,
+     "stock": true,
+     "mrpLabel": "MOP"
     },
     {
      "id": "512",
      "label": "512GB",
      "price": 198000,
-     "mrp": null,
-     "stock": true
+     "mrp": 204900,
+     "stock": true,
+     "mrpLabel": "MOP"
     }
    ],
-   "hidden": false
+   "hidden": false,
+   "offers": [
+    "Card offer: ₹7,000 off on 6-month EMI",
+    "Card offer: ₹6,000 off on full card swipe",
+    "Website price is for online / UPI payment"
+   ]
   },
   {
    "id": "apple-iphone-18-pro",
@@ -99,21 +112,27 @@
    "src": "https://www.apple.com/in/shop/buy-iphone/iphone-18-pro",
    "colours": [
     {
-     "name": "Glacier",
-     "hex": "#B8CEE0",
+     "name": "Silver",
+     "hex": "#E3E3E1",
      "shots": [
-      "img/iphone-18-pro-glacier-backfront.webp",
-      "img/iphone-18-pro-glacier-backside.webp",
-      "img/iphone-18-pro-glacier-cam.webp"
+      "img/p/apple-iphone-18-pro/apple-25.webp",
+      "img/p/apple-iphone-18-pro/apple-26.webp"
      ]
     },
     {
      "name": "Burgundy",
      "hex": "#5E2A33",
      "shots": [
-      "img/iphone-18-pro-burgundy-backfront.webp",
-      "img/iphone-18-pro-burgundy-backside.webp",
-      "img/iphone-18-pro-burgundy-cam.webp"
+      "img/p/apple-iphone-18-pro/apple-27.webp",
+      "img/p/apple-iphone-18-pro/apple-28.webp"
+     ]
+    },
+    {
+     "name": "Glacier Blue",
+     "hex": "#B8CEE0",
+     "shots": [
+      "img/p/apple-iphone-18-pro/apple-29.webp",
+      "img/p/apple-iphone-18-pro/apple-30.webp"
      ]
     }
    ],
@@ -122,11 +141,17 @@
      "id": "256",
      "label": "256GB",
      "price": 159900,
-     "mrp": null,
-     "stock": true
+     "mrp": 164900,
+     "stock": true,
+     "mrpLabel": "MOP"
     }
    ],
-   "hidden": false
+   "hidden": false,
+   "offers": [
+    "Card offer: ₹7,000 off on 6-month EMI",
+    "Card offer: ₹6,000 off on full card swipe",
+    "Website price is for online / UPI payment"
+   ]
   },
   {
    "id": "apple-iphone-17",
@@ -145,36 +170,27 @@
      "name": "Lavender",
      "hex": "#D9C7E8",
      "shots": [
-      "img/apple-iphone-17--lavender-backfront.webp",
-      "img/apple-iphone-17--lavender-backside.webp",
-      "img/apple-iphone-17--lavender-cam.webp"
+      "img/p/apple-iphone-17/apple-19.webp",
+      "img/p/apple-iphone-17/apple-20.webp",
+      "img/p/apple-iphone-17/apple-21.webp"
      ]
     },
     {
      "name": "Sage",
-     "hex": "#C1D09D",
+     "hex": "#B7CC97",
      "shots": [
-      "img/apple-iphone-17--sage-backfront.webp",
-      "img/apple-iphone-17--sage-backside.webp",
-      "img/apple-iphone-17--sage-cam.webp"
-     ]
-    },
-    {
-     "name": "Mist Blue",
-     "hex": "#B0C5E0",
-     "shots": [
-      "img/apple-iphone-17--mist-blue-backfront.webp",
-      "img/apple-iphone-17--mist-blue-backside.webp",
-      "img/apple-iphone-17--mist-blue-cam.webp"
+      "img/p/apple-iphone-17/apple-22.webp",
+      "img/p/apple-iphone-17/apple-23.webp",
+      "img/p/apple-iphone-17/apple-24.webp"
      ]
     },
     {
      "name": "White",
      "hex": "#F2F2F0",
      "shots": [
-      "img/apple-iphone-17--white-backfront.webp",
-      "img/apple-iphone-17--white-backside.webp",
-      "img/apple-iphone-17--white-cam.webp"
+      "img/p/apple-iphone-17/apple-16.webp",
+      "img/p/apple-iphone-17/apple-17.webp",
+      "img/p/apple-iphone-17/apple-18.webp"
      ]
     }
    ],
@@ -183,11 +199,18 @@
      "id": "256",
      "label": "256GB",
      "price": 96500,
-     "mrp": null,
-     "stock": true
+     "mrp": 99900,
+     "stock": true,
+     "mrpLabel": "MOP"
     }
    ],
-   "hidden": false
+   "hidden": false,
+   "offers": [
+    "Limited offer 1–14 Nov: ₹91,500 with Axis or SBI card (visit the shop)",
+    "Card offer: ₹8,000 off on 6-month EMI",
+    "Card offer: ₹7,000 off on full card swipe",
+    "Website price is for online / UPI payment"
+   ]
   },
   {
    "id": "apple-iphone-16",
@@ -199,70 +222,69 @@
    "front": "12MP TrueDepth front camera",
    "batt": "",
    "os": "iOS",
-   "highlights": "Storage not specified on the rate list - shop confirms the exact variant.",
+   "highlights": "",
    "src": "https://www.apple.com/in/shop/buy-iphone/iphone-16",
    "colours": [
     {
-     "name": "Black",
-     "hex": "#464646",
-     "shots": [
-      "img/apple-iphone-16--black-backfront.webp",
-      "img/apple-iphone-16--black-backside.webp",
-      "img/apple-iphone-16--black-cam.webp",
-      "img/apple-iphone-16--black-edge.webp"
-     ]
-    },
-    {
-     "name": "White",
-     "hex": "#F2F2F0",
-     "shots": [
-      "img/apple-iphone-16--white-backfront.webp",
-      "img/apple-iphone-16--white-backside.webp",
-      "img/apple-iphone-16--white-cam.webp",
-      "img/apple-iphone-16--white-edge.webp"
-     ]
-    },
-    {
-     "name": "Pink",
-     "hex": "#F2A0D4",
-     "shots": [
-      "img/apple-iphone-16--pink-backfront.webp",
-      "img/apple-iphone-16--pink-backside.webp",
-      "img/apple-iphone-16--pink-cam.webp",
-      "img/apple-iphone-16--pink-edge.webp"
-     ]
-    },
-    {
      "name": "Teal",
-     "hex": "#A9D9D7",
+     "hex": "#9FC9C4",
      "shots": [
-      "img/apple-iphone-16--teal-backfront.webp",
-      "img/apple-iphone-16--teal-backside.webp",
-      "img/apple-iphone-16--teal-cam.webp",
-      "img/apple-iphone-16--teal-edge.webp"
+      "img/p/apple-iphone-16/apple-03.webp",
+      "img/p/apple-iphone-16/apple-04.webp",
+      "img/p/apple-iphone-16/apple-05.webp"
      ]
     },
     {
      "name": "Ultramarine",
-     "hex": "#869EF6",
+     "hex": "#5B6FD8",
      "shots": [
-      "img/apple-iphone-16--ultramarine-backfront.webp",
-      "img/apple-iphone-16--ultramarine-backside.webp",
-      "img/apple-iphone-16--ultramarine-cam.webp",
-      "img/apple-iphone-16--ultramarine-edge.webp"
+      "img/p/apple-iphone-16/apple-13.webp",
+      "img/p/apple-iphone-16/apple-14.webp",
+      "img/p/apple-iphone-16/apple-15.webp"
+     ]
+    },
+    {
+     "name": "Pink",
+     "hex": "#E9A6CF",
+     "shots": [
+      "img/p/apple-iphone-16/apple-07.webp",
+      "img/p/apple-iphone-16/apple-08.webp",
+      "img/p/apple-iphone-16/apple-09.webp"
+     ]
+    },
+    {
+     "name": "White",
+     "hex": "#F1F0EC",
+     "shots": [
+      "img/p/apple-iphone-16/apple-10.webp",
+      "img/p/apple-iphone-16/apple-11.webp",
+      "img/p/apple-iphone-16/apple-12.webp"
+     ]
+    },
+    {
+     "name": "All colours",
+     "hex": "#888888",
+     "shots": [
+      "img/p/apple-iphone-16/apple-06.webp"
      ]
     }
    ],
    "variants": [
     {
-     "id": "storagetobeconfirmed",
-     "label": "Storage to be confirmed",
+     "id": "128",
+     "label": "128GB",
      "price": 87000,
-     "mrp": null,
-     "stock": true
+     "mrp": 89900,
+     "stock": true,
+     "mrpLabel": "MOP"
     }
    ],
-   "hidden": false
+   "hidden": false,
+   "offers": [
+    "Card offer: ₹3,000 off on 6-month EMI",
+    "Card offer: ₹2,000 off on full card swipe",
+    "Website price is for online / UPI payment"
+   ]
   },
   {
    "id": "apple-iphone-15",
@@ -276,17 +298,32 @@
    "os": "iOS",
    "highlights": "",
    "src": "https://www.apple.com/in/iphone/",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Black",
+     "hex": "#3C3D3A",
+     "shots": [
+      "img/p/apple-iphone-15/apple-01.webp",
+      "img/p/apple-iphone-15/apple-02.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "128",
      "label": "128GB",
      "price": 72500,
-     "mrp": null,
-     "stock": true
+     "mrp": 74900,
+     "stock": true,
+     "mrpLabel": "MOP"
     }
    ],
-   "hidden": false
+   "hidden": false,
+   "offers": [
+    "Card offer: ₹2,000 off on 6-month EMI",
+    "Card offer: ₹1,000 off on full card swipe",
+    "Website price is for online / UPI payment"
+   ]
   },
   {
    "id": "redmi-note-17-pro-max",
@@ -306,14 +343,16 @@
      "label": "8GB + 256GB",
      "price": 45500,
      "mrp": 69999,
-     "stock": true
+     "stock": true,
+     "offer": "₹5,000 card cashback"
     },
     {
      "id": "12-256",
      "label": "12GB + 256GB",
      "price": 50500,
      "mrp": null,
-     "stock": true
+     "stock": true,
+     "offer": "₹5,000 card cashback"
     }
    ],
    "hidden": false,
@@ -348,6 +387,10 @@
       "img/p/redmi-note-17-pro-max/redmi-10.webp"
      ]
     }
+   ],
+   "offers": [
+    "Website price is for UPI payment",
+    "Offer valid 16 Sep – 15 Nov 2026"
    ]
   },
   {
@@ -368,14 +411,16 @@
      "label": "8GB + 128GB",
      "price": 33500,
      "mrp": 49999,
-     "stock": true
+     "stock": true,
+     "offer": "₹3,000 card cashback"
     },
     {
      "id": "8-256",
      "label": "8GB + 256GB",
      "price": 36500,
      "mrp": 54999,
-     "stock": true
+     "stock": true,
+     "offer": "₹3,000 card cashback"
     }
    ],
    "hidden": false,
@@ -410,6 +455,10 @@
       "img/p/redmi-note-17-pro/redmi-22.webp"
      ]
     }
+   ],
+   "offers": [
+    "Website price is for UPI payment",
+    "Offer valid 16 Sep – 15 Nov 2026"
    ]
   },
   {
@@ -428,7 +477,7 @@
     {
      "id": "6-128",
      "label": "6GB + 128GB",
-     "price": 20000,
+     "price": 26000,
      "mrp": 39999,
      "stock": true
     },
@@ -469,6 +518,10 @@
       "img/p/redmi-note-17/redmi-31.webp"
      ]
     }
+   ],
+   "offers": [
+    "Website price is for UPI payment",
+    "Offer valid 16 Sep – 15 Nov 2026"
    ]
   },
   {
@@ -528,6 +581,10 @@
       "img/p/redmi-17/redmi-40.webp"
      ]
     }
+   ],
+   "offers": [
+    "Website price is for UPI payment",
+    "Offer valid 16 Sep – 15 Nov 2026"
    ]
   },
   {
@@ -588,6 +645,10 @@
       "img/p/redmi-17c/redmi-52.webp"
      ]
     }
+   ],
+   "offers": [
+    "Website price is for UPI payment",
+    "Offer valid 16 Sep – 15 Nov 2026"
    ]
   },
   {
@@ -655,6 +716,10 @@
       "img/p/redmi-15a/redmi-64.webp"
      ]
     }
+   ],
+   "offers": [
+    "Website price is for UPI payment",
+    "Offer valid 16 Sep – 15 Nov 2026"
    ]
   },
   {
@@ -710,6 +775,9 @@
       "img/p/moto-g06-power/moto-12.webp"
      ]
     }
+   ],
+   "offers": [
+    "Prices valid till 8 Nov 2026"
    ]
   },
   {
@@ -729,21 +797,21 @@
      "id": "4-64",
      "label": "4GB + 64GB",
      "price": 15000,
-     "mrp": null,
+     "mrp": 26500,
      "stock": true
     },
     {
      "id": "4-128",
      "label": "4GB + 128GB",
      "price": 17000,
-     "mrp": null,
+     "mrp": 30500,
      "stock": true
     },
     {
      "id": "8-128",
      "label": "8GB + 128GB",
      "price": 23000,
-     "mrp": null,
+     "mrp": 39000,
      "stock": true
     }
    ],
@@ -779,6 +847,9 @@
       "img/p/moto-g37-power/moto-24.webp"
      ]
     }
+   ],
+   "offers": [
+    "Prices valid till 8 Nov 2026"
    ]
   },
   {
@@ -799,18 +870,21 @@
      "id": "4-128",
      "label": "4GB + 128GB",
      "price": 19000,
-     "mrp": null,
+     "mrp": 42000,
      "stock": true
     },
     {
      "id": "8-128",
      "label": "8GB + 128GB",
      "price": 25000,
-     "mrp": null,
+     "mrp": 45000,
      "stock": true
     }
    ],
-   "hidden": false
+   "hidden": false,
+   "offers": [
+    "Prices valid till 8 Nov 2026"
+   ]
   },
   {
    "id": "moto-g-max",
@@ -829,14 +903,14 @@
      "id": "4-128",
      "label": "4GB + 128GB",
      "price": 19500,
-     "mrp": null,
+     "mrp": 43000,
      "stock": true
     },
     {
      "id": "6-128",
      "label": "6GB + 128GB",
      "price": 21500,
-     "mrp": null,
+     "mrp": 45000,
      "stock": true
     }
    ],
@@ -875,6 +949,9 @@
       "img/p/moto-g-max/moto-39.webp"
      ]
     }
+   ],
+   "offers": [
+    "Prices valid till 8 Nov 2026"
    ]
   },
   {
@@ -894,22 +971,25 @@
      "id": "8-128",
      "label": "8GB + 128GB",
      "price": 31000,
-     "mrp": null,
-     "stock": true
+     "mrp": 50000,
+     "stock": true,
+     "offer": "₹1,500 card cashback"
     },
     {
      "id": "12-256",
      "label": "12GB + 256GB",
      "price": 35000,
-     "mrp": null,
-     "stock": true
+     "mrp": 60000,
+     "stock": true,
+     "offer": "₹2,000 card cashback"
     },
     {
      "id": "12-512",
      "label": "12GB + 512GB",
      "price": 39000,
-     "mrp": null,
-     "stock": true
+     "mrp": 65000,
+     "stock": true,
+     "offer": "₹2,000 card cashback"
     }
    ],
    "hidden": false,
@@ -944,6 +1024,9 @@
       "img/p/motorola-edge-70-fusion/moto-51.webp"
      ]
     }
+   ],
+   "offers": [
+    "Prices valid till 8 Nov 2026"
    ]
   },
   {
@@ -963,15 +1046,17 @@
      "id": "8-256",
      "label": "8GB + 256GB",
      "price": 40000,
-     "mrp": null,
-     "stock": true
+     "mrp": 70000,
+     "stock": true,
+     "offer": "₹3,000 card cashback"
     },
     {
      "id": "12-256",
      "label": "12GB + 256GB",
      "price": 43000,
-     "mrp": null,
-     "stock": true
+     "mrp": 75000,
+     "stock": true,
+     "offer": "₹3,000 card cashback"
     }
    ],
    "hidden": false,
@@ -1006,6 +1091,9 @@
       "img/p/motorola-edge-70-pro/moto-67.webp"
      ]
     }
+   ],
+   "offers": [
+    "Prices valid till 8 Nov 2026"
    ]
   },
   {
@@ -1025,8 +1113,9 @@
      "id": "12-256",
      "label": "12GB + 256GB",
      "price": 48000,
-     "mrp": null,
-     "stock": true
+     "mrp": 85000,
+     "stock": true,
+     "offer": "₹3,000 card cashback"
     }
    ],
    "hidden": false,
@@ -1061,6 +1150,9 @@
       "img/p/motorola-edge-70-pro-plus/moto-79.webp"
      ]
     }
+   ],
+   "offers": [
+    "Prices valid till 8 Nov 2026"
    ]
   },
   {
@@ -1080,15 +1172,17 @@
      "id": "8-256",
      "label": "8GB + 256GB",
      "price": 55000,
-     "mrp": null,
-     "stock": true
+     "mrp": 90000,
+     "stock": true,
+     "offer": "₹3,000 card cashback"
     },
     {
      "id": "12-256",
      "label": "12GB + 256GB",
      "price": 60000,
-     "mrp": null,
-     "stock": true
+     "mrp": 95000,
+     "stock": true,
+     "offer": "₹3,000 card cashback"
     }
    ],
    "hidden": false,
@@ -1128,6 +1222,9 @@
       "img/p/motorola-edge-70-max/moto-96.webp"
      ]
     }
+   ],
+   "offers": [
+    "Prices valid till 8 Nov 2026"
    ]
   },
   {
