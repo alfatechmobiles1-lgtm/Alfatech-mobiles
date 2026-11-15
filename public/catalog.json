@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-05",
+ "updated": "2026-11-16",
  "shop": {
   "name": "ALFATECH MOBILES",
   "phone": "+91 95544 84848",
@@ -324,6 +324,553 @@
     "Card offer: ₹1,000 off on full card swipe",
     "Website price is for online / UPI payment"
    ]
+  },
+  {
+   "id": "samsung-galaxy-z-fold8",
+   "brand": "Samsung",
+   "name": "Samsung Galaxy Z Fold8 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "12-256",
+     "label": "12GB + 256GB",
+     "price": 179999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "12-512",
+     "label": "12GB + 512GB",
+     "price": 199999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "samsung-galaxy-z-fold8-ultra",
+   "brand": "Samsung",
+   "name": "Samsung Galaxy Z Fold8 Ultra 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "256",
+     "label": "256GB",
+     "price": 199999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "512",
+     "label": "512GB",
+     "price": 219999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "samsung-galaxy-z-flip8",
+   "brand": "Samsung",
+   "name": "Samsung Galaxy Z Flip8 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "12-256",
+     "label": "12GB + 256GB",
+     "price": 124999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "samsung-galaxy-z-fold7",
+   "brand": "Samsung",
+   "name": "Samsung Galaxy Z Fold7 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "12-256",
+     "label": "12GB + 256GB",
+     "price": 174999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "samsung-galaxy-z-flip7-fe",
+   "brand": "Samsung",
+   "name": "Samsung Galaxy Z Flip7 FE 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "256",
+     "label": "256GB",
+     "price": 95999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "samsung-galaxy-s26-ultra",
+   "brand": "Samsung",
+   "name": "Samsung Galaxy S26 Ultra 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "256",
+     "label": "256GB",
+     "price": 154999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "1tb",
+     "label": "1TB",
+     "price": 214999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "samsung-galaxy-s26",
+   "brand": "Samsung",
+   "name": "Samsung Galaxy S26 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "12-256",
+     "label": "12GB + 256GB",
+     "price": 102999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "samsung-galaxy-s26-fe",
+   "brand": "Samsung",
+   "name": "Samsung Galaxy S26 FE 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "256",
+     "label": "256GB",
+     "price": 71999,
+     "mrp": null,
+     "stock": true,
+     "hidden": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "samsung-galaxy-s25-ultra",
+   "brand": "Samsung",
+   "name": "Samsung Galaxy S25 Ultra 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "256",
+     "label": "256GB",
+     "price": 119999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "samsung-galaxy-s25",
+   "brand": "Samsung",
+   "name": "Samsung Galaxy S25 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "12-256",
+     "label": "12GB + 256GB",
+     "price": 84999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "samsung-galaxy-s25-fe",
+   "brand": "Samsung",
+   "name": "Samsung Galaxy S25 FE 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "512",
+     "label": "512GB",
+     "price": 77999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "samsung-galaxy-a57",
+   "brand": "Samsung",
+   "name": "Samsung Galaxy A57 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "256",
+     "label": "256GB",
+     "price": 62999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "12-256",
+     "label": "12GB + 256GB",
+     "price": 72499,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "samsung-galaxy-a37",
+   "brand": "Samsung",
+   "name": "Samsung Galaxy A37 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "8-128",
+     "label": "8GB + 128GB",
+     "price": 46999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "256",
+     "label": "256GB",
+     "price": 54499,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "12-256",
+     "label": "12GB + 256GB",
+     "price": 63999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "samsung-galaxy-a36",
+   "brand": "Samsung",
+   "name": "Samsung Galaxy A36 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "12-256",
+     "label": "12GB + 256GB",
+     "price": 46499,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "samsung-galaxy-a27",
+   "brand": "Samsung",
+   "name": "Samsung Galaxy A27 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "6-128",
+     "label": "6GB + 128GB",
+     "price": 35999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "8-128",
+     "label": "8GB + 128GB",
+     "price": 40999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "8-256",
+     "label": "8GB + 256GB",
+     "price": 47499,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "samsung-galaxy-a17",
+   "brand": "Samsung",
+   "name": "Samsung Galaxy A17 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "6-128",
+     "label": "6GB + 128GB",
+     "price": 27999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "6-128ta",
+     "label": "6GB + 128GB (TA)",
+     "price": 29999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "8-128",
+     "label": "8GB + 128GB",
+     "price": 30999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "samsung-galaxy-a07",
+   "brand": "Samsung",
+   "name": "Samsung Galaxy A07",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "4-128",
+     "label": "4GB + 128GB",
+     "price": 20999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
   },
   {
    "id": "redmi-note-17-pro-max",
@@ -1630,6 +2177,489 @@
      ]
     }
    ]
+  },
+  {
+   "id": "oppo-a6c",
+   "brand": "OPPO",
+   "name": "OPPO A6c 4G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "4-64",
+     "label": "4GB + 64GB",
+     "price": 17999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "oppo-a6x",
+   "brand": "OPPO",
+   "name": "OPPO A6x 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "4-64",
+     "label": "4GB + 64GB",
+     "price": 19999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "4-128",
+     "label": "4GB + 128GB",
+     "price": 23999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "6-128",
+     "label": "6GB + 128GB",
+     "price": 26999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "oppo-a6s",
+   "brand": "OPPO",
+   "name": "OPPO A6s",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "4-128",
+     "label": "4GB + 128GB",
+     "price": 24999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "6-128",
+     "label": "6GB + 128GB",
+     "price": 27999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "oppo-a6",
+   "brand": "OPPO",
+   "name": "OPPO A6",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "4-128",
+     "label": "4GB + 128GB",
+     "price": 29999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "6-128",
+     "label": "6GB + 128GB",
+     "price": 31999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "6-256",
+     "label": "6GB + 256GB",
+     "price": 35999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "oppo-a6-pro",
+   "brand": "OPPO",
+   "name": "OPPO A6 Pro",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "8-128",
+     "label": "8GB + 128GB",
+     "price": 32999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "8-256",
+     "label": "8GB + 256GB",
+     "price": 35999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "oppo-f33-pro",
+   "brand": "OPPO",
+   "name": "OPPO F33 Pro 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "8-128",
+     "label": "8GB + 128GB",
+     "price": 39999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "8-256",
+     "label": "8GB + 256GB",
+     "price": 43999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "oppo-f35",
+   "brand": "OPPO",
+   "name": "OPPO F35 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "6-128",
+     "label": "6GB + 128GB",
+     "price": 38999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "8-128",
+     "label": "8GB + 128GB",
+     "price": 42999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "oppo-f35-pro",
+   "brand": "OPPO",
+   "name": "OPPO F35 Pro 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "6-128",
+     "label": "6GB + 128GB",
+     "price": 45999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "8-128",
+     "label": "8GB + 128GB",
+     "price": 49999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "8-256",
+     "label": "8GB + 256GB",
+     "price": 54999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "oppo-reno16-c",
+   "brand": "OPPO",
+   "name": "OPPO Reno16 C 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "8-128",
+     "label": "8GB + 128GB",
+     "price": 52999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "8-256",
+     "label": "8GB + 256GB",
+     "price": 57999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "12-256",
+     "label": "12GB + 256GB",
+     "price": 62999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "oppo-reno16",
+   "brand": "OPPO",
+   "name": "OPPO Reno16 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "8-256",
+     "label": "8GB + 256GB",
+     "price": 72999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "12-256",
+     "label": "12GB + 256GB",
+     "price": 79999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "oppo-find-x9s",
+   "brand": "OPPO",
+   "name": "OPPO Find X9s 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "12-256",
+     "label": "12GB + 256GB",
+     "price": 84999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "12-512",
+     "label": "12GB + 512GB",
+     "price": 94999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "oppo-k14x",
+   "brand": "OPPO",
+   "name": "OPPO K14x 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "4-64",
+     "label": "4GB + 64GB",
+     "price": 18999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "4-128",
+     "label": "4GB + 128GB",
+     "price": 21999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "6-128",
+     "label": "6GB + 128GB",
+     "price": 24999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
+  },
+  {
+   "id": "oppo-k14",
+   "brand": "OPPO",
+   "name": "OPPO K14 5G",
+   "display": "",
+   "chip": "",
+   "cam": "",
+   "front": "",
+   "batt": "",
+   "os": "Android",
+   "highlights": "",
+   "src": "",
+   "colours": [],
+   "variants": [
+    {
+     "id": "6-128",
+     "label": "6GB + 128GB",
+     "price": 25999,
+     "mrp": null,
+     "stock": true
+    },
+    {
+     "id": "6-256",
+     "label": "6GB + 256GB",
+     "price": 28999,
+     "mrp": null,
+     "stock": true
+    }
+   ],
+   "hidden": false,
+   "offers": [
+    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+   ],
+   "photoNote": "Photo coming soon"
   }
  ]
 }
