@@ -466,7 +466,29 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Pink",
+     "hex": "#F0B6D8",
+     "shots": [
+      "img/p/samsung-galaxy-z-flip8/flip-01.webp"
+     ]
+    },
+    {
+     "name": "Graphite",
+     "hex": "#4A4E57",
+     "shots": [
+      "img/p/samsung-galaxy-z-flip8/flip-02.webp"
+     ]
+    },
+    {
+     "name": "Cream",
+     "hex": "#F2EFE8",
+     "shots": [
+      "img/p/samsung-galaxy-z-flip8/flip-03.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "12-256",
@@ -492,7 +514,32 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Silver Shadow",
+     "hex": "#C9CCD0",
+     "shots": [
+      "img/p/samsung-galaxy-z-fold7/fold7-01.webp"
+     ]
+    },
+    {
+     "name": "Jetblack",
+     "hex": "#26272A",
+     "shots": [
+      "img/p/samsung-galaxy-z-fold7/fold7-02.webp"
+     ]
+    },
+    {
+     "name": "Blue Shadow",
+     "hex": "#2B3F8F",
+     "shots": [
+      "img/p/samsung-galaxy-z-fold7/fold7-03.webp",
+      "img/p/samsung-galaxy-z-fold7/fold7-04.webp",
+      "img/p/samsung-galaxy-z-fold7/fold7-05.webp",
+      "img/p/samsung-galaxy-z-fold7/fold7-06.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "12-256",
