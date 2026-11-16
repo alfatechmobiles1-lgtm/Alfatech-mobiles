@@ -337,26 +337,63 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Mint",
+     "hex": "#B9D3CC",
+     "shots": [
+      "img/p/samsung-galaxy-z-fold8/samsung-01.webp",
+      "img/p/samsung-galaxy-z-fold8/samsung-02.webp",
+      "img/p/samsung-galaxy-z-fold8/samsung-03.webp",
+      "img/p/samsung-galaxy-z-fold8/samsung-04.webp",
+      "img/p/samsung-galaxy-z-fold8/samsung-05.webp",
+      "img/p/samsung-galaxy-z-fold8/samsung-06.webp",
+      "img/p/samsung-galaxy-z-fold8/samsung-07.webp"
+     ]
+    },
+    {
+     "name": "Graphite",
+     "hex": "#4A4E57",
+     "shots": [
+      "img/p/samsung-galaxy-z-fold8/samsung-08.webp",
+      "img/p/samsung-galaxy-z-fold8/samsung-09.webp",
+      "img/p/samsung-galaxy-z-fold8/samsung-10.webp",
+      "img/p/samsung-galaxy-z-fold8/samsung-11.webp"
+     ]
+    },
+    {
+     "name": "Cream White",
+     "hex": "#F2EFE8",
+     "shots": [
+      "img/p/samsung-galaxy-z-fold8/samsung-12.webp",
+      "img/p/samsung-galaxy-z-fold8/samsung-13.webp",
+      "img/p/samsung-galaxy-z-fold8/samsung-14.webp",
+      "img/p/samsung-galaxy-z-fold8/samsung-15.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "12-256",
      "label": "12GB + 256GB",
      "price": 179999,
-     "mrp": null,
-     "stock": true
+     "mrp": 184999,
+     "stock": true,
+     "mrpLabel": "MRP"
     },
     {
      "id": "12-512",
      "label": "12GB + 512GB",
      "price": 199999,
-     "mrp": null,
-     "stock": true
+     "mrp": 204999,
+     "stock": true,
+     "mrpLabel": "MRP"
     }
    ],
    "hidden": false,
    "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
+    "Samsung reward points: up to ₹3,600 (256GB) or ₹4,000 (512GB)",
+    "Card offers and EMI: ask at the shop"
    ],
    "photoNote": "Photo coming soon"
   },
