@@ -377,24 +377,19 @@
      "id": "12-256",
      "label": "12GB + 256GB",
      "price": 179999,
-     "mrp": 184999,
-     "stock": true,
-     "mrpLabel": "MRP"
+     "mrp": null,
+     "stock": true
     },
     {
      "id": "12-512",
      "label": "12GB + 512GB",
      "price": 199999,
-     "mrp": 204999,
-     "stock": true,
-     "mrpLabel": "MRP"
+     "mrp": null,
+     "stock": true
     }
    ],
    "hidden": false,
-   "offers": [
-    "Samsung reward points: up to ₹3,600 (256GB) or ₹4,000 (512GB)",
-    "Card offers and EMI: ask at the shop"
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -427,9 +422,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -455,9 +448,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -483,9 +474,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -511,9 +500,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -546,9 +533,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -574,9 +559,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -603,9 +586,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -631,9 +612,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -659,9 +638,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -687,9 +664,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -722,9 +697,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -764,9 +737,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -792,9 +763,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -834,9 +803,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -876,9 +843,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -904,9 +869,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -2238,9 +2201,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -2280,9 +2241,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -2315,9 +2274,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -2357,9 +2314,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -2392,9 +2347,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -2427,9 +2380,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -2462,9 +2413,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -2504,9 +2453,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -2546,9 +2493,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -2581,9 +2526,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -2616,9 +2559,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -2658,9 +2599,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   },
   {
@@ -2693,9 +2632,7 @@
     }
    ],
    "hidden": false,
-   "offers": [
-    "Price is MOP (market operating price). Card offers and EMI: ask at the shop."
-   ],
+   "offers": [],
    "photoNote": "Photo coming soon"
   }
  ]
