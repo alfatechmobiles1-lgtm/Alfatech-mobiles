@@ -591,7 +591,37 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Black",
+     "hex": "#2A2D31",
+     "shots": [
+      "img/p/samsung-galaxy-s26-ultra/s26u-01.webp",
+      "img/p/samsung-galaxy-s26-ultra/s26u-02.webp"
+     ]
+    },
+    {
+     "name": "Cobalt Violet",
+     "hex": "#5B5C8E",
+     "shots": [
+      "img/p/samsung-galaxy-s26-ultra/s26u-03.webp"
+     ]
+    },
+    {
+     "name": "Sky Blue",
+     "hex": "#BCD3E6",
+     "shots": [
+      "img/p/samsung-galaxy-s26-ultra/s26u-04.webp"
+     ]
+    },
+    {
+     "name": "White",
+     "hex": "#F4F4F4",
+     "shots": [
+      "img/p/samsung-galaxy-s26-ultra/s26u-05.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "256",
@@ -624,7 +654,44 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Black",
+     "hex": "#2A2D31",
+     "shots": [
+      "img/p/samsung-galaxy-s26/s26-01.webp",
+      "img/p/samsung-galaxy-s26/s26-02.webp",
+      "img/p/samsung-galaxy-s26/s26-03.webp"
+     ]
+    },
+    {
+     "name": "Cobalt Violet",
+     "hex": "#5B5C8E",
+     "shots": [
+      "img/p/samsung-galaxy-s26/s26-04.webp",
+      "img/p/samsung-galaxy-s26/s26-05.webp",
+      "img/p/samsung-galaxy-s26/s26-06.webp"
+     ]
+    },
+    {
+     "name": "Pink Gold",
+     "hex": "#EBCFC0",
+     "shots": [
+      "img/p/samsung-galaxy-s26/s26-07.webp",
+      "img/p/samsung-galaxy-s26/s26-08.webp",
+      "img/p/samsung-galaxy-s26/s26-09.webp"
+     ]
+    },
+    {
+     "name": "Silver Shadow",
+     "hex": "#BFC2C7",
+     "shots": [
+      "img/p/samsung-galaxy-s26/s26-10.webp",
+      "img/p/samsung-galaxy-s26/s26-11.webp",
+      "img/p/samsung-galaxy-s26/s26-12.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "12-256",
