@@ -404,7 +404,36 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Graphite",
+     "hex": "#4A4E57",
+     "shots": [
+      "img/p/samsung-galaxy-z-fold8-ultra/ultra-01.webp",
+      "img/p/samsung-galaxy-z-fold8-ultra/ultra-02.webp",
+      "img/p/samsung-galaxy-z-fold8-ultra/ultra-03.webp"
+     ]
+    },
+    {
+     "name": "Cream",
+     "hex": "#F2EFE8",
+     "shots": [
+      "img/p/samsung-galaxy-z-fold8-ultra/ultra-04.webp",
+      "img/p/samsung-galaxy-z-fold8-ultra/ultra-05.webp",
+      "img/p/samsung-galaxy-z-fold8-ultra/ultra-06.webp"
+     ]
+    },
+    {
+     "name": "Violet Shadow",
+     "hex": "#4B2E4A",
+     "shots": [
+      "img/p/samsung-galaxy-z-fold8-ultra/ultra-07.webp",
+      "img/p/samsung-galaxy-z-fold8-ultra/ultra-08.webp",
+      "img/p/samsung-galaxy-z-fold8-ultra/ultra-09.webp",
+      "img/p/samsung-galaxy-z-fold8-ultra/ultra-10.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "256",
