@@ -565,7 +565,23 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Black",
+     "hex": "#1E1F22",
+     "shots": [
+      "img/p/samsung-galaxy-z-flip7-fe/flip7fe-01.webp",
+      "img/p/samsung-galaxy-z-flip7-fe/flip7fe-02.webp"
+     ]
+    },
+    {
+     "name": "White",
+     "hex": "#F1F2F4",
+     "shots": [
+      "img/p/samsung-galaxy-z-flip7-fe/flip7fe-03.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "256",
@@ -744,7 +760,31 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Titanium Silverblue",
+     "hex": "#B8C0D8",
+     "shots": [
+      "img/p/samsung-galaxy-s25-ultra/s25u-01.webp",
+      "img/p/samsung-galaxy-s25-ultra/s25u-02.webp"
+     ]
+    },
+    {
+     "name": "Titanium Whitesilver",
+     "hex": "#D9D5CC",
+     "shots": [
+      "img/p/samsung-galaxy-s25-ultra/s25u-03.webp",
+      "img/p/samsung-galaxy-s25-ultra/s25u-04.webp"
+     ]
+    },
+    {
+     "name": "Titanium Black",
+     "hex": "#2B2C30",
+     "shots": [
+      "img/p/samsung-galaxy-s25-ultra/s25u-05.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "256",
@@ -770,7 +810,15 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Mint",
+     "hex": "#BFE6D3",
+     "shots": [
+      "img/p/samsung-galaxy-s25/s25-01.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "12-256",
@@ -796,7 +844,29 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Navy",
+     "hex": "#2F3F7A",
+     "shots": [
+      "img/p/samsung-galaxy-s25-fe/s25fe-01.webp"
+     ]
+    },
+    {
+     "name": "White",
+     "hex": "#F1F2F4",
+     "shots": [
+      "img/p/samsung-galaxy-s25-fe/s25fe-02.webp"
+     ]
+    },
+    {
+     "name": "Jet Black",
+     "hex": "#2A2B2F",
+     "shots": [
+      "img/p/samsung-galaxy-s25-fe/s25fe-03.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "512",
@@ -822,7 +892,22 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Awesome Navy",
+     "hex": "#1B2236",
+     "shots": [
+      "img/p/samsung-galaxy-a57/a57-01.webp"
+     ]
+    },
+    {
+     "name": "Awesome Iceblue",
+     "hex": "#C9D9EA",
+     "shots": [
+      "img/p/samsung-galaxy-a57/a57-02.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "256",
@@ -855,7 +940,15 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Black",
+     "hex": "#2B2C30",
+     "shots": [
+      "img/p/samsung-galaxy-a37/a37-01.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "8-128",
@@ -895,7 +988,15 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Awesome Navy",
+     "hex": "#1D2060",
+     "shots": [
+      "img/p/samsung-galaxy-a36/a36-01.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "12-256",
@@ -921,7 +1022,29 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Black",
+     "hex": "#2B2C30",
+     "shots": [
+      "img/p/samsung-galaxy-a27/a27-01.webp"
+     ]
+    },
+    {
+     "name": "Light Green",
+     "hex": "#CDEFE9",
+     "shots": [
+      "img/p/samsung-galaxy-a27/a27-02.webp"
+     ]
+    },
+    {
+     "name": "Light Pink",
+     "hex": "#E9D3EA",
+     "shots": [
+      "img/p/samsung-galaxy-a27/a27-03.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "6-128",
@@ -961,7 +1084,22 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Black",
+     "hex": "#2B2C30",
+     "shots": [
+      "img/p/samsung-galaxy-a17/a17-01.webp"
+     ]
+    },
+    {
+     "name": "Gray",
+     "hex": "#B9BBC0",
+     "shots": [
+      "img/p/samsung-galaxy-a17/a17-02.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "6-128",
@@ -1001,7 +1139,16 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Black",
+     "hex": "#2B2C30",
+     "shots": [
+      "img/p/samsung-galaxy-a07/a07-01.webp",
+      "img/p/samsung-galaxy-a07/a07-02.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "4-128",
