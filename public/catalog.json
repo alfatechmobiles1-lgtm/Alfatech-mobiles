@@ -2480,7 +2480,22 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Silver",
+     "hex": "#E6E7EA",
+     "shots": [
+      "img/p/oppo-a6c/a6c-01.webp"
+     ]
+    },
+    {
+     "name": "Brown",
+     "hex": "#5A3A38",
+     "shots": [
+      "img/p/oppo-a6c/a6c-02.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "4-64",
@@ -2506,7 +2521,24 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Aqua",
+     "hex": "#BFE6EA",
+     "shots": [
+      "img/p/oppo-a6x/a6x-01.webp",
+      "img/p/oppo-a6x/a6x-02.webp"
+     ]
+    },
+    {
+     "name": "Olive Green",
+     "hex": "#5E6B58",
+     "shots": [
+      "img/p/oppo-a6x/a6x-03.webp",
+      "img/p/oppo-a6x/a6x-04.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "4-64",
@@ -2546,7 +2578,24 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Gold",
+     "hex": "#E8D2A8",
+     "shots": [
+      "img/p/oppo-a6s/a6s-01.webp",
+      "img/p/oppo-a6s/a6s-02.webp"
+     ]
+    },
+    {
+     "name": "Violet",
+     "hex": "#6A6BA0",
+     "shots": [
+      "img/p/oppo-a6s/a6s-03.webp",
+      "img/p/oppo-a6s/a6s-04.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "4-128",
@@ -2619,7 +2668,24 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Gold",
+     "hex": "#E8D2A8",
+     "shots": [
+      "img/p/oppo-a6-pro/a6pro-01.webp",
+      "img/p/oppo-a6-pro/a6pro-02.webp"
+     ]
+    },
+    {
+     "name": "Brown",
+     "hex": "#4A3A36",
+     "shots": [
+      "img/p/oppo-a6-pro/a6pro-03.webp",
+      "img/p/oppo-a6-pro/a6pro-04.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "8-128",
@@ -2685,7 +2751,29 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Pink",
+     "hex": "#F3C9DA",
+     "shots": [
+      "img/p/oppo-f35/f35-01.webp"
+     ]
+    },
+    {
+     "name": "Grey",
+     "hex": "#8E8683",
+     "shots": [
+      "img/p/oppo-f35/f35-02.webp"
+     ]
+    },
+    {
+     "name": "Blue",
+     "hex": "#CFE0F3",
+     "shots": [
+      "img/p/oppo-f35/f35-03.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "6-128",
@@ -2718,7 +2806,29 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Orange",
+     "hex": "#F28A4B",
+     "shots": [
+      "img/p/oppo-f35-pro/f35p-01.webp"
+     ]
+    },
+    {
+     "name": "Brown",
+     "hex": "#4A3A36",
+     "shots": [
+      "img/p/oppo-f35-pro/f35p-02.webp"
+     ]
+    },
+    {
+     "name": "Blue",
+     "hex": "#CFE0F3",
+     "shots": [
+      "img/p/oppo-f35-pro/f35p-03.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "6-128",
@@ -2798,7 +2908,29 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "White",
+     "hex": "#F2F2F4",
+     "shots": [
+      "img/p/oppo-reno16/reno16-01.webp"
+     ]
+    },
+    {
+     "name": "Deep Purple",
+     "hex": "#4A2A55",
+     "shots": [
+      "img/p/oppo-reno16/reno16-02.webp"
+     ]
+    },
+    {
+     "name": "Lavender",
+     "hex": "#CFC2EA",
+     "shots": [
+      "img/p/oppo-reno16/reno16-03.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "8-256",
@@ -2831,7 +2963,22 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Titanium Grey",
+     "hex": "#7C746F",
+     "shots": [
+      "img/p/oppo-find-x9s/x9s-01.webp"
+     ]
+    },
+    {
+     "name": "Lavender",
+     "hex": "#D9D0E6",
+     "shots": [
+      "img/p/oppo-find-x9s/x9s-02.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "12-256",
@@ -2904,7 +3051,16 @@
    "os": "Android",
    "highlights": "",
    "src": "",
-   "colours": [],
+   "colours": [
+    {
+     "name": "Lavender",
+     "hex": "#C9C9F0",
+     "shots": [
+      "img/p/oppo-k14/k14-01.webp",
+      "img/p/oppo-k14/k14-02.webp"
+     ]
+    }
+   ],
    "variants": [
     {
      "id": "6-128",
