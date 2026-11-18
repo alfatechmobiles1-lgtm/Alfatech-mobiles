@@ -2,7 +2,8 @@
 // Static files are served from ./public by the ASSETS binding (see wrangler.jsonc).
 // Needs: KV binding STORE (in wrangler.jsonc) and secret OWNER_PASSWORD
 // (Worker > Settings > Variables and Secrets). Without them the shop still works.
-// Order and sign-up alerts: secrets TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID (comma-separate several chat ids).
+// Order and sign-up alerts: WhatsApp via CALLMEBOT_PHONE + CALLMEBOT_APIKEY, and/or Telegram via TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID
+// (comma-separate several recipients).
 
 const JSONH = { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' };
 const json = (obj, status = 200) => new Response(JSON.stringify(obj), { status, headers: JSONH });
@@ -47,16 +48,26 @@ const clip = (v, n) => String(v ?? '').replace(/[\u0000-\u001f\u007f]/g, ' ').tr
 const rupees = n => '₹' + (+n || 0).toLocaleString('en-IN');
 const okPhone = v => /^[6-9][0-9]{9}$/.test(String(v || ''));
 async function alertShop(env, text) {
+  let sent = false, any = false;
+  // 1) WhatsApp through CallMeBot: CALLMEBOT_PHONE and CALLMEBOT_APIKEY (comma-separated lists, same order)
+  const wp = String(env.CALLMEBOT_PHONE || '').split(',').map(x => x.trim()).filter(Boolean), wk = String(env.CALLMEBOT_APIKEY || '').split(',').map(x => x.trim());
+  for (let i = 0; i < wp.length; i++) {
+    if (!wk[i]) continue; any = true;
+    try {
+      const r = await fetch(`https://api.callmebot.com/whatsapp.php?phone=${encodeURIComponent(wp[i])}&text=${encodeURIComponent(text)}&apikey=${encodeURIComponent(wk[i])}`);
+      if (r.ok) sent = true;
+    } catch (e) {}
+  }
+  // 2) Telegram: TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID
   const token = env.TELEGRAM_BOT_TOKEN, ids = String(env.TELEGRAM_CHAT_ID || '').split(',').map(x => x.trim()).filter(Boolean);
-  if (!token || !ids.length) return { sent: false, reason: 'telegram_not_set' };
-  let sent = false;
-  for (const id of ids) {
+  if (token) for (const id of ids) {
+    any = true;
     try {
       const r = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ chat_id: id, text, disable_web_page_preview: true }) });
       if (r.ok) sent = true;
     } catch (e) {}
   }
-  return { sent, reason: sent ? '' : 'telegram_failed' };
+  return { sent, reason: sent ? '' : any ? 'send_failed' : 'alerts_not_set' };
 }
 async function readBody(req) {
   const t = await req.text();
@@ -104,7 +115,7 @@ async function api(req, env, url) {
   const p = url.pathname;
   const kv = env.STORE;
 
-  if (p === '/api/status') return json({ kv: !!kv, password: !!env.OWNER_PASSWORD, alerts: !!(env.TELEGRAM_BOT_TOKEN && env.TELEGRAM_CHAT_ID) });
+  if (p === '/api/status') return json({ kv: !!kv, password: !!env.OWNER_PASSWORD, whatsapp: !!(env.CALLMEBOT_PHONE && env.CALLMEBOT_APIKEY), telegram: !!(env.TELEGRAM_BOT_TOKEN && env.TELEGRAM_CHAT_ID) });
   if (req.method === 'POST' && (p === '/api/signup' || p === '/api/order' || p === '/api/paid')) return shopEvents(req, env, p);
 
   if (p === '/api/catalog' && req.method === 'GET') {
