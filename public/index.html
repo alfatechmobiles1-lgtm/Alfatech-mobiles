@@ -318,7 +318,7 @@ dialog::backdrop{background:rgba(10,11,14,.55)}
 .mnav{display:grid}
 .mnav a{padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;font-weight:600;font-size:17px}
 
-.toast{visibility:hidden;position:fixed;left:50%;bottom:20px;transform:translate(-50%,140%);z-index:60;background:var(--ink);color:#fff;border-radius:14px;padding:10px 10px 10px 18px;display:flex;gap:14px;align-items:center;transition:transform .3s ease;max-width:calc(100% - 24px);font-size:15px}
+.toast{width:max-content;visibility:hidden;position:fixed;left:50%;bottom:20px;transform:translate(-50%,140%);z-index:60;background:var(--ink);color:#fff;border-radius:14px;padding:10px 10px 10px 18px;display:flex;gap:14px;align-items:center;transition:transform .3s ease;max-width:calc(100% - 24px);font-size:15px}
 .toast.show{transform:translate(-50%,0);visibility:visible}
 .toast .btn{background:#fff;color:var(--ink);border-color:#fff}
 
@@ -382,6 +382,10 @@ dialog::backdrop{background:rgba(10,11,14,.55)}
 .pm.off{opacity:.55;cursor:not-allowed;background:#f6f7f9}
 .pinstat{font-size:13.5px;min-height:20px;margin:-6px 0 0;color:var(--steel)}
 .pinstat.ok{color:var(--wa);font-weight:600}.pinstat.no{color:var(--red);font-weight:600}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.signup{display:grid;gap:14px;max-width:440px}
+.acct{display:grid;grid-template-columns:90px 1fr;gap:8px 12px;padding:16px;border:1px solid var(--line);border-radius:14px;max-width:440px}.acct span{color:var(--steel)}
+#acctBtn.in::after{content:"";position:absolute;top:9px;right:8px;width:9px;height:9px;border-radius:50%;background:var(--wa);border:2px solid #000}
 /* payment sheet */
 #pay{max-width:min(430px,calc(100% - 24px))}
 #pay .dh{border:0;padding:16px 18px 0}
@@ -421,6 +425,7 @@ details.qrd[open] summary::after{content:"\2212"}
     <button class="hwa" type="button" data-askgeneral><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>WhatsApp us</span></button>
     <a class="hic only-m" href="#shop" aria-label="Search phones"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></a>
     <a class="hic" href="#cart" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h14l-1.2 12.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg><span class="n" id="cartN">0</span></a>
+    <a class="hic" href="#account" id="acctBtn" aria-label="Sign up or sign in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8.5" r="3.7"/><path d="M4.5 20c.9-3.6 3.8-5.4 7.5-5.4s6.6 1.8 7.5 5.4"/></svg></a>
     <button class="hic only-m" type="button" id="menuBtn" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
   <nav class="bnav" aria-label="Brands"><div class="wrap" id="bnav"></div></nav>
@@ -546,12 +551,16 @@ const cartTotal = () => cart.reduce((s,i) => s + byId(i.id).price * i.qty, 0);
 function counts(){ const n = cart.reduce((s,i)=>s+i.qty,0); $('#cartN').textContent = n; $('#cartN').dataset.n = n; }
 let tt;
 function toast(m){ $('#toastMsg').textContent = m; const t = $('#toast'); t.classList.add('show'); clearTimeout(tt); tt = setTimeout(() => t.classList.remove('show'), 2800); }
-function addCart(id, quiet){
+const colourFor = p => { const g = gal(p); return (PDP.id === p.model && PDP.g && PDP.g[PDP.colour]) ? PDP.g[PDP.colour].name : (g && g[0] ? g[0].name : ''); };
+const cfull = i => { const p = byId(i.id); return full(p) + (i.colour ? ', ' + i.colour : ''); };
+const cartImg = (i, p) => { const g = gal(p), c = g && g.find(x => x.name === i.colour); return (c && c.shots[0]) || hero(p); };
+function addCart(id, quiet, colour){
   const p = byId(id); if (!p || !p.stock) return;
-  const ex = cart.find(i => i.id === id);
-  if (ex) ex.qty = Math.min(5, ex.qty + 1); else cart.push({ id, qty:1 });
+  colour = colour ?? colourFor(p);
+  const ex = cart.find(i => i.id === id && (i.colour || '') === colour);
+  if (ex) ex.qty = Math.min(5, ex.qty + 1); else cart.push({ id, qty:1, colour });
   store.set('cart', cart); counts();
-  if (!quiet) toast('Added ' + full(p));
+  if (!quiet) toast('Added ' + full(p) + (colour ? ', ' + colour : ''));
 }
 
 /* ---------- filters ---------- */
@@ -697,9 +706,9 @@ V.product = id => {
 V.cart = () => {
   if (!cart.length) return `<div class="wrap doc"><h1>Your cart is empty</h1><p>Pick a phone and add it here, or buy straight from the phone page on WhatsApp.</p><p style="margin-top:18px"><a class="btn" href="#shop">See all phones</a></p></div>`;
   return `<div class="wrap"><div class="pagehead"><h1>Your cart</h1></div>
-    <div class="layout2"><div>${cart.map((i,k) => { const p = byId(i.id), im = hero(p); return `<div class="ci">
+    <div class="layout2"><div>${cart.map((i,k) => { const p = byId(i.id), im = cartImg(i, p); return `<div class="ci">
       <a class="ph" href="#p-${p.id}">${im ? `<img src="${esc(im)}" alt="">` : ''}</a>
-      <div><h3>${esc(p.name)}</h3><p class="muted" style="font-size:14px">${esc(p.vlabel)}</p>
+      <div><h3>${esc(p.name)}</h3><p class="muted" style="font-size:14px">${esc(p.vlabel)}${i.colour ? ', ' + esc(i.colour) : ''}</p>
         <div class="qty"><button type="button" data-dec="${k}" aria-label="One less">−</button><span>${i.qty}</span><button type="button" data-inc="${k}" aria-label="One more" ${i.qty>=5?'disabled':''}>+</button>
         <button class="link" type="button" data-rm="${k}" style="margin-left:12px;font-size:14px">Remove</button></div></div>
       <b class="num">${inr(p.price * i.qty)}</b></div>`; }).join('')}</div>
@@ -713,11 +722,12 @@ V.cart = () => {
 
 V.checkout = () => {
   if (!cart.length) return V.cart();
+  if (!cust) return `<div class="wrap doc"><h1>Sign up to place your order</h1><p class="muted" style="margin-bottom:18px">You need an account to order. It takes a few seconds, then you can pick how to pay.</p>${signupForm('checkout')}</div>`;
   return `<div class="wrap"><div class="pagehead"><p class="crumbs"><a href="#cart">Cart</a> / Delivery details</p><h1>Delivery details</h1>
     <p class="muted" style="margin-top:10px;max-width:60ch">Send your order to the shop on WhatsApp. The shop confirms stock, the final price with any card offer, and the delivery time before anything is charged.</p></div>
     <form class="layout2" id="coForm" novalidate><div class="form" style="padding-top:10px">
-      <div class="two"><label class="field">Full name<input name="name" required autocomplete="name"></label>
-        <label class="field">Mobile number<input name="phone" required inputmode="numeric" maxlength="13" autocomplete="tel-national" placeholder="10-digit mobile"></label></div>
+      <div class="two"><label class="field">Full name<input name="name" required autocomplete="name" value="${esc(cust.name)}"></label>
+        <label class="field">Mobile number<input name="phone" required inputmode="numeric" maxlength="13" autocomplete="tel-national" placeholder="10-digit mobile" value="${esc(cust.phone)}"></label></div>
       <label class="field">Address<input name="line1" required autocomplete="address-line1" placeholder="House number, street, area"></label>
       <label class="field">Landmark <span class="hint">(optional)</span><input name="line2"></label>
       <div class="three"><label class="field">City<input name="city" required autocomplete="address-level2"></label>
@@ -733,14 +743,25 @@ V.checkout = () => {
       <label class="agree"><input type="checkbox" name="policies" required><span>I agree to the <a class="link" href="#terms">terms</a> and <a class="link" href="#returns">return policy</a>.</span></label>
       <p class="err" id="coErr" role="alert"></p></div>
       <aside class="sum"><h2>Your order</h2>
-        ${cart.map(i => { const p = byId(i.id); return `<div class="ln"><span>${esc(full(p))}${i.qty>1?` × ${i.qty}`:''}</span><span class="num">${inr(p.price*i.qty)}</span></div>`; }).join('')}
+        ${cart.map(i => { const p = byId(i.id); return `<div class="ln"><span>${esc(cfull(i))}${i.qty>1?` × ${i.qty}`:''}</span><span class="num">${inr(p.price*i.qty)}</span></div>`; }).join('')}
         <div class="ln tot"><span>Total</span><span class="num">${inr(cartTotal())}</span></div>
         <button class="btn gold block" id="coGo" type="submit" style="margin-top:16px;min-height:54px;font-size:16px">Pay with UPI</button></aside></form></div>`;
 };
 
 const docPage = (title, body) => `<div class="wrap doc"><h1>${title}</h1>${body}</div>`;
 V.track = () => docPage('Order status', `<p>Every order is handled on WhatsApp. Message the shop with your name and the phone you ordered, and we will tell you where it is.</p><p style="margin-top:16px"><button class="btn wa" type="button" data-askgeneral>${ICON.wa} Message the shop</button></p>`);
-V.account = V.track;
+let cust = store.get('cust', null);
+const signupForm = next => `<form class="signup" id="signupForm" data-next="${next}" novalidate>
+  <label class="field">Full name<input name="name" required autocomplete="name"></label>
+  <label class="field">Mobile number<input name="phone" required inputmode="numeric" maxlength="13" autocomplete="tel-national" placeholder="10-digit mobile"></label>
+  <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <p class="err" id="suErr" role="alert"></p>
+  <button class="btn gold block" type="submit" style="min-height:54px;font-size:16px">Sign up and continue</button>
+  <p class="note">Your name and number go to the shop so we can confirm and deliver your order.</p></form>`;
+V.account = () => cust
+  ? `<div class="wrap doc"><h1>Your account</h1><div class="acct"><span>Name</span><b>${esc(cust.name)}</b><span>Mobile</span><b>${esc(cust.phone)}</b></div>
+      <p style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="#shop">Shop phones</a><button class="btn line" type="button" data-logout>Sign out</button></p></div>`
+  : `<div class="wrap doc"><h1>Sign up</h1><p class="muted" style="margin-bottom:18px">Sign up once with your name and mobile number to place an order.</p>${signupForm('account')}</div>`;
 V.about = () => docPage('About ALFATECH MOBILES', `<p>ALFATECH MOBILES is a smartphone shop on Nishat Road in Sadar Bazar, Shahjahanpur. We sell new, sealed-box phones from Apple, Samsung, Redmi, Motorola, vivo and OPPO, with the brand's India warranty.</p><p>Prices on this website are our own selling prices. Card offers and EMI plans are shown on every phone, so you know the cost before you visit.</p><p>Buy at the shop, or order on WhatsApp for delivery anywhere in ${esc(SHOP.deliveryState)}.</p>`);
 V.contact = () => `<div class="wrap doc"><h1>Visit or contact the shop</h1><p>Questions about a phone, a colour, EMI or an order? Talk to us directly.</p></div>${shopSection()}`;
 const FAQ = [
@@ -796,8 +817,10 @@ document.addEventListener('click', e => {
   if ((t = e.target.closest('[data-brand]'))){ e.preventDefault(); F = blank(); F.brand = t.dataset.brand; go('shop'); return; }
   if ((t = e.target.closest('[data-fbrand]'))){ F.brand = t.dataset.fbrand; render(true); return; }
   if (e.target.closest('#clearF')){ F = blank(); render(true); return; }
+  if ((t = e.target.closest('[data-paid]'))){ tell('/api/paid', { ref: t.dataset.paid, total: +t.dataset.total, customer: cust }); }
+  if (e.target.closest('[data-logout]')){ cust = null; store.set('cust', null); paintAcct(); toast('Signed out'); render(); return; }
   if ((t = e.target.closest('[data-add]'))){ addCart(t.dataset.add); return; }
-  if ((t = e.target.closest('[data-buynow]'))){ const id = t.dataset.buynow; if (!cart.some(i => i.id === id)) addCart(id, true); location.hash = '#checkout'; return; }
+  if ((t = e.target.closest('[data-buynow]'))){ const id = t.dataset.buynow; const col = colourFor(byId(id)); if (!cart.some(i => i.id === id && (i.colour || '') === col)) addCart(id, true, col); location.hash = '#checkout'; return; }
   if ((t = e.target.closest('[data-buy]'))){ const p = byId(t.dataset.buy); if (p) openWA(buyMsg(p), 'Buy on WhatsApp'); return; }
   if ((t = e.target.closest('[data-ask]'))){ const p = byId(t.dataset.ask); if (p) openWA(askMsg(p), 'Ask about this phone'); return; }
   if ((t = e.target.closest('[data-emi]'))){ const p = byId(t.dataset.emi); if (p) openWA(emiMsg(p), 'EMI on WhatsApp'); return; }
@@ -861,8 +884,22 @@ async function onPin(e){
   else say(info.cod ? `${info.city}, ${info.state}. Cash on delivery is available.` : `${info.city}, ${info.state}. Cash on delivery is only for Shahjahanpur, so use UPI or EMI.`, info.cod ? 'ok' : 'no');
 }
 document.addEventListener('input', onPin); document.addEventListener('change', onPin);
+const tell = (path, data) => { try { fetch(path, { method:'POST', headers:{ 'content-type':'application/json' }, body:JSON.stringify(data), keepalive:true }).catch(() => {}); } catch (e) {} };
+function paintAcct(){ const a = $('#acctBtn'); if (a) { a.classList.toggle('in', !!cust); a.setAttribute('aria-label', cust ? 'Account: ' + cust.name : 'Sign up or sign in'); } }
+document.addEventListener('submit', e => {
+  if (e.target.id !== 'signupForm') return;
+  e.preventDefault();
+  const fd = new FormData(e.target), name = String(fd.get('name') || '').trim().replace(/\s+/g, ' '), phone = normPhone(String(fd.get('phone') || ''));
+  if (name.length < 2) { $('#suErr').textContent = 'Enter your full name.'; return; }
+  if (!phone) { $('#suErr').textContent = 'Enter a 10-digit mobile number.'; return; }
+  cust = { name, phone }; store.set('cust', cust); paintAcct();
+  if (!fd.get('website')) tell('/api/signup', { customer: cust });
+  toast('Welcome, ' + name.split(' ')[0]);
+  const nx = e.target.dataset.next || 'account'; if (location.hash === '#' + nx) render(); else location.hash = nx;
+});
 document.addEventListener('submit', e => {
   if (e.target.id !== 'coForm') return;
+  if (!cust) { e.preventDefault(); go('checkout'); return; }
   e.preventDefault();
   const fd = new FormData(e.target), get = k => String(fd.get(k) ?? '').trim();
   const err = [];
@@ -876,9 +913,12 @@ document.addEventListener('submit', e => {
   if (!fd.get('policies')) err.push('Tick the box to accept the terms.');
   if (err.length && !(err.length === 1 && err[0].includes('outside')&&false)){ $('#coErr').textContent = err[0]; $('#coErr').scrollIntoView({ block:'center' }); return; }
   const total = cartTotal(), ref = 'ALF' + Date.now().toString(36).toUpperCase().slice(-6);
-  const items = cart.map((i,k) => { const p = byId(i.id); return `${k+1}. ${full(p)}${i.qty>1?` × ${i.qty}`:''}: ${inr(p.price * i.qty)}`; }).join('\n');
+  const items = cart.map((i,k) => { const p = byId(i.id); return `${k+1}. ${cfull(i)}${i.qty>1?` × ${i.qty}`:''}: ${inr(p.price * i.qty)}`; }).join('\n');
   const label = { online:'Online payment (UPI)', emi:'EMI', cod:'Cash on delivery' }[get('pay')] || get('pay');
   const body = `${items}\nTotal: ${inr(total)}\nPayment: ${label}\nOrder ref: ${ref}\n\nName: ${get('name')}\nMobile: ${normPhone(get('phone'))}\nAddress: ${get('line1')}${get('line2') ? ', ' + get('line2') : ''}, ${get('city')}${get('district') ? ', ' + get('district') : ''} - ${get('pincode')}` + (get('notes') ? `\nNote: ${get('notes')}` : '');
+  tell('/api/order', { ref, total, payment: label, customer: cust,
+    items: cart.map(i => { const p = byId(i.id); return { name: p.name, variant: p.vlabel, colour: i.colour || '', qty: i.qty, price: p.price }; }),
+    delivery: { name: get('name'), phone: normPhone(get('phone')), line1: get('line1'), line2: get('line2'), city: get('city'), district: get('district'), pincode: get('pincode') }, note: get('notes') });
   if (get('pay') === 'online') return openPay(total, ref, `Hello ALFATECH MOBILES, maine online payment kar diya hai. Screenshot bhej raha hoon.\n\n${body}`);
   openWA(`Hello ALFATECH MOBILES, mujhe ye order dena hai:\n\n${body}`, get('pay') === 'emi' ? 'EMI on this order' : 'Cash on delivery');
 });
@@ -985,7 +1025,7 @@ function openPay(total, ref, paidMsg){
     <a class="btn gold block pay-main" id="payApp" href="${upi}">Pay ${inr(total)} with UPI</a>
     <p class="pay-sub">Opens PhonePe, Google Pay, Paytm or any UPI app. The amount is fixed.</p>
     ${qr ? `<details class="qrd"${wide ? ' open' : ''}><summary>Scan a QR code instead</summary><div class="qrbody">${qr}<p>Scan with any UPI app. The amount ${inr(total)} is already inside the code.</p></div></details>` : ''}
-    <a class="btn wa block" href="${waLink(paidMsg)}" target="_blank" rel="noopener">${ICON.wa} I have paid, send the screenshot</a>
+    <a class="btn wa block" href="${waLink(paidMsg)}" target="_blank" rel="noopener" data-paid="${esc(ref)}" data-total="${total}">${ICON.wa} I have paid, send the screenshot</a>
     <p class="pay-note">${LOCK}<span>Never share your UPI PIN. The shop confirms your order once the money arrives.</span></p>`;
   $('#pay').showModal();
 }
@@ -995,7 +1035,7 @@ setInterval(() => { const imgs = document.querySelectorAll('.stage2 .ph'); if (i
   imgs.forEach((im, i) => im.classList.toggle('on', i === k)); chips.forEach((c, i) => c.classList.toggle('on', i === k)); }, 3600);
 document.addEventListener('change', e => { if (e.target.name !== 'pay') return; const b = $('#coGo'); if (b) b.textContent = e.target.value === 'online' ? 'Pay with UPI' : 'Continue'; });
 if (!location.hash || location.hash === '#') history.replaceState(null, '', '#home');
-counts(); render();
+counts(); paintAcct(); render();
 })();
 </script>
 <script>

@@ -2,6 +2,7 @@
 // Static files are served from ./public by the ASSETS binding (see wrangler.jsonc).
 // Needs: KV binding STORE (in wrangler.jsonc) and secret OWNER_PASSWORD
 // (Worker > Settings > Variables and Secrets). Without them the shop still works.
+// Order and sign-up alerts: secrets TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID (comma-separate several chat ids).
 
 const JSONH = { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' };
 const json = (obj, status = 200) => new Response(JSON.stringify(obj), { status, headers: JSONH });
@@ -40,11 +41,71 @@ function validCatalog(c) {
   return null;
 }
 
+
+/* ---------- order and signup alerts (Telegram) ---------- */
+const clip = (v, n) => String(v ?? '').replace(/[\u0000-\u001f\u007f]/g, ' ').trim().slice(0, n);
+const rupees = n => '₹' + (+n || 0).toLocaleString('en-IN');
+const okPhone = v => /^[6-9][0-9]{9}$/.test(String(v || ''));
+async function alertShop(env, text) {
+  const token = env.TELEGRAM_BOT_TOKEN, ids = String(env.TELEGRAM_CHAT_ID || '').split(',').map(x => x.trim()).filter(Boolean);
+  if (!token || !ids.length) return { sent: false, reason: 'telegram_not_set' };
+  let sent = false;
+  for (const id of ids) {
+    try {
+      const r = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ chat_id: id, text, disable_web_page_preview: true }) });
+      if (r.ok) sent = true;
+    } catch (e) {}
+  }
+  return { sent, reason: sent ? '' : 'telegram_failed' };
+}
+async function readBody(req) {
+  const t = await req.text();
+  if (t.length > 30000) throw new Error('too_large');
+  const b = JSON.parse(t);
+  if (!b || typeof b !== 'object' || b.website) throw new Error('bad');   // "website" is a hidden trap field for bots
+  return b;
+}
+async function shopEvents(req, env, p) {
+  let b;
+  try { b = await readBody(req); } catch (e) { return json({ error: 'Bad request' }, 400); }
+  const c = b.customer || {};
+  const cname = clip(c.name, 80), cphone = clip(c.phone, 10);
+  if (cname.length < 2 || !okPhone(cphone)) return json({ error: 'Name and a 10-digit mobile are needed' }, 400);
+  const when = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'medium', timeStyle: 'short' });
+
+  if (p === '/api/signup') {
+    if (env.STORE) await env.STORE.put('cust:' + cphone, JSON.stringify({ name: cname, phone: cphone, at: new Date().toISOString() }));
+    const r = await alertShop(env, `NEW SIGN-UP\n${cname}\n${cphone}\n${when}`);
+    return json({ ok: true, notified: r.sent });
+  }
+
+  const ref = clip(b.ref, 20).replace(/[^A-Za-z0-9]/g, '');
+  if (!ref) return json({ error: 'Order reference missing' }, 400);
+
+  if (p === '/api/paid') {
+    const r = await alertShop(env, `PAYMENT CLAIMED  ${ref}\n${cname}, ${cphone}\nAmount: ${rupees(b.total)}\nThe customer says the UPI payment is done and is sending the screenshot on WhatsApp. Check your bank before handing over the phone.\n${when}`);
+    return json({ ok: true, notified: r.sent });
+  }
+
+  // /api/order
+  const items = (Array.isArray(b.items) ? b.items : []).slice(0, 10).map((i, k) =>
+    `${k + 1}. ${clip(i.name, 80)}${i.variant ? ' (' + clip(i.variant, 40) + ')' : ''}${i.colour ? ', ' + clip(i.colour, 30) : ''} x ${Math.max(1, Math.min(9, +i.qty || 1))}: ${rupees(i.price)}`);
+  if (!items.length) return json({ error: 'No items' }, 400);
+  const d = b.delivery || {};
+  const pay = clip(b.payment, 40);
+  const note = /UPI/i.test(pay) ? 'Waiting for UPI payment. You get a second alert if the customer says it is paid.' : /EMI/i.test(pay) ? 'EMI: call or WhatsApp the customer.' : 'Cash on delivery: Shahjahanpur only.';
+  const text = `NEW ORDER  ${ref}\n${when}\n\n${items.join('\n')}\nTotal: ${rupees(b.total)}\nPayment: ${pay}\n${note}\n\nCustomer: ${cname}, ${cphone}\nDeliver to: ${clip(d.name, 80)}, ${clip(d.phone, 10)}\n${clip(d.line1, 160)}${d.line2 ? ', ' + clip(d.line2, 80) : ''}, ${clip(d.city, 60)}${d.district ? ', ' + clip(d.district, 60) : ''} - ${clip(d.pincode, 6)}` + (b.note ? `\nNote: ${clip(b.note, 300)}` : '');
+  if (env.STORE) await env.STORE.put('order:' + ref, JSON.stringify({ at: new Date().toISOString(), text }), { expirationTtl: 60 * 86400 });
+  const r = await alertShop(env, text);
+  return json({ ok: true, notified: r.sent });
+}
+
 async function api(req, env, url) {
   const p = url.pathname;
   const kv = env.STORE;
 
-  if (p === '/api/status') return json({ kv: !!kv, password: !!env.OWNER_PASSWORD });
+  if (p === '/api/status') return json({ kv: !!kv, password: !!env.OWNER_PASSWORD, alerts: !!(env.TELEGRAM_BOT_TOKEN && env.TELEGRAM_CHAT_ID) });
+  if (req.method === 'POST' && (p === '/api/signup' || p === '/api/order' || p === '/api/paid')) return shopEvents(req, env, p);
 
   if (p === '/api/catalog' && req.method === 'GET') {
     if (!kv) return json({ error: 'kv_not_bound' }, 404);
