@@ -379,6 +379,9 @@ dialog::backdrop{background:rgba(10,11,14,.55)}
 .pm small{display:block;color:var(--steel);font-size:13.5px;margin-top:1px}
 .pm:has(input:checked){border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
 .pm:has(input:focus-visible){outline:2.5px solid var(--gold);outline-offset:2px}
+.pm.off{opacity:.55;cursor:not-allowed;background:#f6f7f9}
+.pinstat{font-size:13.5px;min-height:20px;margin:-6px 0 0;color:var(--steel)}
+.pinstat.ok{color:var(--wa);font-weight:600}.pinstat.no{color:var(--red);font-weight:600}
 /* payment sheet */
 #pay{max-width:min(430px,calc(100% - 24px))}
 #pay .dh{border:0;padding:16px 18px 0}
@@ -721,11 +724,12 @@ V.checkout = () => {
       <div class="three"><label class="field">City<input name="city" required autocomplete="address-level2"></label>
         <label class="field">District<input name="district"></label>
         <label class="field">PIN code<input name="pincode" required inputmode="numeric" maxlength="6" autocomplete="postal-code"></label></div>
+      <p class="pinstat" id="pinStat" aria-live="polite"></p>
       <p class="hint muted" style="font-size:13.5px">We deliver inside ${esc(SHOP.deliveryState)}. Outside it, pick up from the shop.</p>
       <fieldset class="paymeth"><legend>How would you like to pay?</legend>
         <label class="pm"><input type="radio" name="pay" value="online" checked><span><b>Pay now with UPI</b><small>Opens your UPI app with the amount already filled</small></span></label>
         <label class="pm"><input type="radio" name="pay" value="emi"><span><b>EMI</b><small>Talk to the shop on WhatsApp or call</small></span></label>
-        <label class="pm"><input type="radio" name="pay" value="cod"><span><b>Cash on delivery</b><small>Confirm with the shop on WhatsApp or call</small></span></label></fieldset>
+        <label class="pm off" id="pmCod"><input type="radio" name="pay" value="cod" disabled><span><b>Cash on delivery</b><small id="codNote">Only for Shahjahanpur. Enter a Shahjahanpur PIN code to use it.</small></span></label></fieldset>
       <label class="field">Note for the shop <span class="hint">(optional)</span><textarea name="notes" rows="2"></textarea></label>
       <label class="agree"><input type="checkbox" name="policies" required><span>I agree to the <a class="link" href="#terms">terms</a> and <a class="link" href="#returns">return policy</a>.</span></label>
       <p class="err" id="coErr" role="alert"></p></div>
@@ -745,7 +749,7 @@ const FAQ = [
   ['Is the website price the final price?', 'It is the price you pay at ALFATECH MOBILES for UPI or online payment. Card offers can lower it further and are listed on each phone. The shop confirms the final amount before billing.'],
   ['Do you offer EMI?', 'Yes. Each phone shows the monthly EMI for 3, 6, 9 and 12 months. Tap “EMI on WhatsApp” and the shop will tell you which plan works for your card or finance partner, the down payment and the documents needed.'],
   ['Do you deliver?', `Yes, anywhere in ${SHOP.deliveryState}. You can also pick up from the shop in Sadar Bazar.`],
-  ['How do I pay?', 'Pay online by UPI right on the checkout page (the amount is filled in for you), choose EMI, or choose cash on delivery. For EMI and cash on delivery the shop confirms on WhatsApp or by call. We never ask for card numbers, CVV or UPI PIN on this website or on WhatsApp.'],
+  ['How do I pay?', 'Pay online by UPI right on the checkout page (the amount is filled in for you), choose EMI, or choose cash on delivery (inside Shahjahanpur only). For EMI and cash on delivery the shop confirms on WhatsApp or by call. We never ask for card numbers, CVV or UPI PIN on this website or on WhatsApp.'],
   ['What if my phone has a problem?', 'Phones carry the brand warranty and are repaired at the brand’s authorised service centres. If a phone is dead on arrival, tell us as soon as possible and we will help you with the replacement.']
 ];
 V.faq = () => docPage('Questions', `<div class="faq">${FAQ.map(([q,a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}</div>`);
@@ -818,6 +822,45 @@ document.querySelectorAll('dialog').forEach(d => d.addEventListener('click', e =
 const UK = [[244305,244999],[246000,246999],[247453,247999],[248000,249999],[262500,263999]];
 const isUpPin = pin => { if (!/^[1-9][0-9]{5}$/.test(pin)) return false; const n = +pin; return n >= 201000 && n <= 285999 && !UK.some(([a,b]) => n >= a && n <= b); };
 const normPhone = raw => { let d = (raw||'').replace(/\D/g,''); if (d.length===12 && d.startsWith('91')) d=d.slice(2); if (d.length===11 && d.startsWith('0')) d=d.slice(1); return /^[6-9][0-9]{9}$/.test(d) ? d : null; };
+/* PIN code: fill the city automatically and allow cash on delivery only inside Shahjahanpur */
+const COD_PINS = ['242001'];   /* used only when the PIN lookup cannot be reached */
+const PIN = { pin:'', cod:false }, pinCache = {};
+async function pinInfo(pin){
+  if (pinCache[pin]) return pinCache[pin];
+  let r;
+  try {
+    const res = await fetch('https://api.postalpincode.in/pincode/' + pin), j = await res.json(), po = (j[0] && j[0].PostOffice) || [];
+    if (po.length) {
+      const ok = x => v => String(x[v] || '').trim().toLowerCase();
+      const block = String(po[0].Block || '').trim(), dist = String(po[0].District || '').trim();
+      r = { city: (block && block.toUpperCase() !== 'NA') ? block : dist, district: dist, state: po[0].State || '',
+            cod: po.some(x => ok(x)('District') === 'shahjahanpur' && ok(x)('Block') === 'shahjahanpur') };
+    } else r = { unknown:true, cod:false };
+  } catch (e) { r = { offline:true, cod: COD_PINS.includes(pin) }; }
+  if (!r.offline) pinCache[pin] = r;
+  return r;
+}
+function setCod(){
+  const rad = document.querySelector('input[name=pay][value=cod]'); if (!rad) return;
+  rad.disabled = !PIN.cod; $('#pmCod').classList.toggle('off', !PIN.cod);
+  $('#codNote').textContent = PIN.cod ? 'Pay the delivery person in cash. Available in Shahjahanpur.' : 'Only for Shahjahanpur. Enter a Shahjahanpur PIN code to use it.';
+  if (!PIN.cod && rad.checked) { const o = document.querySelector('input[name=pay][value=online]'); o.checked = true; o.dispatchEvent(new Event('change', { bubbles:true })); }
+}
+async function onPin(e){
+  if (e.target.name !== 'pincode') return;
+  const pin = e.target.value.replace(/\D/g, '').slice(0, 6); if (e.target.value !== pin) e.target.value = pin;
+  PIN.pin = pin; PIN.cod = false; setCod();
+  const st = $('#pinStat'), say = (t, c) => { st.textContent = t; st.className = 'pinstat' + (c ? ' ' + c : ''); };
+  if (pin.length < 6) return say('');
+  say('Checking PIN code…');
+  const info = await pinInfo(pin); if (e.target.value !== pin) return;
+  if (info.unknown) return say('We could not find that PIN code. Check the number.', 'no');
+  if (!info.offline) { const f = document.querySelector('[name=city]'), d = document.querySelector('[name=district]'); if (f) f.value = info.city; if (d) d.value = info.district; }
+  PIN.cod = info.cod; setCod();
+  if (info.offline) say(info.cod ? 'Shahjahanpur. Cash on delivery is available.' : 'Cash on delivery is only for Shahjahanpur.', info.cod ? 'ok' : 'no');
+  else say(info.cod ? `${info.city}, ${info.state}. Cash on delivery is available.` : `${info.city}, ${info.state}. Cash on delivery is only for Shahjahanpur, so use UPI or EMI.`, info.cod ? 'ok' : 'no');
+}
+document.addEventListener('input', onPin); document.addEventListener('change', onPin);
 document.addEventListener('submit', e => {
   if (e.target.id !== 'coForm') return;
   e.preventDefault();
@@ -829,6 +872,7 @@ document.addEventListener('submit', e => {
   if (get('city').length < 2) err.push('Enter your city.');
   if (!/^[1-9][0-9]{5}$/.test(get('pincode'))) err.push('Enter a 6-digit PIN code.');
   else if (!isUpPin(get('pincode'))) err.push(`${get('pincode')} is outside ${SHOP.deliveryState}. Use an address in ${SHOP.deliveryState}, or call the shop to pick it up.`);
+  if (get('pay') === 'cod' && !(PIN.cod && PIN.pin === get('pincode'))) err.push('Cash on delivery is only for Shahjahanpur. Choose UPI or EMI for this address.');
   if (!fd.get('policies')) err.push('Tick the box to accept the terms.');
   if (err.length && !(err.length === 1 && err[0].includes('outside')&&false)){ $('#coErr').textContent = err[0]; $('#coErr').scrollIntoView({ block:'center' }); return; }
   const total = cartTotal(), ref = 'ALF' + Date.now().toString(36).toUpperCase().slice(-6);
